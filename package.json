@@ -2,7 +2,7 @@
   "name": "b3-companies",
   "version": "1.0.0",
   "description": "Crawler para pegar dados das empresas no B3",
-  "main": "index.js",
+  "main": "all.js",
   "author": "Thiago Silva Ferreira",
   "license": "MIT",
   "private": false,
