@@ -7,7 +7,7 @@ if (process.env.MOCK !== undefined) {
   useMock = process.env.MOCK === 'true'
 }
 
-const b3company = async code => {
+const b3company = async (code, delay = 0) => {
   const url = `http://bvmf.bmfbovespa.com.br/pt-br/mercados/acoes/empresas/ExecutaAcaoConsultaInfoEmp.asp?CodCVM=${code}&ViewDoc=1&AnoDoc=2019&VersaoDoc=1&NumSeqDoc=80218`
   let $
 
@@ -54,8 +54,13 @@ const b3company = async code => {
     output.codes.push($(item).text())
   })
   output.codes = [...new Set(output.codes)]
+  output.codes = output.codes.filter(code => !!code)
 
-  return output
+  return new Promise(resolve => {
+    setTimeout(() => {
+      resolve(output)
+    }, delay)
+  })
 }
 
 module.exports = b3company

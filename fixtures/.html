@@ -1,0 +1,4604 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="pt-br">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<title>FUNDAMENTUS - Invista consciente - Indicadores Fundamentalistas</title>
+	
+	<link rel="stylesheet" href="css/estilo.css" type="text/css" media="screen, projection">
+	<link rel="stylesheet" href="css/print.css" type="text/css" media="print">
+	<link rel="shortcut icon" href="img/fundamentus.ico" type="image/x-icon">
+	<!--[if lte IE 6]>
+		<link rel="stylesheet" type="text/css" href="css/menu_ie6.css">
+		<script type="text/javascript" src="script/ADxMenu.js"></script>
+	<![endif]-->
+	<!-- <script src="script/mootools.svn.js" type="text/javascript"></script>  -->
+<script src="http://ajax.googleapis.com/ajax/libs/mootools/1.11/mootools-yui-compressed.js" type="text/javascript"></script>
+
+<!-- Facebook Pixel Code -->
+<script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '180895865796070');
+  fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=180895865796070&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Facebook Pixel Code -->	<script type="text/javascript" src="script/Observer.js"></script>
+	<script type="text/javascript" src="script/Autocompleter.js"></script>
+	<script src="script/cmplte.php" type="text/javascript" language="JavaScript"></script>
+	
+	<script src="script/tip.js" type="text/javascript" language="JavaScript"></script>
+	<script type="text/javascript">
+		function poApple() { }
+	</script>	
+	
+</head>
+<body class="detalhes">
+	<!-- ClickTale Top part -->
+<script type="text/javascript">
+var WRInitTime=(new Date()).getTime();
+</script>
+<!-- ClickTale end of Top part -->
+	
+	<div class="center">
+			<script>		function validateForm() {			let form = document.createElement('form');			form.action = '/detalhes.php';			form.method = 'GET';			form.innerHTML = '<input name="papel" value="'+document.forms[0]["papel"].value.toUpperCase()+'">';			document.body.append(form);			form.submit();			return false;		}	</script>		<div class="topo">		<a href="index.php"><img class="logo" src="img/logo.gif" alt="FUNDAMENTUS - Invista consciente"></a>			<div class="avancada"><a href="buscaavancada.php">Busca avan�ada por empresa</a></div>			<form class="busca" method="get" action="detalhes.php" onsubmit="return validateForm() ">				<fieldset>					<legend>Procurar por a��o/empresa</legend>					<input class="texto" autocomplete="off" id="completar" name="papel" type="text"><input type="image" src="img/bt_exibir.jpg" class="botao" value="Exibir"><br>				</fieldset>			</form>      			<div id="containerMenu">				<ul id="menu" class="institucional adxm menu">					<li><a class="home" href="index.php">P�gina inicial</a></li>					<!--- <li><a class="conheca" href="conheca.php">Conhe�a o sistema</a></li> --->					<li><a class="consciente" href="consciente.php">Investimento consciente</a></li>					<li><a class="contato" href="contato.php">Entre em contato</a></li>          				</ul>				<ul id="menu" class="software adxm menu">					<li><a class="detalhes" href="detalhes.php">Detalhes</a></li>					<li><a class="graficos" onClick="poApple()" >Gr�ficos</a>						<ul>							<li><a href="graficos.php?papel=&tipo=1">Balan�o patrimonial</a></li>							<li><a href="graficos.php?papel=&tipo=2">Demonstrativos de resultados</a></li>							<li><a href="graficos.php?papel=&tipo=3">Indicadores fundamentalistas</a></li>						</ul>					</li>					<li><a class="historicos" onClick="poApple()">Dados Hist�ricos</a>						<ul class="provetos">							<li><a class="dh" href="balancos.php?papel=&tipo=1">Balan�os em Excel</a></li>							<li><a class="dh" href="proventos.php?papel=&tipo=2">Proventos</a></li>						</ul>					</li>					<li><a class="cotacoes" href="cotacoes.php?papel=">Hist�rico de cota��es</a></li>					</li>				</ul>			</div>		</div>		<div class="conteudo clearfix">
+				
+  	<div class="center">
+		<div class="conteudo clearfix">
+			<h1>Selecione o Papel</h1>
+      <table id="test1" class="resultado sortable-onload-1-reverse rowstyle-par colstyle-col no-arrow" border="0" cellpadding="0" cellspacing="0">
+				<thead>
+					<tr>
+						<th style="-moz-user-select: none;" class="fd-column-0 sortable-text reverseSort"><a href="#">Papel</a></th>
+						<th style="-moz-user-select: none;" class="sortable-text fd-column-1"><a href="#">Nome Comercial</a></th>
+						<th style="-moz-user-select: none;" class="sortable-text fd-column-2"><a href="#">Raz�o Social</a></th>
+					</tr>
+				</thead>
+				<tbody>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=AALR3 ">AALR3 </a></td>
+              <td>ALLIAR</td>
+              <td>CENTRO DE IMAGEM DIAGNOSTICOS S.A.</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=ABCB3">ABCB3</a></td>
+              <td>ABC Brasil</td>
+              <td>BANCO ABC BRASIL S/A</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=ABCB4">ABCB4</a></td>
+              <td>ABC Brasil</td>
+              <td>BANCO ABC BRASIL S/A</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=ABEV3">ABEV3</a></td>
+              <td>AMBEV S/A</td>
+              <td>AMBEV S.A.</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=ABRE3">ABRE3</a></td>
+              <td>SOMOS EDUCA</td>
+              <td>SOMOS EDUCA��O S.A.</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=ABYA3">ABYA3</a></td>
+              <td>ABYARA</td>
+              <td>ABYARA PLANEJAMENTO IMOBILIARIO S.A.</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=ACES3">ACES3</a></td>
+              <td>ARCELORMITTAL INOX BRASIL</td>
+              <td>ARCELORMITTAL INOX BRASIL S.A.</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=ACES4">ACES4</a></td>
+              <td>ARCELORMITTAL INOX BRASIL</td>
+              <td>ARCELORMITTAL INOX BRASIL S.A.</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=ADHM3">ADHM3</a></td>
+              <td>VITALYZE.ME</td>
+              <td>VITALYZE.ME SAUDE E TECNOLOGIA S.A.</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=AEDU11">AEDU11</a></td>
+              <td>ANHANGUERA EDUCACIONAL PARTICIPA��ES SA</td>
+              <td>ANHANGUERA EDUCACIONAL PARTICIPA��ES S.A</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=AEDU3">AEDU3</a></td>
+              <td>ANHANGUERA EDUCACIONAL PARTICIPA��ES SA</td>
+              <td>ANHANGUERA EDUCACIONAL PARTICIPA��ES S.A</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=AELP3">AELP3</a></td>
+              <td>AES ELPA</td>
+              <td>AES ELPA SA</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=AESL3">AESL3</a></td>
+              <td>AES SUL DISTRIB. GA�CHA DE ENERGIA S.A.</td>
+              <td>AES SUL DISTRIB. GA�CHA DE ENERGIA S.A.</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=AESL4">AESL4</a></td>
+              <td>AES SUL DISTRIB. GA�CHA DE ENERGIA S.A.</td>
+              <td>AES SUL DISTRIB. GA�CHA DE ENERGIA S.A.</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=AFLT3">AFLT3</a></td>
+              <td>AFLUENTE T</td>
+              <td>AFLUENTE TRANSMISS�O DE ENERGIA EL�TRICA S/A</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=AFLU3">AFLU3</a></td>
+              <td>AFLUENTE</td>
+              <td>AFLUENTE GER.E TRANSM.ENERG.ELETR. S.A.</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=AFLU5">AFLU5</a></td>
+              <td>AFLUENTE</td>
+              <td>AFLUENTE GER.E TRANSM.ENERG.ELETR. S.A.</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=AGEI3">AGEI3</a></td>
+              <td>AGRE EMP IMOB</td>
+              <td>AGRE EMPREENDIMENTOS IMOBILI�RIOS S.A.</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=AGEN33">AGEN33</a></td>
+              <td>Agrenco</td>
+              <td>AGRENCO LTD. </td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=AGIN3">AGIN3</a></td>
+              <td>Agra Incorp</td>
+              <td>AGRA EMPREENDIMENTOS IMOBILI�RIOS S/A</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=AGRO3">AGRO3</a></td>
+              <td>BRASILAGRO</td>
+              <td>BRASILAGRO - CIA BRAS DE PROP AGRICOLAS</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=AHEB3">AHEB3</a></td>
+              <td>PARQUE ANHEMBI</td>
+              <td>SAO PAULO TURISMO S.A.</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=AHEB5">AHEB5</a></td>
+              <td>PARQUE ANHEMBI</td>
+              <td>SAO PAULO TURISMO S.A.</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=AHEB6">AHEB6</a></td>
+              <td>PARQUE ANHEMBI</td>
+              <td>SAO PAULO TURISMO S.A.</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=ALBA3">ALBA3</a></td>
+              <td>DANA-ALBARUS S/A IND�STRIA E COM�RCIO</td>
+              <td>DANA-ALBARUS S.A. IND�STRIA E COM�RCIO</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=ALLL11">ALLL11</a></td>
+              <td>ALL - AM�RICA LATINA LOG�STICA S/A</td>
+              <td>ALL AMERICA LATINA LOGISTICA SA</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=ALLL3">ALLL3</a></td>
+              <td>ALL - AM�RICA LATINA LOG�STICA S/A</td>
+              <td>ALL AMERICA LATINA LOGISTICA SA</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=ALLL4">ALLL4</a></td>
+              <td>ALL - AM�RICA LATINA LOG�STICA S/A</td>
+              <td>ALL AMERICA LATINA LOGISTICA SA</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=ALPA3">ALPA3</a></td>
+              <td>ALPARGATAS</td>
+              <td>SAO PAULO ALPARGATAS SA</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=ALPA4">ALPA4</a></td>
+              <td>ALPARGATAS</td>
+              <td>SAO PAULO ALPARGATAS SA</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=ALSC3">ALSC3</a></td>
+              <td>ALIANSCE</td>
+              <td>ALIANSCE SHOPPING CENTERS S.A.</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=ALSO3">ALSO3</a></td>
+              <td>ALIANSCSONAE</td>
+              <td>ALIANSCE SONAE SHOPPING CENTERS S.A.</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=ALUP11">ALUP11</a></td>
+              <td>ALUPAR</td>
+              <td>ALUPAR INVESTIMENTOS S/A</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=ALUP3">ALUP3</a></td>
+              <td>ALUPAR</td>
+              <td>ALUPAR INVESTIMENTOS S/A</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=ALUP4">ALUP4</a></td>
+              <td>ALUPAR</td>
+              <td>ALUPAR INVESTIMENTOS S/A</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=AMAR3">AMAR3</a></td>
+              <td>LOJAS MARISA</td>
+              <td>MARISA LOJAS S.A.</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=AMBV3">AMBV3</a></td>
+              <td>AMBEV</td>
+              <td>COMPANHIA DE BEBIDAS DAS AM�RICAS-AMBEV</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=AMBV4">AMBV4</a></td>
+              <td>AMBEV</td>
+              <td>COMPANHIA DE BEBIDAS DAS AM�RICAS-AMBEV</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=AMIL3">AMIL3</a></td>
+              <td>AMIL</td>
+              <td>AMIL PARTICIPA��ES S/A</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=AMPI3">AMPI3</a></td>
+              <td>AMPLA INVEST</td>
+              <td>AMPLA INVESTIMENTOS E SERVICOS S.A.</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=ANIM3">ANIM3</a></td>
+              <td>ANIMA</td>
+              <td>GAEC EDUCA��O S.A.</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=AORE3">AORE3</a></td>
+              <td>VITALYZE.ME</td>
+              <td>VITALYZE.ME SAUDE E TECNOLOGIA S.A.</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=APER3">APER3</a></td>
+              <td>ALPER S.A.</td>
+              <td>ALPER CONSULTORIA E CORRETORA DE SEGUROS S.A.</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=APTI4">APTI4</a></td>
+              <td>ALIPERTI</td>
+              <td>SIDERURGICA J L ALIPERTI SA</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=ARCE3">ARCE3</a></td>
+              <td>BELGO</td>
+              <td>COMPANHIA SIDER�RGICA BELGO-MINEIRA</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=ARCZ3">ARCZ3</a></td>
+              <td>ARACRUZ CELULOSE SA</td>
+              <td>ARACRUZ CELULOSE S/A</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=ARCZ6">ARCZ6</a></td>
+              <td>ARACRUZ CELULOSE SA</td>
+              <td>ARACRUZ CELULOSE S/A</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=ARLA3">ARLA3</a></td>
+              <td>ARTHUR LANGE</td>
+              <td>ARTHUR LANGE SA IND E COM</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=ARLA4">ARLA4</a></td>
+              <td>ARTHUR LANGE</td>
+              <td>ARTHUR LANGE SA IND E COM</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=ARPS3">ARPS3</a></td>
+              <td>DOUAT CIA TEXTIL</td>
+              <td>DOUAT CIA TEXTIL</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=ARPS4">ARPS4</a></td>
+              <td>DOUAT CIA TEXTIL</td>
+              <td>DOUAT CIA TEXTIL</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=ARTE3">ARTE3</a></td>
+              <td>KUALA S.A.</td>
+              <td>KUALA SA</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=ARTE4">ARTE4</a></td>
+              <td>KUALA S.A.</td>
+              <td>KUALA SA</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=ARTR3">ARTR3</a></td>
+              <td>ARTERIS</td>
+              <td>ARTERIS S.A.</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=ARZZ3">ARZZ3</a></td>
+              <td>AREZZO CO</td>
+              <td>AREZZO IND�STRIA E COM�RCIO S.A.</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=ASSM3">ASSM3</a></td>
+              <td>HOTEIS ELDORADO</td>
+              <td>COMPANHIA  ELDORADO DE HOTEIS</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=ASSM4">ASSM4</a></td>
+              <td>HOTEIS ELDORADO</td>
+              <td>COMPANHIA  ELDORADO DE HOTEIS</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=ASTA4">ASTA4</a></td>
+              <td>SANTISTA T�XTIL S.A.</td>
+              <td>SANTISTA TEXTIL SA</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=ATOM3">ATOM3</a></td>
+              <td>ATOMPAR</td>
+              <td>ATOM PARTICIPACOES S.A.</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=AUTM3">AUTM3</a></td>
+              <td>AUTOMETAL</td>
+              <td>AUTOMETAL S.A.</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=AVIL3">AVIL3</a></td>
+              <td>ACOS VILLARES</td>
+              <td>A�OS VILLARES SA</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=AZEV3">AZEV3</a></td>
+              <td>AZEVEDO & TRAVASSOS</td>
+              <td>AZEVEDO & TRAVASSOS SA</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=AZEV4">AZEV4</a></td>
+              <td>AZEVEDO & TRAVASSOS</td>
+              <td>AZEVEDO & TRAVASSOS SA</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=AZUL4">AZUL4</a></td>
+              <td>AZUL</td>
+              <td>AZUL S.A.</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=B3SA3">B3SA3</a></td>
+              <td>B3</td>
+              <td>B3 S.A. - BRASIL, BOLSA, BALC�O</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=BAHI11">BAHI11</a></td>
+              <td>BAHEMA</td>
+              <td>BAHEMA SA</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=BAHI3">BAHI3</a></td>
+              <td>BAHEMA</td>
+              <td>BAHEMA SA</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=BAHI4">BAHI4</a></td>
+              <td>BAHEMA</td>
+              <td>BAHEMA SA</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=BAHI5">BAHI5</a></td>
+              <td>BAHEMA</td>
+              <td>BAHEMA SA</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=BALM3">BALM3</a></td>
+              <td>BAUMER</td>
+              <td>BAUMER SA</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=BALM4">BALM4</a></td>
+              <td>BAUMER</td>
+              <td>BAUMER SA</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=BAUH4">BAUH4</a></td>
+              <td>EXCELSIOR</td>
+              <td>EXCELSIOR ALIMENTOS SA.</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=BAZA3">BAZA3</a></td>
+              <td>BANCO DA AMAZONIA S.A.</td>
+              <td>BANCO DA AMAZ�NIA S.A.</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=BBAS3">BBAS3</a></td>
+              <td>BANCO DO BRASIL S.A.</td>
+              <td>BANCO DO BRASIL S.A.</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=BBDC3">BBDC3</a></td>
+              <td>BANCO BRADESCO S.A.</td>
+              <td>BANCO BRADESCO SA</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=BBDC4">BBDC4</a></td>
+              <td>BANCO BRADESCO S.A.</td>
+              <td>BANCO BRADESCO SA</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=BBRK3">BBRK3</a></td>
+              <td>BR Brokers</td>
+              <td>BRASIL BROKERS PARTICIPA��ES SA</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=BBSE3">BBSE3</a></td>
+              <td>BBSEGURIDADE</td>
+              <td>BB SEGURIDADE PARTICIPA��ES S.A.</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=BBTG11">BBTG11</a></td>
+              <td>BTG PACTUAL UNITS</td>
+              <td>Units BTG PACTUAL</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=BBTG12">BBTG12</a></td>
+              <td>BTG PACTUAL</td>
+              <td>BTG PACTUAL PARTICIPATIONS. LTD.</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=BBTG13">BBTG13</a></td>
+              <td>BTG PACTUAL</td>
+              <td>BTG PACTUAL PARTICIPATIONS. LTD.</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=BCAL6">BCAL6</a></td>
+              <td>PRO METALURG</td>
+              <td>PR� METALURGIA S.A.</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=BDLL3">BDLL3</a></td>
+              <td>BAEDELLA</td>
+              <td>BARDELLA SA INDS MECANICAS</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=BDLL4">BDLL4</a></td>
+              <td>BAEDELLA</td>
+              <td>BARDELLA SA INDS MECANICAS</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=BECE3">BECE3</a></td>
+              <td>BEC</td>
+              <td>BANCO DO ESTADO DO CEARA S/A BEC</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=BECE4">BECE4</a></td>
+              <td>BEC</td>
+              <td>BANCO DO ESTADO DO CEARA S/A BEC</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=BEEF3">BEEF3</a></td>
+              <td>Minerva</td>
+              <td>MINERVA S/A</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=BEES3">BEES3</a></td>
+              <td>BANESTES S/A</td>
+              <td>BANESTES SA BANCO ESTADO ESPIRITO SANTO</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=BEES4">BEES4</a></td>
+              <td>BANESTES S/A</td>
+              <td>BANESTES SA BANCO ESTADO ESPIRITO SANTO</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=BELG3">BELG3</a></td>
+              <td>BELGO</td>
+              <td>COMPANHIA SIDER�RGICA BELGO-MINEIRA</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=BELG4">BELG4</a></td>
+              <td>BELGO</td>
+              <td>COMPANHIA SIDER�RGICA BELGO-MINEIRA</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=BEMA3">BEMA3</a></td>
+              <td>Bematech</td>
+              <td>BEMATECH IND COM EQUIP ELETRONICOS SA</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=BERG3">BERG3</a></td>
+              <td>BERGAMO</td>
+              <td>BERGAMO CIA INDUSTRIAL</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=BESP3">BESP3</a></td>
+              <td>BANESPA</td>
+              <td>BANCO DO ESTADO DE SAO PAULO S.A. - BANESPA</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=BESP4">BESP4</a></td>
+              <td>BANESPA</td>
+              <td>BANCO DO ESTADO DE SAO PAULO S.A. - BANESPA</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=BFIT3">BFIT3</a></td>
+              <td>BANCO SUDAMERIS BRASIL SA</td>
+              <td>BANCO SUDAMERIS BRASIL SA</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=BFIT4">BFIT4</a></td>
+              <td>BANCO SUDAMERIS BRASIL SA</td>
+              <td>BANCO SUDAMERIS BRASIL SA</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=BGIP3">BGIP3</a></td>
+              <td>BANESE</td>
+              <td>BANCO ESTADO SERGIPE SA</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=BGIP4">BGIP4</a></td>
+              <td>BANESE</td>
+              <td>BANCO ESTADO SERGIPE SA</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=BHGR3">BHGR3</a></td>
+              <td>BHG</td>
+              <td>BHG S.A. - BRAZIL HOSPITALITY GROUP</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=BICB3">BICB3</a></td>
+              <td>BicBanco</td>
+              <td>BANCO INDUSTRIAL E COMERCIAL S/A</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=BICB4">BICB4</a></td>
+              <td>BicBanco</td>
+              <td>BANCO INDUSTRIAL E COMERCIAL S/A</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=BIDI11">BIDI11</a></td>
+              <td>INTER BANCO</td>
+              <td>BANCO INTER S.A.</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=BIDI3">BIDI3</a></td>
+              <td>INTER BANCO</td>
+              <td>BANCO INTER S.A.</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=BIDI4">BIDI4</a></td>
+              <td>INTER BANCO</td>
+              <td>BANCO INTER S.A.</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=BIOM3">BIOM3</a></td>
+              <td>BIOMM SA</td>
+              <td>BIOMM SA</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=BIOM4">BIOM4</a></td>
+              <td>BIOMM SA</td>
+              <td>BIOMM SA</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=BISA3">BISA3</a></td>
+              <td>BROOKFIELD INCORPORACOES</td>
+              <td>BROOKFIELD INCORPORACOES S.A.</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=BKBR3">BKBR3</a></td>
+              <td>BK BRASIL</td>
+              <td>BK BRASIL OPERA��O E ASSESSORIA A RESTAURANTES SA</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=BMEB3">BMEB3</a></td>
+              <td>BANCO MERCANTIL DO BRASIL S/A</td>
+              <td>BANCO MERCANTIL BRASIL SA</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=BMEB4">BMEB4</a></td>
+              <td>BANCO MERCANTIL DO BRASIL S/A</td>
+              <td>BANCO MERCANTIL BRASIL SA</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=BMEF3">BMEF3</a></td>
+              <td>BMF</td>
+              <td>BOLSA DE MERCADORIAS & FUTUROS - BM&F S/A</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=BMIN3">BMIN3</a></td>
+              <td>BANCO MERCANTIL DE INVESTIMENTOS SA</td>
+              <td>BCO MERCANTIL INVS SA</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=BMIN4">BMIN4</a></td>
+              <td>BANCO MERCANTIL DE INVESTIMENTOS SA</td>
+              <td>BCO MERCANTIL INVS SA</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=BMKS3">BMKS3</a></td>
+              <td>MONARK</td>
+              <td>BICICLETAS MONARK SA</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=BMTO3">BMTO3</a></td>
+              <td>BRASMOTOR S.A</td>
+              <td>BRASMOTOR SA</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=BMTO4">BMTO4</a></td>
+              <td>BRASMOTOR S.A</td>
+              <td>BRASMOTOR SA</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=BNBR3">BNBR3</a></td>
+              <td>BANCO DO NORDESTE</td>
+              <td>BANCO DO NORDESTE DO BRASIL SA</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=BNBR4">BNBR4</a></td>
+              <td>BANCO DO NORDESTE</td>
+              <td>BANCO DO NORDESTE DO BRASIL SA</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=BNCA3">BNCA3</a></td>
+              <td>NOSSA CAIXA-NOSSO BANCO</td>
+              <td>BANCO NOSSA CAIXA S.A.</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=BOBR3">BOBR3</a></td>
+              <td>BOMBRIL SA</td>
+              <td>BOMBRIL SA</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=BOBR4">BOBR4</a></td>
+              <td>BOMBRIL SA</td>
+              <td>BOMBRIL SA</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=BOVH3">BOVH3</a></td>
+              <td>Bovespa Hld</td>
+              <td>BOVESPA HOLDING SA</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=BPAC11">BPAC11</a></td>
+              <td>BTGP BANCO</td>
+              <td>BCO BTG PACTUAL S.A.</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=BPAC3">BPAC3</a></td>
+              <td>BTGP BANCO</td>
+              <td>BCO BTG PACTUAL S.A.</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=BPAC5">BPAC5</a></td>
+              <td>BTGP BANCO</td>
+              <td>BCO BTG PACTUAL S.A.</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=BPAN4">BPAN4</a></td>
+              <td>BANCO PAN</td>
+              <td>BCO PAN S.A.</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=BPAR3">BPAR3</a></td>
+              <td>BANPAR� S.A.</td>
+              <td>BANCO ESTADO PARA SA</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=BPAT33">BPAT33</a></td>
+              <td>Patagonia</td>
+              <td>BANCO PATAGONIA SA</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=BPHA3">BPHA3</a></td>
+              <td>BRAZIL PHARMA S.A.</td>
+              <td>BR PHARMA</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=BPIA3">BPIA3</a></td>
+              <td>BEP</td>
+              <td>BANCO DO ESTADO DO PIAU� S.A.</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=BPNM3">BPNM3</a></td>
+              <td>BANCO PAN</td>
+              <td>BCO PAN S.A.</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=BPNM4">BPNM4</a></td>
+              <td>BANCO PAN</td>
+              <td>BCO PAN S.A.</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=BRAP3">BRAP3</a></td>
+              <td>BRADESPAR S/A</td>
+              <td>BRADESPAR S/A</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=BRAP4">BRAP4</a></td>
+              <td>BRADESPAR S/A</td>
+              <td>BRADESPAR S/A</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=BRDT3">BRDT3</a></td>
+              <td>PETROBRAS BR</td>
+              <td>PETROBRAS DISTRIBUIDORA S/A</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=BRFS3">BRFS3</a></td>
+              <td>BRF Foods</td>
+              <td>BRF Foods</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=BRGE11">BRGE11</a></td>
+              <td>CONSORCIO ALFA</td>
+              <td>CONSORCIO ALFA DE ADMINISTRA��O SA</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=BRGE12">BRGE12</a></td>
+              <td>CONSORCIO ALFA</td>
+              <td>CONSORCIO ALFA DE ADMINISTRA��O SA</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=BRGE3">BRGE3</a></td>
+              <td>CONSORCIO ALFA</td>
+              <td>CONSORCIO ALFA DE ADMINISTRA��O SA</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=BRGE5">BRGE5</a></td>
+              <td>CONSORCIO ALFA</td>
+              <td>CONSORCIO ALFA DE ADMINISTRA��O SA</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=BRGE6">BRGE6</a></td>
+              <td>CONSORCIO ALFA</td>
+              <td>CONSORCIO ALFA DE ADMINISTRA��O SA</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=BRGE7">BRGE7</a></td>
+              <td>CONSORCIO ALFA</td>
+              <td>CONSORCIO ALFA DE ADMINISTRA��O SA</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=BRGE8">BRGE8</a></td>
+              <td>CONSORCIO ALFA</td>
+              <td>CONSORCIO ALFA DE ADMINISTRA��O SA</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=BRIN3">BRIN3</a></td>
+              <td>ALPER S.A.</td>
+              <td>ALPER CONSULTORIA E CORRETORA DE SEGUROS S.A.</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=BRIV3">BRIV3</a></td>
+              <td>ALFA DE INVESTIMENTO</td>
+              <td>BANCO ALFA DE INVESTIMENTO SA</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=BRIV4">BRIV4</a></td>
+              <td>ALFA DE INVESTIMENTO</td>
+              <td>BANCO ALFA DE INVESTIMENTO SA</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=BRKM3">BRKM3</a></td>
+              <td>BRASKEM</td>
+              <td>BRASKEM S.A.</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=BRKM5">BRKM5</a></td>
+              <td>BRASKEM</td>
+              <td>BRASKEM S.A.</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=BRKM6">BRKM6</a></td>
+              <td>BRASKEM</td>
+              <td>BRASKEM S.A.</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=BRML3">BRML3</a></td>
+              <td>BR MALLS PARTICIPA��ES S/A</td>
+              <td>BR MALLS PARTICIPACOES S.A.</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=BRPR3">BRPR3</a></td>
+              <td>BR PROPERTIES</td>
+              <td>BR PROPERTIES S.A.</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=BRSR3">BRSR3</a></td>
+              <td>BANRISUL S/A</td>
+              <td>BANCO DO ESTADO DO  RIO GRANDE DO SUL SA</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=BRSR4">BRSR4</a></td>
+              <td>BANRISUL S/A</td>
+              <td>BANCO DO ESTADO DO  RIO GRANDE DO SUL SA</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=BRSR5">BRSR5</a></td>
+              <td>BANRISUL S/A</td>
+              <td>BANCO DO ESTADO DO  RIO GRANDE DO SUL SA</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=BRSR6">BRSR6</a></td>
+              <td>BANRISUL S/A</td>
+              <td>BANCO DO ESTADO DO  RIO GRANDE DO SUL SA</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=BRTP3">BRTP3</a></td>
+              <td>BRASIL TELECOM PARTICIPA��ES S.A.</td>
+              <td>BRASIL TELECOM PARTICIPA��ES SA</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=BRTP4">BRTP4</a></td>
+              <td>BRASIL TELECOM PARTICIPA��ES S.A.</td>
+              <td>BRASIL TELECOM PARTICIPA��ES SA</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=BSCT3">BSCT3</a></td>
+              <td>BESC S.A.</td>
+              <td>BANCO DO ESTADO DE SANTA CATARINA SA</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=BSCT5">BSCT5</a></td>
+              <td>BESC S.A.</td>
+              <td>BANCO DO ESTADO DE SANTA CATARINA SA</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=BSCT6">BSCT6</a></td>
+              <td>BESC S.A.</td>
+              <td>BANCO DO ESTADO DE SANTA CATARINA SA</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=BSEV3">BSEV3</a></td>
+              <td>BIOSEV</td>
+              <td>BIOSEV S.A.</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=BSGR3">BSGR3</a></td>
+              <td>AGF BRASIL SEGUROS</td>
+              <td>AGF BRASIL SEGUROS SA</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=BSLI3">BSLI3</a></td>
+              <td>BRB</td>
+              <td>BRB-BANCO DE BRASILIA SA</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=BSLI4">BSLI4</a></td>
+              <td>BRB</td>
+              <td>BRB-BANCO DE BRASILIA SA</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=BTOW3">BTOW3</a></td>
+              <td>B2W - COMPANHIA GLOBAL DO VAREJO</td>
+              <td>B2W - COMPANHIA GLOBAL DO VAREJO</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=BTTL3">BTTL3</a></td>
+              <td>APABA</td>
+              <td>BATTISTELLA ADM E PARTIC S.A - APABA</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=BTTL4">BTTL4</a></td>
+              <td>APABA</td>
+              <td>BATTISTELLA ADM E PARTIC S.A - APABA</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=BUET3">BUET3</a></td>
+              <td>BUETTNER S/A - INDUSTRIA E COMERCIO</td>
+              <td>BUETTNER SA IND E COMERCIO</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=BUET4">BUET4</a></td>
+              <td>BUETTNER S/A - INDUSTRIA E COMERCIO</td>
+              <td>BUETTNER SA IND E COMERCIO</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=BVMF3">BVMF3</a></td>
+              <td>B3</td>
+              <td>B3 S.A. - BRASIL, BOLSA, BALC�O</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=CAFE3">CAFE3</a></td>
+              <td>CAFE SOLUVEL BRASILIA S/A</td>
+              <td>CAFE SOLUVEL BRASILIA SA</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=CAFE4">CAFE4</a></td>
+              <td>CAFE SOLUVEL BRASILIA S/A</td>
+              <td>CAFE SOLUVEL BRASILIA SA</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=CALI3">CALI3</a></td>
+              <td>CAL S/A</td>
+              <td>CONST ADOLPHO LINDENBERG SA</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=CALI4">CALI4</a></td>
+              <td>CAL S/A</td>
+              <td>CONST ADOLPHO LINDENBERG SA</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=CAMB3">CAMB3</a></td>
+              <td>PENALTY</td>
+              <td>CAMBUCI SA</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=CAMB4">CAMB4</a></td>
+              <td>PENALTY</td>
+              <td>CAMBUCI SA</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=CAML3">CAML3</a></td>
+              <td>CAMIL</td>
+              <td>CAMIL ALIMENTOS S.A.</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=CARD3">CARD3</a></td>
+              <td>CSU CARDSYST</td>
+              <td>CSU CARDSYSTEM S.A.</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=CASN3">CASN3</a></td>
+              <td>CASAN</td>
+              <td>CIA CAT. DE �GUAS E SANEAMENTO - CASAN</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=CBEE3">CBEE3</a></td>
+              <td>AMPLA ENERG</td>
+              <td>AMPLA ENERGIA E SERVICOS S.A.</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=CBMA3">CBMA3</a></td>
+              <td>COBRASMA S/A</td>
+              <td>COBRASMA SA</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=CBMA4">CBMA4</a></td>
+              <td>COBRASMA S/A</td>
+              <td>COBRASMA SA</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=CCHI3">CCHI3</a></td>
+              <td>CHIARELLI</td>
+              <td>CERAMICA CHIARELLI SA</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=CCHI4">CCHI4</a></td>
+              <td>CHIARELLI</td>
+              <td>CERAMICA CHIARELLI SA</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=CCIM3">CCIM3</a></td>
+              <td>CC DES IMOB</td>
+              <td>CAMARGO CORREA DESENV. IMOBILIARIO S.A.</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=CCPR3">CCPR3</a></td>
+              <td>CYRELA COMMERCIAL PROPERTIES SA EMP PART</td>
+              <td>CYRELA COMMERCIAL PROPERTIES SA EMP PART</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=CCRO3">CCRO3</a></td>
+              <td>COMPANHIA DE CONCESS�ES RODOVI�RIAS</td>
+              <td>COMPANHIA DE CONCESS�ES RODOVI�RIAS</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=CCTU4">CCTU4</a></td>
+              <td>COMPANHIA BRASILEIRA DE CARTUCHOS - CBC</td>
+              <td>COMPANHIA BRASILEIRA DE CARTUCHOS - CBC</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=CCXC3">CCXC3</a></td>
+              <td>CCX CARVAO</td>
+              <td>CCX CARV�O DA COL�MBIA S.A.</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=CEBR3">CEBR3</a></td>
+              <td>CEB - COMPANHIA ENERG�TICA DE BRAS�LIA</td>
+              <td>COMPANHIA ENERG�TICA DE BRAS�LIA - CEB</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=CEBR5">CEBR5</a></td>
+              <td>CEB - COMPANHIA ENERG�TICA DE BRAS�LIA</td>
+              <td>COMPANHIA ENERG�TICA DE BRAS�LIA - CEB</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=CEBR6">CEBR6</a></td>
+              <td>CEB - COMPANHIA ENERG�TICA DE BRAS�LIA</td>
+              <td>COMPANHIA ENERG�TICA DE BRAS�LIA - CEB</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=CEDO3">CEDO3</a></td>
+              <td>CIA. DE FIA��O E TECIDOS CEDRO CACHOEIRA</td>
+              <td>COMPANHIA DE FIACAO E TECIDOS CEDRO E CACHOEIRA</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=CEDO4">CEDO4</a></td>
+              <td>CIA. DE FIA��O E TECIDOS CEDRO CACHOEIRA</td>
+              <td>COMPANHIA DE FIACAO E TECIDOS CEDRO E CACHOEIRA</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=CEEB3">CEEB3</a></td>
+              <td>COELBA</td>
+              <td>CIA ELETRICIDADE DA BAHIA</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=CEEB5">CEEB5</a></td>
+              <td>COELBA</td>
+              <td>CIA ELETRICIDADE DA BAHIA</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=CEED3">CEED3</a></td>
+              <td>CEEE-D</td>
+              <td>CIA ESTADUAL DE DISTRIB ENER ELET-CEEE-D</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=CEED4">CEED4</a></td>
+              <td>CEEE-D</td>
+              <td>CIA ESTADUAL DE DISTRIB ENER ELET-CEEE-D</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=CEGR3">CEGR3</a></td>
+              <td>CEG</td>
+              <td>CIA. DISTRIB. DE G�S DO RIO DE JANEIRO</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=CELM3">CELM3</a></td>
+              <td>CELM CIA EQUIP. DE LABORATORIOS MODERNOS</td>
+              <td>CELM CIA EQUIP LABS MODERNOS</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=CELP5">CELP5</a></td>
+              <td>CELPA</td>
+              <td>CENTRAIS EL�TRICAS DO PAR� S.A - CELPA</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=CELP7">CELP7</a></td>
+              <td>CELPA</td>
+              <td>CENTRAIS EL�TRICAS DO PAR� S.A - CELPA</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=CEPE3">CEPE3</a></td>
+              <td>CELPE</td>
+              <td>CIA ENERG�TICA DE PERNAMBUCO - CELPE</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=CEPE5">CEPE5</a></td>
+              <td>CELPE</td>
+              <td>CIA ENERG�TICA DE PERNAMBUCO - CELPE</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=CEPE6">CEPE6</a></td>
+              <td>CELPE</td>
+              <td>CIA ENERG�TICA DE PERNAMBUCO - CELPE</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=CESP3">CESP3</a></td>
+              <td>CESP CIA ENERGETICA SAO PAULO</td>
+              <td>CESP - COMPANHIA ENERG�TICA DE S�O PAULO</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=CESP4">CESP4</a></td>
+              <td>CESP CIA ENERGETICA SAO PAULO</td>
+              <td>CESP - COMPANHIA ENERG�TICA DE S�O PAULO</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=CESP5">CESP5</a></td>
+              <td>CESP CIA ENERGETICA SAO PAULO</td>
+              <td>CESP - COMPANHIA ENERG�TICA DE S�O PAULO</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=CESP6">CESP6</a></td>
+              <td>CESP CIA ENERGETICA SAO PAULO</td>
+              <td>CESP - COMPANHIA ENERG�TICA DE S�O PAULO</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=CFLU4">CFLU4</a></td>
+              <td>COCA COLA</td>
+              <td>COMPANHIA FLUMINENSE DE REFRIGERANTES</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=CGAS3">CGAS3</a></td>
+              <td>COMPANHIA DE G�S DE S�O PAULO - COMG�S</td>
+              <td>COMPANHIA DE G�S DE S�O PAULO - COMG�S</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=CGAS5">CGAS5</a></td>
+              <td>COMPANHIA DE G�S DE S�O PAULO - COMG�S</td>
+              <td>COMPANHIA DE G�S DE S�O PAULO - COMG�S</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=CGOS3">CGOS3</a></td>
+              <td>CELG</td>
+              <td>COMPANHIA ENERG�TICA DE GOI�S - CELG</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=CGOS4">CGOS4</a></td>
+              <td>CELG</td>
+              <td>COMPANHIA ENERG�TICA DE GOI�S - CELG</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=CGRA3">CGRA3</a></td>
+              <td>GRAZZIOTIN</td>
+              <td>GRAZZIOTIN SA</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=CGRA4">CGRA4</a></td>
+              <td>GRAZZIOTIN</td>
+              <td>GRAZZIOTIN SA</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=CIEL3">CIEL3</a></td>
+              <td>CIELO</td>
+              <td>CIELO S.A.</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=CIQU3">CIQU3</a></td>
+              <td>CACIQUE</td>
+              <td>CIA CACIQUE CAFE SOLUVEL</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=CIQU4">CIQU4</a></td>
+              <td>CACIQUE</td>
+              <td>CIA CACIQUE CAFE SOLUVEL</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=CLAN3">CLAN3</a></td>
+              <td>CLARION</td>
+              <td>CLARION S.A. AGROINDUSTRIAL </td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=CLAN4">CLAN4</a></td>
+              <td>CLARION</td>
+              <td>CLARION S.A. AGROINDUSTRIAL </td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=CLSC3">CLSC3</a></td>
+              <td>CELESC</td>
+              <td>CENTRAIS ELETRICAS DE SANTA CATARINA S.A</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=CLSC4">CLSC4</a></td>
+              <td>CELESC</td>
+              <td>CENTRAIS ELETRICAS DE SANTA CATARINA S.A</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=CLSC5">CLSC5</a></td>
+              <td>CELESC</td>
+              <td>CENTRAIS ELETRICAS DE SANTA CATARINA S.A</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=CLSC6">CLSC6</a></td>
+              <td>CELESC</td>
+              <td>CENTRAIS ELETRICAS DE SANTA CATARINA S.A</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=CMET4">CMET4</a></td>
+              <td>CAEMI</td>
+              <td>CAEMI MINERA��O E METALURGIA S.A.</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=CMIG3">CMIG3</a></td>
+              <td>CEMIG</td>
+              <td>CIA ENERG MINAS GERAIS - CEMIG</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=CMIG4">CMIG4</a></td>
+              <td>CEMIG</td>
+              <td>CIA ENERG MINAS GERAIS - CEMIG</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=CMMA4">CMMA4</a></td>
+              <td>CMA PARTICIPACOES SA</td>
+              <td>CMA PARTICIPA��ES SA</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=CNFB4">CNFB4</a></td>
+              <td>CONFAB</td>
+              <td>CONFAB INDUSTRIAL SA</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=CNTO3">CNTO3</a></td>
+              <td>CENTAURO</td>
+              <td>GRUPO SBF SA</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=COCE3">COCE3</a></td>
+              <td>CIA ENERG CEARA - COELCE</td>
+              <td>CIA ENERG CEARA - COELCE</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=COCE5">COCE5</a></td>
+              <td>CIA ENERG CEARA - COELCE</td>
+              <td>CIA ENERG CEARA - COELCE</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=COCE6">COCE6</a></td>
+              <td>CIA ENERG CEARA - COELCE</td>
+              <td>CIA ENERG CEARA - COELCE</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=COGN3">COGN3</a></td>
+              <td>COGNA</td>
+              <td>KROTON EDUCACIONAL S.A.</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=CORR3">CORR3</a></td>
+              <td>CORREA RIBEIRO SA COM. IND.</td>
+              <td>CORREA RIBEIRO SA COM IND</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=CORR4">CORR4</a></td>
+              <td>CORREA RIBEIRO SA COM. IND.</td>
+              <td>CORREA RIBEIRO SA COM IND</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=CPFE3">CPFE3</a></td>
+              <td>CPFL ENERGIA S.A.</td>
+              <td>CPFL ENERGIA SA</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=CPFG3">CPFG3</a></td>
+              <td>CPFL GERA��O DE ENERGIA S/A</td>
+              <td>CPFL GERA��O DE ENERGIA S/A</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=CPFG4">CPFG4</a></td>
+              <td>CPFL GERA��O DE ENERGIA S/A</td>
+              <td>CPFL GERA��O DE ENERGIA S/A</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=CPFP4">CPFP4</a></td>
+              <td>CPFL - PIRATININGA</td>
+              <td>CIA PIRATININGA DE FOR�A E LUZ</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=CPLE3">CPLE3</a></td>
+              <td>COPEL</td>
+              <td>COMPANHIA PARANAENSE DE ENERGIA</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=CPLE5">CPLE5</a></td>
+              <td>COPEL</td>
+              <td>COMPANHIA PARANAENSE DE ENERGIA</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=CPLE6">CPLE6</a></td>
+              <td>COPEL</td>
+              <td>COMPANHIA PARANAENSE DE ENERGIA</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=CPNY3">CPNY3</a></td>
+              <td>COMPANY  S/A</td>
+              <td>COMPANY SA</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=CPRE3">CPRE3</a></td>
+              <td>CPFL RENOVAV</td>
+              <td>CPFL ENERGIAS RENOV�VEIS S.A.</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=CPSL3">CPSL3</a></td>
+              <td>COPESUL</td>
+              <td>COPESUL - COMPANHIA PETROQU�MICA DO SUL</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=CRBM3">CRBM3</a></td>
+              <td>CARA�BA METAIS S.A</td>
+              <td>CARAIBA METAIS SA</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=CRBM7">CRBM7</a></td>
+              <td>CARA�BA METAIS S.A</td>
+              <td>CARAIBA METAIS SA</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=CRDE3">CRDE3</a></td>
+              <td>CR2</td>
+              <td>CR2 EMPREENDIMENTOS IMOBILI�RIOS S/A</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=CREM3">CREM3</a></td>
+              <td>CREMER S.A.</td>
+              <td>CREMER SA</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=CREM4">CREM4</a></td>
+              <td>CREMER S.A.</td>
+              <td>CREMER SA</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=CRFB3">CRFB3</a></td>
+              <td>CARREFOUR BR</td>
+              <td>ATACAD�O S.A.</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=CRIV3">CRIV3</a></td>
+              <td>ALFA FINANCEIRA</td>
+              <td>FINANCEIRA ALFA S.A.- C.F.I</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=CRIV4">CRIV4</a></td>
+              <td>ALFA FINANCEIRA</td>
+              <td>FINANCEIRA ALFA S.A.- C.F.I</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=CRPG3">CRPG3</a></td>
+              <td>CRISTAL</td>
+              <td>CRISTAL PIGMENTOS DO BRASIL S.A.</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=CRPG5">CRPG5</a></td>
+              <td>CRISTAL</td>
+              <td>CRISTAL PIGMENTOS DO BRASIL S.A.</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=CRPG6">CRPG6</a></td>
+              <td>CRISTAL</td>
+              <td>CRISTAL PIGMENTOS DO BRASIL S.A.</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=CRTP3">CRTP3</a></td>
+              <td>CELULAR CRT PARTICIPA��ES S/A</td>
+              <td>CELULAR CRT PARTICIPA��ES S.A.</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=CRTP5">CRTP5</a></td>
+              <td>CELULAR CRT PARTICIPA��ES S/A</td>
+              <td>CELULAR CRT PARTICIPA��ES S.A.</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=CRUZ3">CRUZ3</a></td>
+              <td>SOUZA CRUZ</td>
+              <td>SOUZA CRUZ SA</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=CSAB3">CSAB3</a></td>
+              <td>COMPANHIA DE SEGUROS ALIAN�A DA BAHIA</td>
+              <td>CIA SEGUROS ALIANCA BAHIA</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=CSAB4">CSAB4</a></td>
+              <td>COMPANHIA DE SEGUROS ALIAN�A DA BAHIA</td>
+              <td>CIA SEGUROS ALIANCA BAHIA</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=CSAN3">CSAN3</a></td>
+              <td>COSAN SA INDUSTRIA E COMERCIO</td>
+              <td>COSAN SA INDUSTRIA E COMERCIO</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=CSMG3">CSMG3</a></td>
+              <td>COPASA MG</td>
+              <td>COMPANHIA DE SANEAMENTO DE MINAS GERAIS</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=CSNA3">CSNA3</a></td>
+              <td>CSN</td>
+              <td>CIA SIDERURGICA NACIONAL</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=CSPC3">CSPC3</a></td>
+              <td>COSIPA</td>
+              <td>COMPANHIA SIDER�RGICA PAULISTA - COSIPA</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=CSPC4">CSPC4</a></td>
+              <td>COSIPA</td>
+              <td>COMPANHIA SIDER�RGICA PAULISTA - COSIPA</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=CSRN3">CSRN3</a></td>
+              <td>COSERN</td>
+              <td>CIA ENERG�TICA DO RIO GRANDE DO NORTE</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=CSRN5">CSRN5</a></td>
+              <td>COSERN</td>
+              <td>CIA ENERG�TICA DO RIO GRANDE DO NORTE</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=CSRN6">CSRN6</a></td>
+              <td>COSERN</td>
+              <td>CIA ENERG�TICA DO RIO GRANDE DO NORTE</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=CSTB3">CSTB3</a></td>
+              <td>COMPANHIA SIDER�RGICA DE TUBAR�O</td>
+              <td>COMPANHIA  SIDER�RGICA  DE  TUBAR�O</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=CSTB4">CSTB4</a></td>
+              <td>COMPANHIA SIDER�RGICA DE TUBAR�O</td>
+              <td>COMPANHIA  SIDER�RGICA  DE  TUBAR�O</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=CTIP3">CTIP3</a></td>
+              <td>CETIP</td>
+              <td>CETIP S.A. - BALC�O ORGANIZADO DE ATIVOS</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=CTKA3">CTKA3</a></td>
+              <td>KARSTEN</td>
+              <td>KARSTEN SA</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=CTKA4">CTKA4</a></td>
+              <td>KARSTEN</td>
+              <td>KARSTEN SA</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=CTNM3">CTNM3</a></td>
+              <td>COTEMINAS</td>
+              <td>CIA TECIDOS NORTE DE MINAS - COTEMINAS</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=CTNM4">CTNM4</a></td>
+              <td>COTEMINAS</td>
+              <td>CIA TECIDOS NORTE DE MINAS - COTEMINAS</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=CTPC3">CTPC3</a></td>
+              <td>CTM CITRUS SA</td>
+              <td>CTM CITRUS SA</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=CTPC4">CTPC4</a></td>
+              <td>CTM CITRUS SA</td>
+              <td>CTM CITRUS SA</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=CTSA3">CTSA3</a></td>
+              <td>SANTANENSE</td>
+              <td>CIA TECIDOS SANTANENSE</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=CTSA4">CTSA4</a></td>
+              <td>SANTANENSE</td>
+              <td>CIA TECIDOS SANTANENSE</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=CTSA8">CTSA8</a></td>
+              <td>SANTANENSE</td>
+              <td>CIA TECIDOS SANTANENSE</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=CTWR3">CTWR3</a></td>
+              <td>BLUE TREE HOTELS</td>
+              <td>BLUE TREE HOTELS & RESORTS DO BRASIL SA</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=CVCB3">CVCB3</a></td>
+              <td>CVC BRASIL</td>
+              <td>CVC BRASIL OPERADORA E AG�NCIA DE VIAGENS S.A.</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=CYRE3">CYRE3</a></td>
+              <td>CYRELA BRAZIL REALTY</td>
+              <td>CYRELA BRAZIL REALTY S.A. EMPREEN E PART</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=CYRE4">CYRE4</a></td>
+              <td>CYRELA BRAZIL REALTY</td>
+              <td>CYRELA BRAZIL REALTY S.A. EMPREEN E PART</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=CZLT33">CZLT33</a></td>
+              <td>Cosan Ltd</td>
+              <td>COSAN LIMITED</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=CZRS3">CZRS3</a></td>
+              <td>Cruzeiro Sul</td>
+              <td>BANCO CRUZEIRO DO SUL SA</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=CZRS4">CZRS4</a></td>
+              <td>Cruzeiro Sul</td>
+              <td>BANCO CRUZEIRO DO SUL SA</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=DAGB33">DAGB33</a></td>
+              <td>DUFRY AG</td>
+              <td>DUFRY A.G.</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=DASA3">DASA3</a></td>
+              <td>DIAGNOSTICOS DA AMERICA SA</td>
+              <td>DIAGNOSTICOS DA AMERICA SA</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=DAYC3">DAYC3</a></td>
+              <td>Daycoval</td>
+              <td>BANCO DAYCOVAL S.A.</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=DAYC4">DAYC4</a></td>
+              <td>Daycoval</td>
+              <td>BANCO DAYCOVAL S.A.</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=DFVA3">DFVA3</a></td>
+              <td>D F VASCONCELLOS S/A O.M.A.P.</td>
+              <td>D F VASCONC SA OPT MEC A PREC</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=DFVA4">DFVA4</a></td>
+              <td>D F VASCONCELLOS S/A O.M.A.P.</td>
+              <td>D F VASCONC SA OPT MEC A PREC</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=DHBI3">DHBI3</a></td>
+              <td>DHB</td>
+              <td>DHB IND E COMERCIO SA</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=DHBI4">DHBI4</a></td>
+              <td>DHB</td>
+              <td>DHB IND E COMERCIO SA</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=DIRR3">DIRR3</a></td>
+              <td>Direcional Engenharia</td>
+              <td>DIRECIONAL ENGENHARIA S.A.</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=DJON4">DJON4</a></td>
+              <td>DIJON S/A</td>
+              <td>DIJON SA</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=DMMO3">DMMO3</a></td>
+              <td>DOMMO</td>
+              <td>DOMMO ENERGIA S.A.</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=DOCA3">DOCA3</a></td>
+              <td>DOCAS S.A.</td>
+              <td>DOCAS INVESTIMENTOS SA</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=DOCA4">DOCA4</a></td>
+              <td>DOCAS S.A.</td>
+              <td>DOCAS INVESTIMENTOS SA</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=DOHL3">DOHL3</a></td>
+              <td>DOHLER</td>
+              <td>DOHLER S.A.</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=DOHL4">DOHL4</a></td>
+              <td>DOHLER</td>
+              <td>DOHLER S.A.</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=DPPI3">DPPI3</a></td>
+              <td>IPIRANGA DISTRIBUIDORA</td>
+              <td>DISTRIB PRODUTOS PETROLEO IPIRANGA S.A.</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=DPPI4">DPPI4</a></td>
+              <td>IPIRANGA DISTRIBUIDORA</td>
+              <td>DISTRIB PRODUTOS PETROLEO IPIRANGA S.A.</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=DSUL3">DSUL3</a></td>
+              <td>DATASUL</td>
+              <td>DATASUL S.A.</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=DTCY3">DTCY3</a></td>
+              <td>DTCOM</td>
+              <td>DTCOM - DIRECT TO COMPANY S.A.</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=DTEX3">DTEX3</a></td>
+              <td>DURATEX</td>
+              <td>SATIPEL INDUSTRIAL S/A</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=DUFB11">DUFB11</a></td>
+              <td>DUFRY SOUTH AMERICA LTD.</td>
+              <td>DUFRY SOUTH AMERICA LTD.</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=DUQE3">DUQE3</a></td>
+              <td>METALURGICA DUQUE SA</td>
+              <td>METALURGICA DUQUE SA</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=DUQE4">DUQE4</a></td>
+              <td>METALURGICA DUQUE SA</td>
+              <td>METALURGICA DUQUE SA</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=DURA3">DURA3</a></td>
+              <td>DURATEX</td>
+              <td>DURATEX SA</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=DURA4">DURA4</a></td>
+              <td>DURATEX</td>
+              <td>DURATEX SA</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=DXTG4">DXTG4</a></td>
+              <td>DIXIE TOGA</td>
+              <td>DIXIE TOGA SA</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=EALT3">EALT3</a></td>
+              <td>ELECTRO A�O ALTONA S/A</td>
+              <td>ELECTRO A�O ALTONA S/A</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=EALT4">EALT4</a></td>
+              <td>ELECTRO A�O ALTONA S/A</td>
+              <td>ELECTRO A�O ALTONA S/A</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=EBCO3">EBCO3</a></td>
+              <td>EMBRACO</td>
+              <td>EMP BRAS COMPRES SA - EMBRACO</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=EBCO4">EBCO4</a></td>
+              <td>EMBRACO</td>
+              <td>EMP BRAS COMPRES SA - EMBRACO</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=EBEN4">EBEN4</a></td>
+              <td>BANDEIRANTE</td>
+              <td>BANDEIRANTE ENERGIA S/A</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=EBTP3">EBTP3</a></td>
+              <td>EMBRATEL PARTICIPA��ES SA</td>
+              <td>EMBRATEL PARTICIPA��ES SA</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=EBTP4">EBTP4</a></td>
+              <td>EMBRATEL PARTICIPA��ES SA</td>
+              <td>EMBRATEL PARTICIPA��ES SA</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=ECIS3">ECIS3</a></td>
+              <td>ECISA</td>
+              <td>ECISA ENG COM E INDUSTRIA SA</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=ECIS4">ECIS4</a></td>
+              <td>ECISA</td>
+              <td>ECISA ENG COM E INDUSTRIA SA</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=ECOR3">ECOR3</a></td>
+              <td>ECORODOVIAS</td>
+              <td>ECORODOVIAS INFRAESTRUTURA E LOG�STICA S.A.</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=ECPR3">ECPR3</a></td>
+              <td>ENCORPAR</td>
+              <td>EMP.NAC.C., R�DITO E PART. S.A. ENCORPAR</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=ECPR4">ECPR4</a></td>
+              <td>ENCORPAR</td>
+              <td>EMP.NAC.C., R�DITO E PART. S.A. ENCORPAR</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=EEEL3">EEEL3</a></td>
+              <td>CEEE</td>
+              <td>CIA ESTADUAL ENERG ELETR-CEEE</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=EEEL4">EEEL4</a></td>
+              <td>CEEE</td>
+              <td>CIA ESTADUAL ENERG ELETR-CEEE</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=EGIE3">EGIE3</a></td>
+              <td>	ENGIE BRASIL</td>
+              <td>ENGIE BRASIL ENERGIA S.A.</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=EKTR3">EKTR3</a></td>
+              <td>ELEKTRO ELETRICIDADE E SERVI�OS S.A.</td>
+              <td>ELEKTRO ELETRICIDADE E SERVI�OS S.A.</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=EKTR4">EKTR4</a></td>
+              <td>ELEKTRO ELETRICIDADE E SERVI�OS S.A.</td>
+              <td>ELEKTRO ELETRICIDADE E SERVI�OS S.A.</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=ELCA3">ELCA3</a></td>
+              <td>REDE EMPRESAS DE ENERGIA EL�TRICA S.A.</td>
+              <td>REDE EMPRESAS DE ENERGIA EL�TRICA S.A.</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=ELCA4">ELCA4</a></td>
+              <td>REDE EMPRESAS DE ENERGIA EL�TRICA S.A.</td>
+              <td>REDE EMPRESAS DE ENERGIA EL�TRICA S.A.</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=ELEK3">ELEK3</a></td>
+              <td>ELEKEIROZ S/A</td>
+              <td>ELEKEIROZ S/A</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=ELEK4">ELEK4</a></td>
+              <td>ELEKEIROZ S/A</td>
+              <td>ELEKEIROZ S/A</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=ELET3">ELET3</a></td>
+              <td>ELETROBR�S</td>
+              <td>CENTRAIS ELET BRASILEIRAS SA</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=ELET5">ELET5</a></td>
+              <td>ELETROBR�S</td>
+              <td>CENTRAIS ELET BRASILEIRAS SA</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=ELET6">ELET6</a></td>
+              <td>ELETROBR�S</td>
+              <td>CENTRAIS ELET BRASILEIRAS SA</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=ELEV3">ELEV3</a></td>
+              <td> ELEVA </td>
+              <td>ELEVA ALIMENTOS S/A</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=ELPL3">ELPL3</a></td>
+              <td>AES ELETROPAULO</td>
+              <td>ELETROPAULO METROPOLITANA EL.S.PAULO S.A</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=ELPL4">ELPL4</a></td>
+              <td>AES ELETROPAULO</td>
+              <td>ELETROPAULO METROPOLITANA EL.S.PAULO S.A</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=ELPL5">ELPL5</a></td>
+              <td>AES ELETROPAULO</td>
+              <td>ELETROPAULO METROPOLITANA EL.S.PAULO S.A</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=ELPL6">ELPL6</a></td>
+              <td>AES ELETROPAULO</td>
+              <td>ELETROPAULO METROPOLITANA EL.S.PAULO S.A</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=ELUM3">ELUM3</a></td>
+              <td>ELUMA</td>
+              <td>ELUMA SA INDUSTRIA E COMERCIO</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=ELUM4">ELUM4</a></td>
+              <td>ELUMA</td>
+              <td>ELUMA SA INDUSTRIA E COMERCIO</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=EMAE4">EMAE4</a></td>
+              <td>EMAE</td>
+              <td>EMAE-EMP.METROPOLITANA �GUAS ENERGIA S.A</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=EMBR3">EMBR3</a></td>
+              <td>EMBRAER</td>
+              <td>EMBRAER EMP BRAS AERON SA</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=ENAT3">ENAT3</a></td>
+              <td>ENAUTA PART</td>
+              <td>ENAUTA PARTICIPA��ES S.A.</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=ENBR3">ENBR3</a></td>
+              <td>EDP ENERGIAS DO BRASIL S/A</td>
+              <td>EDP ENERGIAS DO BRASIL S/A</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=ENER3">ENER3</a></td>
+              <td>ENERSUL</td>
+              <td>EMPRESA ENERG�TICA DE M.S. S.A.</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=ENER5">ENER5</a></td>
+              <td>ENERSUL</td>
+              <td>EMPRESA ENERG�TICA DE M.S. S.A.</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=ENER6">ENER6</a></td>
+              <td>ENERSUL</td>
+              <td>EMPRESA ENERG�TICA DE M.S. S.A.</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=ENEV3">ENEV3</a></td>
+              <td>ENEVA</td>
+              <td>ENEVA S.A</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=ENGI11">ENGI11</a></td>
+              <td>ENERGISA</td>
+              <td>ENERGISA SA</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=ENGI3">ENGI3</a></td>
+              <td>ENERGISA</td>
+              <td>ENERGISA SA</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=ENGI4">ENGI4</a></td>
+              <td>ENERGISA</td>
+              <td>ENERGISA SA</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=ENMT3">ENMT3</a></td>
+              <td>ENERGISA MT</td>
+              <td>ENERGISA MATO GROSSO-DISTRIBUIDORA DE ENERGIA S/A</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=ENMT4">ENMT4</a></td>
+              <td>ENERGISA MT</td>
+              <td>ENERGISA MATO GROSSO-DISTRIBUIDORA DE ENERGIA S/A</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=EQTL3">EQTL3</a></td>
+              <td>EQUATORIAL ENERGIA S.A.</td>
+              <td>EQUATORIAL ENERGIA S.A.</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=ESCE3">ESCE3</a></td>
+              <td>ESCELSA</td>
+              <td>ESPIRITO SANTO CENTRAIS ELETRICAS SA</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=ESTC11">ESTC11</a></td>
+              <td>YDUQS PART</td>
+              <td>ESTACIO PARTICIPACOES S.A.</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=ESTC3">ESTC3</a></td>
+              <td>YDUQS PART</td>
+              <td>ESTACIO PARTICIPACOES S.A.</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=ESTC4">ESTC4</a></td>
+              <td>YDUQS PART</td>
+              <td>ESTACIO PARTICIPACOES S.A.</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=ESTR3">ESTR3</a></td>
+              <td>ESTRELA</td>
+              <td>MANUFATURA DE  BRINQUEDOS ESTRELA SA</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=ESTR4">ESTR4</a></td>
+              <td>ESTRELA</td>
+              <td>MANUFATURA DE  BRINQUEDOS ESTRELA SA</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=ETER3">ETER3</a></td>
+              <td>ETERNIT</td>
+              <td>ETERNIT SA</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=ETER4">ETER4</a></td>
+              <td>ETERNIT</td>
+              <td>ETERNIT SA</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=EUCA3">EUCA3</a></td>
+              <td>EUCATEX</td>
+              <td>EUCATEX SA IND E COMERCIO</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=EUCA4">EUCA4</a></td>
+              <td>EUCATEX</td>
+              <td>EUCATEX SA IND E COMERCIO</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=EVEN3">EVEN3</a></td>
+              <td>Even</td>
+              <td>EVEN CONSTRUTORA E INCORPORADORA S/A</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=EZTC3">EZTC3</a></td>
+              <td>EZTec</td>
+              <td>EZ TEC EMPREEND. E PARTICIPA��ES S/A</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=FBMC3">FBMC3</a></td>
+              <td>FIBAM</td>
+              <td>FIBAM CIA INDUSTRIAL</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=FBMC4">FBMC4</a></td>
+              <td>FIBAM</td>
+              <td>FIBAM CIA INDUSTRIAL</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=FBRA4">FBRA4</a></td>
+              <td>FERTIBR�S S/A</td>
+              <td>FERTIBRAS SA</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=FCAP3">FCAP3</a></td>
+              <td>FICAP</td>
+              <td>SAM INDUSTRIAS SA</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=FCAP4">FCAP4</a></td>
+              <td>FICAP</td>
+              <td>SAM INDUSTRIAS SA</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=FESA3">FESA3</a></td>
+              <td>FERBASA</td>
+              <td>CIA FERRO LIGAS BAHIA FERBASA</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=FESA4">FESA4</a></td>
+              <td>FERBASA</td>
+              <td>CIA FERRO LIGAS BAHIA FERBASA</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=FFTL3">FFTL3</a></td>
+              <td>FOSFERTIL</td>
+              <td>FERTILIZANTES FOSFATADOS S.A. FOSFERTIL</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=FFTL4">FFTL4</a></td>
+              <td>FOSFERTIL</td>
+              <td>FERTILIZANTES FOSFATADOS S.A. FOSFERTIL</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=FGUI3">FGUI3</a></td>
+              <td>FERREIRA GUIMARAES</td>
+              <td>CIA TEXTIL FERREIRA GUIMARAES</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=FGUI4">FGUI4</a></td>
+              <td>FERREIRA GUIMARAES</td>
+              <td>CIA TEXTIL FERREIRA GUIMARAES</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=FHER3">FHER3</a></td>
+              <td>Fer Heringer</td>
+              <td>FERTILIZANTES HERINGER SA</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=FIBR3">FIBR3</a></td>
+              <td>Fibria</td>
+              <td>VOTORANTIM CELULOSE E PAPEL SA</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=FIGE3">FIGE3</a></td>
+              <td>INVESTIMENTOS BEMGE</td>
+              <td>INVESTIMENTOS BEMGE S.A.</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=FIGE4">FIGE4</a></td>
+              <td>INVESTIMENTOS BEMGE</td>
+              <td>INVESTIMENTOS BEMGE S.A.</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=FJTA3">FJTA3</a></td>
+              <td>FORJAS TAURUS SA</td>
+              <td>FORJAS TAURUS SA</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=FJTA4">FJTA4</a></td>
+              <td>FORJAS TAURUS SA</td>
+              <td>FORJAS TAURUS SA</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=FLCL3">FLCL3</a></td>
+              <td>CATAG LEOPOLDINA</td>
+              <td>CIA FOR�A E LUZ CATAGUAZES-LEOPOLDINA</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=FLCL5">FLCL5</a></td>
+              <td>CATAG LEOPOLDINA</td>
+              <td>CIA FOR�A E LUZ CATAGUAZES-LEOPOLDINA</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=FLCL6">FLCL6</a></td>
+              <td>CATAG LEOPOLDINA</td>
+              <td>CIA FOR�A E LUZ CATAGUAZES-LEOPOLDINA</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=FLRY3">FLRY3</a></td>
+              <td>FLEURY</td>
+              <td>FLEURY S.A.</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=FRAS3">FRAS3</a></td>
+              <td>FRAS-LE S.A.</td>
+              <td>FRAS-LE SA</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=FRAS4">FRAS4</a></td>
+              <td>FRAS-LE S.A.</td>
+              <td>FRAS-LE SA</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=FRIO3">FRIO3</a></td>
+              <td>Metalfrio</td>
+              <td>METALFRIO SOLUTIONS S/A</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=FRTA3">FRTA3</a></td>
+              <td>POMIFRUTAS</td>
+              <td>POMIFRUTAS S/A</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=FTRX3">FTRX3</a></td>
+              <td>FAB TECIDOS C RENAUX</td>
+              <td>FAB TECIDOS CARLOS RENAUX SA</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=FTRX4">FTRX4</a></td>
+              <td>FAB TECIDOS C RENAUX</td>
+              <td>FAB TECIDOS CARLOS RENAUX SA</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=GAFP3">GAFP3</a></td>
+              <td>CIMOB</td>
+              <td>CIMOB PARTICIPA��ES SA</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=GAFP4">GAFP4</a></td>
+              <td>CIMOB</td>
+              <td>CIMOB PARTICIPA��ES SA</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=GALO3">GALO3</a></td>
+              <td>EMEEGE ESCAPAMENTOS</td>
+              <td>DE MAIO GALLO S.A IND. COM. P�S P/ AUTOM</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=GALO4">GALO4</a></td>
+              <td>EMEEGE ESCAPAMENTOS</td>
+              <td>DE MAIO GALLO S.A IND. COM. P�S P/ AUTOM</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=GAZO3">GAZO3</a></td>
+              <td>GAZOLA SA IND�STRIA METALURGICA</td>
+              <td>GAZOLA SA IND�STRIA METALURGICA</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=GAZO4">GAZO4</a></td>
+              <td>GAZOLA SA IND�STRIA METALURGICA</td>
+              <td>GAZOLA SA IND�STRIA METALURGICA</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=GBIO33">GBIO33</a></td>
+              <td>BIOTOSCANA</td>
+              <td>BIOTOSCANA INVESTMENTS S.A.</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=GEPA3">GEPA3</a></td>
+              <td>DUKE ENERGY INT,GERA��O PARANAPANEMA SA</td>
+              <td>DUKE ENERGY INT,GERA��O PARANAPANEMA SA</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=GEPA4">GEPA4</a></td>
+              <td>DUKE ENERGY INT,GERA��O PARANAPANEMA SA</td>
+              <td>DUKE ENERGY INT,GERA��O PARANAPANEMA SA</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=GETI3">GETI3</a></td>
+              <td>AES TIETE SA</td>
+              <td>AES TIETE SA</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=GETI4">GETI4</a></td>
+              <td>AES TIETE SA</td>
+              <td>AES TIETE SA</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=GFSA3">GFSA3</a></td>
+              <td>GAFISA</td>
+              <td>GAFISA SA</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=GGBR3">GGBR3</a></td>
+              <td>GERDAU S.A.</td>
+              <td>GERDAU SA</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=GGBR4">GGBR4</a></td>
+              <td>GERDAU S.A.</td>
+              <td>GERDAU SA</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=GLOB4">GLOB4</a></td>
+              <td>VIAVAREJO</td>
+              <td>VIA VAREJO S.A.</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=GNDI3">GNDI3</a></td>
+              <td>INTERMEDICA</td>
+              <td>NOTRE DAME INTERMEDICA PARTICIPACOES SA</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=GOAU3">GOAU3</a></td>
+              <td>METAL�RGICA GERDAU</td>
+              <td>METALURGICA GERDAU SA</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=GOAU4">GOAU4</a></td>
+              <td>METAL�RGICA GERDAU</td>
+              <td>METALURGICA GERDAU SA</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=GOLL4">GOLL4</a></td>
+              <td>GOL LINHAS AEREAS INTELIGENTES SA</td>
+              <td>GOL LINHAS AEREAS INTELIGENTES SA</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=GPCP3">GPCP3</a></td>
+              <td>GPC PARTICIPACOES SA</td>
+              <td>GPC PARTICIPACOES SA</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=GPIV33">GPIV33</a></td>
+              <td>GP INVESTMENTS, LTD</td>
+              <td>GP INVESTMENTS, LTD</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=GRND3">GRND3</a></td>
+              <td>GRENDENE SA</td>
+              <td>GRENDENE SA</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=GRNL4">GRNL4</a></td>
+              <td>GRAN�LEO S/A</td>
+              <td>GRANOLEO SA CI SEMS OLEAGS DER</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=GSHP3">GSHP3</a></td>
+              <td>Generalshopp</td>
+              <td>GENERAL SHOPPING BRASIL SA</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=GUAR3">GUAR3</a></td>
+              <td>GUARARAPES CONFEC��ES</td>
+              <td>GUARARAPES CONFEC��ES SA</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=GUAR4">GUAR4</a></td>
+              <td>GUARARAPES CONFEC��ES</td>
+              <td>GUARARAPES CONFEC��ES SA</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=GVTT3">GVTT3</a></td>
+              <td>GVT HOLDING</td>
+              <td>GVT (HOLDING) S.A.</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=HAGA3">HAGA3</a></td>
+              <td>HAGA</td>
+              <td>FERRAGENS HAGA SA</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=HAGA4">HAGA4</a></td>
+              <td>HAGA</td>
+              <td>FERRAGENS HAGA SA</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=HAPV3">HAPV3</a></td>
+              <td>HAPVIDA</td>
+              <td>HAPVIDA PARTICIPACOES E INVESTIMENTOS SA</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=HBOR3">HBOR3</a></td>
+              <td>Helbor</td>
+              <td>HELBOR EMPREENDIMENTOS S/A</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=HBTS5">HBTS5</a></td>
+              <td>CIA HABITASUL</td>
+              <td>COMPANHIIA HABITASUL DE PARTICIPA��ES</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=HETA3">HETA3</a></td>
+              <td>HERCULES S/A</td>
+              <td>HERCULES S/A - FABRICA DE TALHERES</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=HETA4">HETA4</a></td>
+              <td>HERCULES S/A</td>
+              <td>HERCULES S/A - FABRICA DE TALHERES</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=HGTX3">HGTX3</a></td>
+              <td>CIA HERING</td>
+              <td>CIA HERING</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=HGTX4">HGTX4</a></td>
+              <td>CIA HERING</td>
+              <td>CIA HERING</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=HOOT4">HOOT4</a></td>
+              <td>HOTEIS OTHON S.A.</td>
+              <td>HOTEIS OTHON SA</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=HRTP3">HRTP3</a></td>
+              <td>PETRORIO</td>
+              <td>PETRO RIO S.A.</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=HYPE3">HYPE3</a></td>
+              <td>HYPERA</td>
+              <td>HYPERA S.A.</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=ICPI3">ICPI3</a></td>
+              <td>CIMENTO ITAU CORUMBA</td>
+              <td>CIMENTO ITAU DE CORUMBA SA</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=IDNT3">IDNT3</a></td>
+              <td>IDEIASNET</td>
+              <td>IDEIASNET SA</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=IDVL11">IDVL11</a></td>
+              <td>Indusval</td>
+              <td>BCO INDUSVAL S.A.</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=IDVL3">IDVL3</a></td>
+              <td>Indusval</td>
+              <td>BCO INDUSVAL S.A.</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=IDVL4">IDVL4</a></td>
+              <td>Indusval</td>
+              <td>BCO INDUSVAL S.A.</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=IENG3">IENG3</a></td>
+              <td>INEPAR ENERGIA</td>
+              <td>INEPAR ENERGIA SA</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=IENG5">IENG5</a></td>
+              <td>INEPAR ENERGIA</td>
+              <td>INEPAR ENERGIA SA</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=IGBR3">IGBR3</a></td>
+              <td>GRADIENTE</td>
+              <td>GRADIENTE ELETRONICA S A</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=IGBR5">IGBR5</a></td>
+              <td>GRADIENTE</td>
+              <td>GRADIENTE ELETRONICA S A</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=IGBR6">IGBR6</a></td>
+              <td>GRADIENTE</td>
+              <td>GRADIENTE ELETRONICA S A</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=IGTA3">IGTA3</a></td>
+              <td>IGUATEMI</td>
+              <td>IGUATEMI EMPRESA DE SHOPPING CENTERS S.A</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=IGUA3">IGUA3</a></td>
+              <td>CIA. IGUA�U DE CAF� SOL�VEL</td>
+              <td>CIA. IGUA�U DE CAF� SOL�VEL</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=IGUA5">IGUA5</a></td>
+              <td>CIA. IGUA�U DE CAF� SOL�VEL</td>
+              <td>CIA. IGUA�U DE CAF� SOL�VEL</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=IGUA6">IGUA6</a></td>
+              <td>CIA. IGUA�U DE CAF� SOL�VEL</td>
+              <td>CIA. IGUA�U DE CAF� SOL�VEL</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=ILLS4">ILLS4</a></td>
+              <td>LINHAS CIRCULO</td>
+              <td>CIRCULO S/A</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=ILMD3">ILMD3</a></td>
+              <td>YARA BRASIL FERTILIZANTES S.A.</td>
+              <td>YARA BRASIL FERTILIZANTES S.A.</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=ILMD4">ILMD4</a></td>
+              <td>YARA BRASIL FERTILIZANTES S.A.</td>
+              <td>YARA BRASIL FERTILIZANTES S.A.</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=IMBI3">IMBI3</a></td>
+              <td>COMPANHIA DOCAS DE IMBITUBA</td>
+              <td>CIA DOCAS DE IMBITUBA</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=IMBI4">IMBI4</a></td>
+              <td>COMPANHIA DOCAS DE IMBITUBA</td>
+              <td>CIA DOCAS DE IMBITUBA</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=IMCH3">IMCH3</a></td>
+              <td>IMC HOLDINGS</td>
+              <td>International Meal Company Holdings S.A.</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=INEP3">INEP3</a></td>
+              <td>INEPAR S/A</td>
+              <td>INEPAR SA IND E CONSTRUCOES</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=INEP4">INEP4</a></td>
+              <td>INEPAR S/A</td>
+              <td>INEPAR SA IND E CONSTRUCOES</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=INET3">INET3</a></td>
+              <td>ATOMPAR</td>
+              <td>ATOM PARTICIPACOES S.A.</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=INHA3">INHA3</a></td>
+              <td>GAFISA</td>
+              <td>GAFISA SA</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=IRBR3">IRBR3</a></td>
+              <td>IRBBRASIL RE</td>
+              <td>IRB - BRASIL RESSEGUROS S.A.</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=ITEC3">ITEC3</a></td>
+              <td>ITAUTEC PHILCO SA - GRUPO ITAUTEC PHILCO</td>
+              <td>ITAUTEC PHILCO S.A. - GRUPO ITAUTEC PHILCO</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=ITSA3">ITSA3</a></td>
+              <td>ITA�SA</td>
+              <td>ITA�SA - INVESTIMENTOS ITA� S.A.</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=ITSA4">ITSA4</a></td>
+              <td>ITA�SA</td>
+              <td>ITA�SA - INVESTIMENTOS ITA� S.A.</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=ITUB3">ITUB3</a></td>
+              <td>ITAUUNIBANCO</td>
+              <td>ITAU UNIBANCO HOLDING S.A.</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=ITUB4">ITUB4</a></td>
+              <td>ITAUUNIBANCO</td>
+              <td>ITAU UNIBANCO HOLDING S.A.</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=IVTT3">IVTT3</a></td>
+              <td>BHG</td>
+              <td>BHG S.A. - BRAZIL HOSPITALITY GROUP</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=JBDU3">JBDU3</a></td>
+              <td>J B DUARTE</td>
+              <td>INDS J B DUARTE SA</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=JBDU4">JBDU4</a></td>
+              <td>J B DUARTE</td>
+              <td>INDS J B DUARTE SA</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=JBSS3">JBSS3</a></td>
+              <td>JBS</td>
+              <td>JBS S.A.</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=JFAB4">JFAB4</a></td>
+              <td>JARAGUA FABRIL</td>
+              <td>JARAGUA FABRIL SA</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=JFEN3">JFEN3</a></td>
+              <td>JO�O FORTES ENGENHARIA S.A.</td>
+              <td>JOAO FORTES ENGENHARIA SA</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=JHSF3">JHSF3</a></td>
+              <td>JHSF Part</td>
+              <td>JHSF PARTICIPA��ES SA</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=JOPA3">JOPA3</a></td>
+              <td>JOSAPAR S/A</td>
+              <td>JOSAPAR- JOAQUIM OLIVEIRA S/A PARTICIP</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=JOPA4">JOPA4</a></td>
+              <td>JOSAPAR S/A</td>
+              <td>JOSAPAR- JOAQUIM OLIVEIRA S/A PARTICIP</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=JPSA3">JPSA3</a></td>
+              <td>JEREISSATI PARTICIPACOES</td>
+              <td>JEREISSATI PARTICIPACOES</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=JSLG3">JSLG3</a></td>
+              <td>JULIO SIMOES</td>
+              <td>J�LIO SIM�ES LOG�STICA S.A.</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=KEPL3">KEPL3</a></td>
+              <td>KEPLER WEBER SA</td>
+              <td>KEPLER WEBER SA</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=KLBN11">KLBN11</a></td>
+              <td>KLABIN</td>
+              <td>KLABIN S.A.</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=KLBN3">KLBN3</a></td>
+              <td>KLABIN</td>
+              <td>KLABIN S.A.</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=KLBN4">KLBN4</a></td>
+              <td>KLABIN</td>
+              <td>KLABIN S.A.</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=KROT11">KROT11</a></td>
+              <td>COGNA</td>
+              <td>KROTON EDUCACIONAL S.A.</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=KROT3">KROT3</a></td>
+              <td>COGNA</td>
+              <td>KROTON EDUCACIONAL S.A.</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=KROT4">KROT4</a></td>
+              <td>COGNA</td>
+              <td>KROTON EDUCACIONAL S.A.</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=KSSA3">KSSA3</a></td>
+              <td>KLABINSEGALL</td>
+              <td>KLABIN SEGALL S.A.</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=LAME3">LAME3</a></td>
+              <td>LOJAS AMERICANAS S.A.</td>
+              <td>LOJAS AMERICANAS SA</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=LAME4">LAME4</a></td>
+              <td>LOJAS AMERICANAS S.A.</td>
+              <td>LOJAS AMERICANAS SA</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=LATM11">LATM11</a></td>
+              <td>LATAM AIRLN</td>
+              <td>LATAM AIRLINES GROUP S.A.</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=LATS3">LATS3</a></td>
+              <td>REXAM BEVERAGE CAN SOUTH AMERICA</td>
+              <td>REXAM BEVERAGE CAN SOUTH AMERICA S.A.</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=LCAM3">LCAM3</a></td>
+              <td>LOCAMERICA</td>
+              <td>COMPANHIA DE LOCA��O DAS AM�RICAS</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=LCSA3">LCSA3</a></td>
+              <td>N�O  CONSTA</td>
+              <td>PARMALAT BRASIL S.A  IND DE  ALIMENTOS.</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=LCSA4">LCSA4</a></td>
+              <td>N�O  CONSTA</td>
+              <td>PARMALAT BRASIL S.A  IND DE  ALIMENTOS.</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=LECO3">LECO3</a></td>
+              <td>LECO</td>
+              <td>CIA LECO DE PRODS ALIMENTICIOS</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=LECO4">LECO4</a></td>
+              <td>LECO</td>
+              <td>CIA LECO DE PRODS ALIMENTICIOS</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=LETO3">LETO3</a></td>
+              <td>MITTO</td>
+              <td>INDUSTRIAS MICHELETTO S/A</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=LETO5">LETO5</a></td>
+              <td>MITTO</td>
+              <td>INDUSTRIAS MICHELETTO S/A</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=LEVE3">LEVE3</a></td>
+              <td>MAHLE METAL LEVE</td>
+              <td>MAHLE METAL LEVE S.A.</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=LEVE4">LEVE4</a></td>
+              <td>MAHLE METAL LEVE</td>
+              <td>MAHLE METAL LEVE S.A.</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=LFFE3">LFFE3</a></td>
+              <td>LA FONTE TELECOM S/A</td>
+              <td>LA FONTE TELECOM S/A</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=LFFE4">LFFE4</a></td>
+              <td>LA FONTE TELECOM S/A</td>
+              <td>LA FONTE TELECOM S/A</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=LGLO4">LGLO4</a></td>
+              <td>LIVRARIA DO GLOBO S/A</td>
+              <td>LIVRARIA DO GLOBO SA</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=LIGH3">LIGH3</a></td>
+              <td>LIGHT</td>
+              <td>LIGHT SERVI�OS DE ELETRICIDADE SA</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=LIGT3">LIGT3</a></td>
+              <td>LIGHT SA</td>
+              <td>LIGHT SA</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=LINX3">LINX3</a></td>
+              <td>LINX</td>
+              <td>LINX S.A.</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=LIPR3">LIPR3</a></td>
+              <td>LIGHTPAR</td>
+              <td>LIGHT PARTICIPA��ES S.A. - LIGHTPAR</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=LIQO3">LIQO3</a></td>
+              <td>LIQ</td>
+              <td>LIQ PARTICIPA��ES S.A.</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=LIXC3">LIXC3</a></td>
+              <td>LIX DA CUNHA</td>
+              <td>CONST LIX DA CUNHA SA</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=LIXC4">LIXC4</a></td>
+              <td>LIX DA CUNHA</td>
+              <td>CONST LIX DA CUNHA SA</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=LLIS3">LLIS3</a></td>
+              <td>LE LIS BLANC DEUX</td>
+              <td>LE LIS BLANC DEUX COM. CONF. ROUPAS S.A.</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=LOGG3">LOGG3</a></td>
+              <td>LOG COM PROP</td>
+              <td>LOG COMMERCIAL PROPERTIES</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=LOGN3">LOGN3</a></td>
+              <td>Log-In</td>
+              <td>LOG-IN LOGISTICA INTERMODAL SA</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=LPSB3">LPSB3</a></td>
+              <td>LOPES BRASIL</td>
+              <td>LPS BRASIL - CONSULTORIA DE IMOVEIS S.A.</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=LREN3">LREN3</a></td>
+              <td>RENNER</td>
+              <td>LOJAS RENNER SA</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=LREN4">LREN4</a></td>
+              <td>RENNER</td>
+              <td>LOJAS RENNER SA</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=LUPA3">LUPA3</a></td>
+              <td>LUPATECH</td>
+              <td>LUPATECH S.A.</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=LUXM3">LUXM3</a></td>
+              <td>TREVISA INVESTIMENTOS SA</td>
+              <td>TREVISA  INVESTIMENTOS SA</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=LUXM4">LUXM4</a></td>
+              <td>TREVISA INVESTIMENTOS SA</td>
+              <td>TREVISA  INVESTIMENTOS SA</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=MAGG3">MAGG3</a></td>
+              <td>MAGNESITA REFRAT�RIOS</td>
+              <td>MAGNESITA REFRAT�RIOS S/A </td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=MAGS3">MAGS3</a></td>
+              <td>MAGNESITA S/A</td>
+              <td>MAGNESITA SA</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=MAPT3">MAPT3</a></td>
+              <td>CIA MARCOPOLO</td>
+              <td>CEMEPE INVESTIMENTOS SA</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=MAPT4">MAPT4</a></td>
+              <td>CIA MARCOPOLO</td>
+              <td>CEMEPE INVESTIMENTOS SA</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=MARI3">MARI3</a></td>
+              <td>Marisa</td>
+              <td>MARISA SA</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=MDIA3">MDIA3</a></td>
+              <td>M.DIASBRANCO</td>
+              <td>M.DIAS BRANCO S.A. IND COM DE ALIMENTOS</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=MEAL3">MEAL3</a></td>
+              <td>IMC S/A</td>
+              <td>INTERNATIONAL MEAL COMPANY ALIMENTACAO S.A.</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=MEDI3">MEDI3</a></td>
+              <td>MEDIAL SAUDE</td>
+              <td>MEDIAL SAUDE S.A.</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=MEND5">MEND5</a></td>
+              <td>MENDES JUNIOR ENGENHARIA S/A</td>
+              <td>MENDES JUNIOR ENGENHARIA SA</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=MEND6">MEND6</a></td>
+              <td>MENDES JUNIOR ENGENHARIA S/A</td>
+              <td>MENDES JUNIOR ENGENHARIA SA</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=MERC3">MERC3</a></td>
+              <td>MERCANTIL BRASIL</td>
+              <td>MERCANTIL DO BR FINC SA CFI</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=MERC4">MERC4</a></td>
+              <td>MERCANTIL BRASIL</td>
+              <td>MERCANTIL DO BR FINC SA CFI</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=MGEL3">MGEL3</a></td>
+              <td>MANGELS</td>
+              <td>MANGELS INDUSTRIAL SA</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=MGEL4">MGEL4</a></td>
+              <td>MANGELS</td>
+              <td>MANGELS INDUSTRIAL SA</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=MGLU3">MGLU3</a></td>
+              <td>MAGAZ LUIZA</td>
+              <td>MAGAZINE LUIZA S.A.</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=MILK33">MILK33</a></td>
+              <td>Laep DR3</td>
+              <td>LAEP INVESTMENTS LTD.</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=MILS3">MILS3</a></td>
+              <td>MILLS</td>
+              <td>MILLS ESTRUTURAS E SERVI�OS DE ENGENHARIA S.A.</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=MLFT3">MLFT3</a></td>
+              <td>JEREISSATI PARTICIPACOES</td>
+              <td>JEREISSATI PARTICIPACOES</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=MLFT4">MLFT4</a></td>
+              <td>JEREISSATI PARTICIPACOES</td>
+              <td>JEREISSATI PARTICIPACOES</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=MLPA12">MLPA12</a></td>
+              <td>MELHORAMENTOS PAPEIS</td>
+              <td>MELPAPER SA</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=MLPA3">MLPA3</a></td>
+              <td>MELHORAMENTOS PAPEIS</td>
+              <td>MELPAPER SA</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=MLPA4">MLPA4</a></td>
+              <td>MELHORAMENTOS PAPEIS</td>
+              <td>MELPAPER SA</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=MMAQ3">MMAQ3</a></td>
+              <td>MINASM�QUINAS S/A</td>
+              <td>MINASMAQUINAS SA</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=MMAQ4">MMAQ4</a></td>
+              <td>MINASM�QUINAS S/A</td>
+              <td>MINASMAQUINAS SA</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=MMXM3">MMXM3</a></td>
+              <td>MMX MINER</td>
+              <td>MMX MINERA��O E MET�LICOS S.A.</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=MNDL3">MNDL3</a></td>
+              <td>MUNDIAL S/A</td>
+              <td>MUNDIAL S/A - PRODUTOS DE CONSUMO </td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=MNDL4">MNDL4</a></td>
+              <td>MUNDIAL S/A</td>
+              <td>MUNDIAL S/A - PRODUTOS DE CONSUMO </td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=MNPR3">MNPR3</a></td>
+              <td>MINUPAR</td>
+              <td>MINUPAR PARTICIPACOES SA</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=MNPR4">MNPR4</a></td>
+              <td>MINUPAR</td>
+              <td>MINUPAR PARTICIPACOES SA</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=MNSA3">MNSA3</a></td>
+              <td>MANASA</td>
+              <td>MANASA MADEIREIRA NACIONAL SA</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=MNSA4">MNSA4</a></td>
+              <td>MANASA</td>
+              <td>MANASA MADEIREIRA NACIONAL SA</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=MOAR3">MOAR3</a></td>
+              <td>MONTEIRO ARANHA</td>
+              <td>MONTEIRO ARANHA SA</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=MOVI3 ">MOVI3 </a></td>
+              <td>MOVIDA</td>
+              <td>MOVIDA PARTICIPACOES SA</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=MPLU3">MPLU3</a></td>
+              <td>MULTIPLUS</td>
+              <td>Multiplus S.A.</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=MRFG3">MRFG3</a></td>
+              <td>Marfrig</td>
+              <td>MARFRIG FRIGORIFICOS E COM DE ALIM S.A.</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=MRSL3">MRSL3</a></td>
+              <td>MARISOL</td>
+              <td>MARISOL SA</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=MRSL4">MRSL4</a></td>
+              <td>MARISOL</td>
+              <td>MARISOL SA</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=MRVE3">MRVE3</a></td>
+              <td>MRV</td>
+              <td>MRV ENGENHARIA E PARTICIPA��ES S/A</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=MSAN3">MSAN3</a></td>
+              <td>BUNGE BRASIL S.A.</td>
+              <td>BUNGE BRASIL SA</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=MSAN4">MSAN4</a></td>
+              <td>BUNGE BRASIL S.A.</td>
+              <td>BUNGE BRASIL SA</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=MSPA3">MSPA3</a></td>
+              <td>MELHORAMENTOS</td>
+              <td>COMPANHIA  MELHORAMENTOS DE S�O PAULO</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=MSPA4">MSPA4</a></td>
+              <td>MELHORAMENTOS</td>
+              <td>COMPANHIA  MELHORAMENTOS DE S�O PAULO</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=MTBR3">MTBR3</a></td>
+              <td>WHIRLPOOL S.A.</td>
+              <td>WHIRLPOOL S.A.</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=MTBR4">MTBR4</a></td>
+              <td>WHIRLPOOL S.A.</td>
+              <td>WHIRLPOOL S.A.</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=MTIG3">MTIG3</a></td>
+              <td>IGUA�U</td>
+              <td>METALGRAFICA IGUACU SA</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=MTIG4">MTIG4</a></td>
+              <td>IGUA�U</td>
+              <td>METALGRAFICA IGUACU SA</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=MTSA4">MTSA4</a></td>
+              <td>METISA</td>
+              <td>METISA METAL�RGICA  TIMBOENSE SA</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=MULT3">MULT3</a></td>
+              <td>Multiplan</td>
+              <td>MULTIPLAN EMP. IMOBILIARIOS S/A</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=MWET3">MWET3</a></td>
+              <td>WETZEL S.A.</td>
+              <td>WETZEL S.A.</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=MWET4">MWET4</a></td>
+              <td>WETZEL S.A.</td>
+              <td>WETZEL S.A.</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=MYPK3">MYPK3</a></td>
+              <td>IOCHPE-MAXION</td>
+              <td>IOCHPE-MAXION SA</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=MYPK4">MYPK4</a></td>
+              <td>IOCHPE-MAXION</td>
+              <td>IOCHPE-MAXION SA</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=NAFG3">NAFG3</a></td>
+              <td>NADIR FIGUEIREDO</td>
+              <td>NADIR FIGUEIREDO IND E COM SA</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=NAFG4">NAFG4</a></td>
+              <td>NADIR FIGUEIREDO</td>
+              <td>NADIR FIGUEIREDO IND E COM SA</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=NATU3">NATU3</a></td>
+              <td>NATURA COSMETICOS SA</td>
+              <td>NATURA COSMETICOS SA</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=NEOE3">NEOE3</a></td>
+              <td>NEOENERGIA</td>
+              <td>NEOENERGIA S.A.</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=NETC3">NETC3</a></td>
+              <td>NET SERVI�OS DE COMUNICA��O S.A.</td>
+              <td>NET SERVI�OS DE COMUNICA��O S.A.</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=NETC4">NETC4</a></td>
+              <td>NET SERVI�OS DE COMUNICA��O S.A.</td>
+              <td>NET SERVI�OS DE COMUNICA��O S.A.</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=NORD3">NORD3</a></td>
+              <td>NORDON INDS METALURGICAS SA</td>
+              <td>NORDON INDS METALURGICAS SA</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=NUTR3">NUTR3</a></td>
+              <td>NUTRIPLANT</td>
+              <td>NUTRIPLANT IND�STRIA E COM�RCIO S/A</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=ODPV3">ODPV3</a></td>
+              <td>ODONTOPREV</td>
+              <td>ODONTOPREV S.A.</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=OFSA3">OFSA3</a></td>
+              <td>OUROFINO S/A</td>
+              <td>OURO FINO SAUDE ANIMAL PARTICIPACOES S.A.</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=OGXP3">OGXP3</a></td>
+              <td>OGX</td>
+              <td>�LEO E G�S PARTICIPA��ES S.A.</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=OIBR3">OIBR3</a></td>
+              <td>OI</td>
+              <td>OI S.A.</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=OIBR4">OIBR4</a></td>
+              <td>OI</td>
+              <td>OI S.A.</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=OMGE3">OMGE3</a></td>
+              <td>OMEGA GER</td>
+              <td>OMEGA GERA��O S.A.</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=OSAO4">OSAO4</a></td>
+              <td>PLASCAR PARTICIPA��ES INDUSTRIAIS S.A</td>
+              <td>PLASCAR PARTICIPA��ES INDUSTRIAIS S.A</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=OSXB3">OSXB3</a></td>
+              <td>OSX BRASIL</td>
+              <td>OSX BRASIL S.A.</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=PALF11">PALF11</a></td>
+              <td>CPFL</td>
+              <td>COMPANHIA PAULISTA DE FORCA LUZ - CPFL</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=PALF3">PALF3</a></td>
+              <td>CPFL</td>
+              <td>COMPANHIA PAULISTA DE FORCA LUZ - CPFL</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=PALF5">PALF5</a></td>
+              <td>CPFL</td>
+              <td>COMPANHIA PAULISTA DE FORCA LUZ - CPFL</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=PARC3">PARC3</a></td>
+              <td>WIZ S.A.</td>
+              <td>WIZ SOLU��ES E CORRETAGEM DE SEGUROS S.A.</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=PARD3">PARD3</a></td>
+              <td>IHPARDINI</td>
+              <td>INSTITUTO HERMES PARDINI S.A.</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=PATI3">PATI3</a></td>
+              <td>PANATLANTICA</td>
+              <td>PANATLANTICA SA</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=PATI4">PATI4</a></td>
+              <td>PANATLANTICA</td>
+              <td>PANATLANTICA SA</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=PCAR3">PCAR3</a></td>
+              <td>P�O DE A��CAR</td>
+              <td>COMPANHIA BRASILEIRA DE DISTRIBUI��O</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=PCAR4">PCAR4</a></td>
+              <td>P�O DE A��CAR</td>
+              <td>COMPANHIA BRASILEIRA DE DISTRIBUI��O</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=PCAR5">PCAR5</a></td>
+              <td>P�O DE A��CAR</td>
+              <td>COMPANHIA BRASILEIRA DE DISTRIBUI��O</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=PDGR3">PDGR3</a></td>
+              <td>PDG REALT</td>
+              <td>PDG REALTY S.A. EMPREEND E PARTICIPACOES</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=PEAB3">PEAB3</a></td>
+              <td>CIA. DE PARTICIPA��ES ALIAN�A DA BAHIA</td>
+              <td>CIA DE PARTICIPA��ES ALIAN�A DA BAHIA</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=PEAB4">PEAB4</a></td>
+              <td>CIA. DE PARTICIPA��ES ALIAN�A DA BAHIA</td>
+              <td>CIA DE PARTICIPA��ES ALIAN�A DA BAHIA</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=PEFX3">PEFX3</a></td>
+              <td>PETROFLEX IND�STRIA E COM�RCIO S.A</td>
+              <td>PETROFLEX IND�STRIA E COM�RCIO S.A.</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=PEFX5">PEFX5</a></td>
+              <td>PETROFLEX IND�STRIA E COM�RCIO S.A</td>
+              <td>PETROFLEX IND�STRIA E COM�RCIO S.A.</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=PETR3">PETR3</a></td>
+              <td>PETROBRAS</td>
+              <td>PETR�LEO BRASILEIRO  S.A.  - PETROBRAS</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=PETR4">PETR4</a></td>
+              <td>PETROBRAS</td>
+              <td>PETR�LEO BRASILEIRO  S.A.  - PETROBRAS</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=PFRM3">PFRM3</a></td>
+              <td>PROFARMA</td>
+              <td>PROFARMA DISTRIB PROD FARMACEUTICOS S.A.</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=PINE3">PINE3</a></td>
+              <td>Pine</td>
+              <td>BANCO PINE S/A</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=PINE4">PINE4</a></td>
+              <td>Pine</td>
+              <td>BANCO PINE S/A</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=PITI4">PITI4</a></td>
+              <td>AV. DR CHUCRI ZAIDAN, 920 - 16� ANDAR</td>
+              <td>LF TEL SA</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=PLAS3">PLAS3</a></td>
+              <td>PLASCAR PARTICIPA��ES INDUSTRIAIS S.A</td>
+              <td>PLASCAR PARTICIPA��ES INDUSTRIAIS S.A</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=PLDN4">PLDN4</a></td>
+              <td>POLIALDEN</td>
+              <td>POLIALDEN PETROQUIMICA SA</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=PLIM4">PLIM4</a></td>
+              <td>NET SERVI�OS DE COMUNICA��O S.A.</td>
+              <td>NET SERVI�OS DE COMUNICA��O S.A.</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=PLTO5">PLTO5</a></td>
+              <td>POLITENO IND E COMERCIO S.A.</td>
+              <td>POLITENO IND E COMERCIO SA</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=PLTO6">PLTO6</a></td>
+              <td>POLITENO IND E COMERCIO S.A.</td>
+              <td>POLITENO IND E COMERCIO SA</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=PMAM3">PMAM3</a></td>
+              <td>PARANAPANEMA S.A.</td>
+              <td>PARANAPANEMA SA</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=PMAM4">PMAM4</a></td>
+              <td>PARANAPANEMA S.A.</td>
+              <td>PARANAPANEMA SA</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=PMET3">PMET3</a></td>
+              <td>PRO METALURG</td>
+              <td>PR� METALURGIA S.A.</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=PMET5">PMET5</a></td>
+              <td>PRO METALURG</td>
+              <td>PR� METALURGIA S.A.</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=PMET6">PMET6</a></td>
+              <td>PRO METALURG</td>
+              <td>PR� METALURGIA S.A.</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=PNOR5">PNOR5</a></td>
+              <td>PRONOR</td>
+              <td>PRONOR PETROQUIMICA SA</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=PNOR6">PNOR6</a></td>
+              <td>PRONOR</td>
+              <td>PRONOR PETROQUIMICA SA</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=PNVL3">PNVL3</a></td>
+              <td>PANVEL FARM�CIAS</td>
+              <td>DIMED SA DISTRIBUIDORA DE MEDICAMENTOS</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=PNVL4">PNVL4</a></td>
+              <td>PANVEL FARM�CIAS</td>
+              <td>DIMED SA DISTRIBUIDORA DE MEDICAMENTOS</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=POMO3">POMO3</a></td>
+              <td>MARCOPOLO</td>
+              <td>MARCOPOLO SA</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=POMO4">POMO4</a></td>
+              <td>MARCOPOLO</td>
+              <td>MARCOPOLO SA</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=POPR4">POPR4</a></td>
+              <td>POLIPROPILENO S.A.</td>
+              <td>POLIPROPILENO SA</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=PORP4">PORP4</a></td>
+              <td>POLIPROPILENO PARTICIPA��ES S.A.</td>
+              <td>POLIPROPILENO PARTICIPACOES S.A.</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=POSI3">POSI3</a></td>
+              <td>POSITIVO INF</td>
+              <td>POSITIVO INFORMATICA S.A.</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=PQUN3">PQUN3</a></td>
+              <td>PETROQUIMICA UNIAO S.A.</td>
+              <td>PETROQUIMICA UNIAO SA</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=PQUN4">PQUN4</a></td>
+              <td>PETROQUIMICA UNIAO S.A.</td>
+              <td>PETROQUIMICA UNIAO SA</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=PRBC3">PRBC3</a></td>
+              <td>Parana</td>
+              <td>PARANA BANCO S.A.</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=PRBC4">PRBC4</a></td>
+              <td>Parana</td>
+              <td>PARANA BANCO S.A.</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=PRGA4">PRGA4</a></td>
+              <td>BRF Foods</td>
+              <td>BRF Foods</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=PRIO3">PRIO3</a></td>
+              <td>PETRORIO</td>
+              <td>PETRO RIO S.A.</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=PRML3">PRML3</a></td>
+              <td>PRUMO</td>
+              <td>PRUMO LOG�STICA S.A.</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=PRTX3">PRTX3</a></td>
+              <td>PORTX</td>
+              <td>CENTENNIAL ASSET PARTICIP. SUDESTE S.A.</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=PRVI3">PRVI3</a></td>
+              <td>Providencia</td>
+              <td>COMPANHIA PROVIDENCIA IND E COMERCIO</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=PSSA3">PSSA3</a></td>
+              <td>PORTO SEGURO SA</td>
+              <td>PORTO SEGURO SA</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=PTBL3">PTBL3</a></td>
+              <td>PORTOBELLO S/A</td>
+              <td>PORTOBELLO S/A</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=PTBL4">PTBL4</a></td>
+              <td>PORTOBELLO S/A</td>
+              <td>PORTOBELLO S/A</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=PTIP3">PTIP3</a></td>
+              <td>IPIRANGA PETROQUIMICA SA</td>
+              <td>IPIRANGA PETROQUIMICA SA</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=PTIP4">PTIP4</a></td>
+              <td>IPIRANGA PETROQUIMICA SA</td>
+              <td>IPIRANGA PETROQUIMICA SA</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=PTNT3">PTNT3</a></td>
+              <td>PETTENATI</td>
+              <td>PETTENATI SA IND TEXTIL</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=PTNT4">PTNT4</a></td>
+              <td>PETTENATI</td>
+              <td>PETTENATI SA IND TEXTIL</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=PTPA3">PTPA3</a></td>
+              <td>PETROPAR SA</td>
+              <td>PETROPAR SA</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=PTPA4">PTPA4</a></td>
+              <td>PETROPAR SA</td>
+              <td>PETROPAR SA</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=PTQS4">PTQS4</a></td>
+              <td>PETROQUISA</td>
+              <td>PETROBRAS QU�MICA S.A.- PETROQUISA</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=QGEP3">QGEP3</a></td>
+              <td>ENAUTA PART</td>
+              <td>ENAUTA PARTICIPA��ES S.A.</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=QUAL3">QUAL3</a></td>
+              <td>QUALICORP</td>
+              <td>QUALICORP S.A.</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=RADL3">RADL3</a></td>
+              <td>RAIADROGASIL</td>
+              <td>RAIA DROGASIL S.A.</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=RAIA3">RAIA3</a></td>
+              <td>RAIA</td>
+              <td>RAIA S.A.</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=RAIL3">RAIL3</a></td>
+              <td>ALL - AM�RICA LATINA LOG�STICA S/A</td>
+              <td>ALL AMERICA LATINA LOGISTICA SA</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=RANI3">RANI3</a></td>
+              <td>CELULOSE IRANI</td>
+              <td>CELULOSE IRANI SA</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=RANI4">RANI4</a></td>
+              <td>CELULOSE IRANI</td>
+              <td>CELULOSE IRANI SA</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=RAPT3">RAPT3</a></td>
+              <td>RANDON S.A. IMPLEMENTOS E PARTICIPA��ES</td>
+              <td>RANDON S.A. IMPLEMENTOS E PARTICIPA��ES</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=RAPT4">RAPT4</a></td>
+              <td>RANDON S.A. IMPLEMENTOS E PARTICIPA��ES</td>
+              <td>RANDON S.A. IMPLEMENTOS E PARTICIPA��ES</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=RCSL4">RCSL4</a></td>
+              <td>RECRUSUL</td>
+              <td>RECRUSUL SA</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=RCTB31">RCTB31</a></td>
+              <td>TELEBRAS</td>
+              <td>TELEC. BRASILEIRAS S.A. - TELEBR�S</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=RCTB33">RCTB33</a></td>
+              <td>TELEBRAS</td>
+              <td>TELEC. BRASILEIRAS S.A. - TELEBR�S</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=RCTB41">RCTB41</a></td>
+              <td>TELEBRAS</td>
+              <td>TELEC. BRASILEIRAS S.A. - TELEBR�S</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=RCTB42">RCTB42</a></td>
+              <td>TELEBRAS</td>
+              <td>TELEC. BRASILEIRAS S.A. - TELEBR�S</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=RDCD3">RDCD3</a></td>
+              <td>Redecard</td>
+              <td>REDECARD S.A.</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=RDNI3">RDNI3</a></td>
+              <td>RODOBENSIMOB</td>
+              <td>RODOBENS NEGOCIOS IMOBILIARIOS S.A.</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=RDTR3">RDTR3</a></td>
+              <td>REDENTOR</td>
+              <td>REDENTOR ENERGIA S.A.</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=REDE3">REDE3</a></td>
+              <td>REDE EMPRESAS DE ENERGIA EL�TRICA S.A.</td>
+              <td>REDE EMPRESAS DE ENERGIA EL�TRICA S.A.</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=REDE4">REDE4</a></td>
+              <td>REDE EMPRESAS DE ENERGIA EL�TRICA S.A.</td>
+              <td>REDE EMPRESAS DE ENERGIA EL�TRICA S.A.</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=REEM4">REEM4</a></td>
+              <td>RHEEM EMPRS</td>
+              <td>RIMET EMPREEND. INDS. E COMERCIAIS S/A</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=RENT3">RENT3</a></td>
+              <td>LOCALIZA RENT A CAR</td>
+              <td>LOCALIZA RENT A CAR SA</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=REPA3">REPA3</a></td>
+              <td>ELECTROLUX</td>
+              <td>ELECTROLUX DO BRASIL SA</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=REPA4">REPA4</a></td>
+              <td>ELECTROLUX</td>
+              <td>ELECTROLUX DO BRASIL SA</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=RGEG3">RGEG3</a></td>
+              <td>RGE - RIO GRANDE ENERGIA</td>
+              <td>RIO GRANDE ENERGIA SA</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=RHDS3">RHDS3</a></td>
+              <td>M G POLIEST</td>
+              <td>M G POLIESTER S.A.</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=RHDS4">RHDS4</a></td>
+              <td>M G POLIEST</td>
+              <td>M G POLIESTER S.A.</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=RIPI3">RIPI3</a></td>
+              <td>REFINARIA DE PETR�LEO IPIRANGA SA</td>
+              <td>REFINARIA PET IPIRANGA SA</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=RIPI4">RIPI4</a></td>
+              <td>REFINARIA DE PETR�LEO IPIRANGA SA</td>
+              <td>REFINARIA PET IPIRANGA SA</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=RJCP3">RJCP3</a></td>
+              <td>RJCP EQUITY</td>
+              <td>RJCP EQUITY S.A.</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=RLOG3">RLOG3</a></td>
+              <td>COSAN LOG</td>
+              <td>COSAN LOGISTICA S.A.</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=RNAR3">RNAR3</a></td>
+              <td>POMIFRUTAS</td>
+              <td>POMIFRUTAS S/A</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=RNEW11">RNEW11</a></td>
+              <td>RENOVA</td>
+              <td>RENOVA ENERGIA S.A.</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=RNEW3">RNEW3</a></td>
+              <td>RENOVA</td>
+              <td>RENOVA ENERGIA S.A.</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=RNEW4">RNEW4</a></td>
+              <td>RENOVA</td>
+              <td>RENOVA ENERGIA S.A.</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=RNPT3">RNPT3</a></td>
+              <td>RENNER PARTICIPA��ES S/A</td>
+              <td>RENNER PARTICIPA��ES SA</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=RNPT4">RNPT4</a></td>
+              <td>RENNER PARTICIPA��ES S/A</td>
+              <td>RENNER PARTICIPA��ES SA</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=ROMI3">ROMI3</a></td>
+              <td>ROMI</td>
+              <td>INDS ROMI SA</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=ROMI4">ROMI4</a></td>
+              <td>ROMI</td>
+              <td>INDS ROMI SA</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=RPAD3">RPAD3</a></td>
+              <td>ALFA HOLDINGS</td>
+              <td>ALFA HOLDINGS SA</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=RPAD5">RPAD5</a></td>
+              <td>ALFA HOLDINGS</td>
+              <td>ALFA HOLDINGS SA</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=RPAD6">RPAD6</a></td>
+              <td>ALFA HOLDINGS</td>
+              <td>ALFA HOLDINGS SA</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=RPMG3">RPMG3</a></td>
+              <td>REFINARIA DE PETR�LEOS DE MANGUINHOS S.A</td>
+              <td>REFINARIA PET MANGUINHOS SA</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=RPMG4">RPMG4</a></td>
+              <td>REFINARIA DE PETR�LEOS DE MANGUINHOS S.A</td>
+              <td>REFINARIA PET MANGUINHOS SA</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=RPSA4">RPSA4</a></td>
+              <td>RIPASA</td>
+              <td>RIPASA SA CELULOSE E PAPEL</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=RSID3">RSID3</a></td>
+              <td>ROSSI RESIDENCIAL</td>
+              <td>ROSSI RESIDENCIAL SA</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=RSIP3">RSIP3</a></td>
+              <td>RASIP AGRO PASTORIL</td>
+              <td>RASIP AGRO PASTORIL SA</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=RSIP4">RSIP4</a></td>
+              <td>RASIP AGRO PASTORIL</td>
+              <td>RASIP AGRO PASTORIL SA</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=RSUL4">RSUL4</a></td>
+              <td>METALURGICA RIOSULENSE S/A</td>
+              <td>METALURGICA RIOSULENSE SA</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=RUMO3">RUMO3</a></td>
+              <td>RUMO LOG</td>
+              <td>RUMO LOGISTICA OPERADORA MULTIMODAL S.A.</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=SALM3">SALM3</a></td>
+              <td>SEARA ALIMENTOS</td>
+              <td>SEARA ALIMENTOS SA</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=SALM4">SALM4</a></td>
+              <td>SEARA ALIMENTOS</td>
+              <td>SEARA ALIMENTOS SA</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=SANB11">SANB11</a></td>
+              <td>SANTANDER</td>
+              <td>BANCO SANTANDER S.A.</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=SANB3">SANB3</a></td>
+              <td>SANTANDER</td>
+              <td>BANCO SANTANDER S.A.</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=SANB4">SANB4</a></td>
+              <td>SANTANDER</td>
+              <td>BANCO SANTANDER S.A.</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=SAPR11">SAPR11</a></td>
+              <td>SANEPAR</td>
+              <td>CIA. DE SANEAMENTO DO PARAN� - SANEPAR</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=SAPR3">SAPR3</a></td>
+              <td>SANEPAR</td>
+              <td>CIA. DE SANEAMENTO DO PARAN� - SANEPAR</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=SAPR4">SAPR4</a></td>
+              <td>SANEPAR</td>
+              <td>CIA. DE SANEAMENTO DO PARAN� - SANEPAR</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=SASG3">SASG3</a></td>
+              <td>SUL AMERICA SEGUROS</td>
+              <td>SUL AMERICA CIA NACL SEGUROS</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=SBSP3">SBSP3</a></td>
+              <td>SABESP</td>
+              <td>CIA SANEAMENTO B�SICO ESTADO S�O PAULO</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=SCAR3">SCAR3</a></td>
+              <td>S�O CARLOS EMPREEND.E PARTICIPA��ES S.A.</td>
+              <td>S�O CARLOS EMPREENDS E PARTICIPA��ES S.A</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=SCAR4">SCAR4</a></td>
+              <td>S�O CARLOS EMPREEND.E PARTICIPA��ES S.A.</td>
+              <td>S�O CARLOS EMPREENDS E PARTICIPA��ES S.A</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=SCLO3">SCLO3</a></td>
+              <td>SCHLOSSER TECIDOS</td>
+              <td>CIA INDL SCHLOSSER SA</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=SCLO4">SCLO4</a></td>
+              <td>SCHLOSSER TECIDOS</td>
+              <td>CIA INDL SCHLOSSER SA</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=SDIA3">SDIA3</a></td>
+              <td>SADIA</td>
+              <td>SADIA SA</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=SDIA4">SDIA4</a></td>
+              <td>SADIA</td>
+              <td>SADIA SA</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=SEBB11">SEBB11</a></td>
+              <td>SEB - SISTEMA EDUCACIONAL BRASILEIRO S/A</td>
+              <td>SEB - SISTEMA EDUCACIONAL BRASILEIRO S/A</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=SEBB3">SEBB3</a></td>
+              <td>SEB - SISTEMA EDUCACIONAL BRASILEIRO S/A</td>
+              <td>SEB - SISTEMA EDUCACIONAL BRASILEIRO S/A</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=SEBB4">SEBB4</a></td>
+              <td>SEB - SISTEMA EDUCACIONAL BRASILEIRO S/A</td>
+              <td>SEB - SISTEMA EDUCACIONAL BRASILEIRO S/A</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=SEDU3">SEDU3</a></td>
+              <td>SOMOS EDUCA</td>
+              <td>SOMOS EDUCA��O S.A.</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=SEER3">SEER3</a></td>
+              <td>SER EDUCA</td>
+              <td>SER EDUCACIONAL S.A.</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=SEMP3">SEMP3</a></td>
+              <td>SEMP TOSHIBA</td>
+              <td>SEMP TOSHIBA SA</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=SFSA3">SFSA3</a></td>
+              <td>Sofisa</td>
+              <td>BANCO SOFISA SA</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=SFSA4">SFSA4</a></td>
+              <td>Sofisa</td>
+              <td>BANCO SOFISA SA</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=SGAS3">SGAS3</a></td>
+              <td>WLM</td>
+              <td>WLM IND�STRIA E COM�RCIO S/A</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=SGAS4">SGAS4</a></td>
+              <td>WLM</td>
+              <td>WLM IND�STRIA E COM�RCIO S/A</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=SGEN3">SGEN3</a></td>
+              <td>SERGEN</td>
+              <td>SERGEN SERVS GERAIS DE ENG SA</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=SGEN4">SGEN4</a></td>
+              <td>SERGEN</td>
+              <td>SERGEN SERVS GERAIS DE ENG SA</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=SGPS3">SGPS3</a></td>
+              <td>Springs</td>
+              <td>SPRINGS GLOBAL PARTICIPA��ES S/A</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=SHOW3">SHOW3</a></td>
+              <td>TIME FOR FUN</td>
+              <td>T4F Entretenimento S.A.</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=SHUL4">SHUL4</a></td>
+              <td>SCHULZ</td>
+              <td>SCHULZ SA</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=SJOS3">SJOS3</a></td>
+              <td>S�O JOS�</td>
+              <td>FIACAO TECELAGEM SAO JOSE SA</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=SJOS4">SJOS4</a></td>
+              <td>S�O JOS�</td>
+              <td>FIACAO TECELAGEM SAO JOSE SA</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=SLCE3">SLCE3</a></td>
+              <td>SLC Agricola</td>
+              <td>SLC AGRICOLA SA</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=SLCP3">SLCP3</a></td>
+              <td>SULACAP</td>
+              <td>SUL AMERICA CAPITALIZACAO S.A.</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=SLED3">SLED3</a></td>
+              <td>EDITORA SARAIVA</td>
+              <td>SARAIVA SA LIVREIROS EDITORES</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=SLED4">SLED4</a></td>
+              <td>EDITORA SARAIVA</td>
+              <td>SARAIVA SA LIVREIROS EDITORES</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=SMLE3">SMLE3</a></td>
+              <td>SMILES</td>
+              <td>SMILES S.A.</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=SMLS3">SMLS3</a></td>
+              <td>SMILES</td>
+              <td>SMILES FIDELIDADE S.A.</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=SMTO3">SMTO3</a></td>
+              <td>SAO MARTINHO</td>
+              <td>SAO MARTINHO S.A.</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=SNSL3">SNSL3</a></td>
+              <td>SINQIA</td>
+              <td>SINQIA S.A.</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=SNSY5">SNSY5</a></td>
+              <td>SANSUY S.A. IND�STRIA DE PL�STICOS</td>
+              <td>SANSUY SA IND�STRIA  DE PLASTICOS</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=SOND3">SOND3</a></td>
+              <td>SONDOTECNICA S/A.</td>
+              <td>SONDOTECNICA ENGENHARIA DE SOLOS S/A.</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=SOND5">SOND5</a></td>
+              <td>SONDOTECNICA S/A.</td>
+              <td>SONDOTECNICA ENGENHARIA DE SOLOS S/A.</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=SOND6">SOND6</a></td>
+              <td>SONDOTECNICA S/A.</td>
+              <td>SONDOTECNICA ENGENHARIA DE SOLOS S/A.</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=SPRI3">SPRI3</a></td>
+              <td>SPRINGER</td>
+              <td>SPRINGER SA</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=SPRI5">SPRI5</a></td>
+              <td>SPRINGER</td>
+              <td>SPRINGER SA</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=SPRI6">SPRI6</a></td>
+              <td>SPRINGER</td>
+              <td>SPRINGER SA</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=SQIA3">SQIA3</a></td>
+              <td>SINQIA</td>
+              <td>SINQIA S.A.</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=SSBR3">SSBR3</a></td>
+              <td>ALIANSCSONAE</td>
+              <td>ALIANSCE SONAE SHOPPING CENTERS S.A.</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=STBP11">STBP11</a></td>
+              <td>SBPAR</td>
+              <td>SANTOS BRASIL PARTICIPA��ES S.A.</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=STBP3">STBP3</a></td>
+              <td>SBPAR</td>
+              <td>SANTOS BRASIL PARTICIPA��ES S.A.</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=STLB3">STLB3</a></td>
+              <td>VITALYZE.ME</td>
+              <td>VITALYZE.ME SAUDE E TECNOLOGIA S.A.</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=STRP4">STRP4</a></td>
+              <td>STAROUP</td>
+              <td>BOTUCATU T�XTIL S.A.</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=SUBA3">SUBA3</a></td>
+              <td></td>
+              <td>SUBMARINO S/A</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=SULA11">SULA11</a></td>
+              <td>Sul America</td>
+              <td>SUL AMERICA S/A</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=SULA3">SULA3</a></td>
+              <td>Sul America</td>
+              <td>SUL AMERICA S/A</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=SULA4">SULA4</a></td>
+              <td>Sul America</td>
+              <td>SUL AMERICA S/A</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=SULT3">SULT3</a></td>
+              <td>CONSTRUTORA SULTEPA S/A</td>
+              <td>CONST SULTEPA SA</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=SULT4">SULT4</a></td>
+              <td>CONSTRUTORA SULTEPA S/A</td>
+              <td>CONST SULTEPA SA</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=SUZA4">SUZA4</a></td>
+              <td>SUZANO HOLDING S.A.</td>
+              <td>SUZANO HOLDING S.A. (EX-NEMOFEFFER S.A.)</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=SUZB3">SUZB3</a></td>
+              <td>Suzano Papel</td>
+              <td>SUZANO PAPEL E CELULOSE S.A.</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=SUZB5">SUZB5</a></td>
+              <td>Suzano Papel</td>
+              <td>SUZANO PAPEL E CELULOSE S.A.</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=SUZB6">SUZB6</a></td>
+              <td>Suzano Papel</td>
+              <td>SUZANO PAPEL E CELULOSE S.A.</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=SWET3">SWET3</a></td>
+              <td>VITALYZE.ME</td>
+              <td>VITALYZE.ME SAUDE E TECNOLOGIA S.A.</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=SZPQ4">SZPQ4</a></td>
+              <td>SUZANO PETROQUIMICA S.A.</td>
+              <td>SUZANO PETROQUIMICA S.A.</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=TAEE11">TAEE11</a></td>
+              <td>TAESA</td>
+              <td>TRANSMISSORA ALIAN�A DE ENERGIA EL�TRICA S.A.</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=TAEE3">TAEE3</a></td>
+              <td>TAESA</td>
+              <td>TRANSMISSORA ALIAN�A DE ENERGIA EL�TRICA S.A.</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=TAEE4">TAEE4</a></td>
+              <td>TAESA</td>
+              <td>TRANSMISSORA ALIAN�A DE ENERGIA EL�TRICA S.A.</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=TAMM3">TAMM3</a></td>
+              <td>TAM</td>
+              <td>TAM S.A.</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=TAMM4">TAMM4</a></td>
+              <td>TAM</td>
+              <td>TAM S.A.</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=TANC4">TANC4</a></td>
+              <td>TAM</td>
+              <td>TAM S.A.</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=TARP11">TARP11</a></td>
+              <td>TARPON</td>
+              <td>TARPON INVESTMENT GROUP LTD.</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=TBLE3">TBLE3</a></td>
+              <td>	ENGIE BRASIL</td>
+              <td>ENGIE BRASIL ENERGIA S.A.</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=TBLE5">TBLE5</a></td>
+              <td>	ENGIE BRASIL</td>
+              <td>ENGIE BRASIL ENERGIA S.A.</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=TBLE6">TBLE6</a></td>
+              <td>	ENGIE BRASIL</td>
+              <td>ENGIE BRASIL ENERGIA S.A.</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=TCNO3">TCNO3</a></td>
+              <td>TECNOSOLO S/A</td>
+              <td>TECNOSOLO S/A</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=TCNO4">TCNO4</a></td>
+              <td>TECNOSOLO S/A</td>
+              <td>TECNOSOLO S/A</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=TCOC3">TCOC3</a></td>
+              <td>TELE CENTRO OESTE CELULAR PARTICIP. S/A</td>
+              <td>TCO CELULAR PARTICIPA��ES  S/A</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=TCOC4">TCOC4</a></td>
+              <td>TELE CENTRO OESTE CELULAR PARTICIP. S/A</td>
+              <td>TCO CELULAR PARTICIPA��ES  S/A</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=TCSA3">TCSA3</a></td>
+              <td>TECNISA</td>
+              <td>TECNISA S.A.</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=TCSL4">TCSL4</a></td>
+              <td>TIM PARTICIPA��ES S.A.</td>
+              <td>TIM PARTICIPA��ES S.A.</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=TDBH3">TDBH3</a></td>
+              <td>TELEF�NICA EMPRESAS S.A</td>
+              <td>TELEFONICA DATA BRASIL HOLDING SA</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=TDBH4">TDBH4</a></td>
+              <td>TELEF�NICA EMPRESAS S.A</td>
+              <td>TELEFONICA DATA BRASIL HOLDING SA</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=TECN3">TECN3</a></td>
+              <td>TECHNOS</td>
+              <td>TECHNOS S.A.</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=TEFC11">TEFC11</a></td>
+              <td>TELEF�NICA</td>
+              <td>TELEF�NICA S.A.</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=TEKA3">TEKA3</a></td>
+              <td>TEKA S.A.</td>
+              <td>TEKA TECELAGEM KUEHNRICH SA</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=TEKA4">TEKA4</a></td>
+              <td>TEKA S.A.</td>
+              <td>TEKA TECELAGEM KUEHNRICH SA</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=TELB3">TELB3</a></td>
+              <td>TELEBRAS</td>
+              <td>TELEC. BRASILEIRAS S.A. - TELEBR�S</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=TELB4">TELB4</a></td>
+              <td>TELEBRAS</td>
+              <td>TELEC. BRASILEIRAS S.A. - TELEBR�S</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=TEMP3">TEMP3</a></td>
+              <td>TEMPO PART</td>
+              <td>TEMPO PARTICIPACOES</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=TEND3">TEND3</a></td>
+              <td>Tenda</td>
+              <td>CONSTRUTORA TENDA S/A</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=TENE5">TENE5</a></td>
+              <td>TECBLU</td>
+              <td>TECBLU - TECELAGEM BLUMENAU S/A.</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=TENE7">TENE7</a></td>
+              <td>TECBLU</td>
+              <td>TECBLU - TECELAGEM BLUMENAU S/A.</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=TERI3">TERI3</a></td>
+              <td>TEREOS</td>
+              <td>TEREOS INTERNACIONAL S.A.</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=TESA3">TESA3</a></td>
+              <td>TERRA SANTA</td>
+              <td>TERRA SANTA AGRO S.A.</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=TGMA3">TGMA3</a></td>
+              <td>Tegma</td>
+              <td>TEGMA GEST�O LOG�STICA SA</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=TIBR3">TIBR3</a></td>
+              <td>CRISTAL</td>
+              <td>CRISTAL PIGMENTOS DO BRASIL S.A.</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=TIBR5">TIBR5</a></td>
+              <td>CRISTAL</td>
+              <td>CRISTAL PIGMENTOS DO BRASIL S.A.</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=TIBR6">TIBR6</a></td>
+              <td>CRISTAL</td>
+              <td>CRISTAL PIGMENTOS DO BRASIL S.A.</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=TIET11">TIET11</a></td>
+              <td>AES TIETE E</td>
+              <td>AES TIETE ENERGIA SA</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=TIET3">TIET3</a></td>
+              <td>AES TIETE E</td>
+              <td>AES TIETE ENERGIA SA</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=TIET4">TIET4</a></td>
+              <td>AES TIETE E</td>
+              <td>AES TIETE ENERGIA SA</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=TIMP3">TIMP3</a></td>
+              <td>TIM PARTICIPA��ES S.A.</td>
+              <td>TIM PARTICIPA��ES S.A.</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=TKNO4">TKNO4</a></td>
+              <td>TEKNO</td>
+              <td>TEKNO S.A. CONSTR.IND�STRIA E COM�RCIO</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=TLCP3">TLCP3</a></td>
+              <td>TELE LESTE CELULAR PARTICIPA��ES SA</td>
+              <td>TELE LESTE CELULAR PARTICIPA��ES SA</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=TLCP4">TLCP4</a></td>
+              <td>TELE LESTE CELULAR PARTICIPA��ES SA</td>
+              <td>TELE LESTE CELULAR PARTICIPA��ES SA</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=TMAR3">TMAR3</a></td>
+              <td>TELEMAR</td>
+              <td>TELEMAR NORTE LESTE SA</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=TMAR5">TMAR5</a></td>
+              <td>TELEMAR</td>
+              <td>TELEMAR NORTE LESTE SA</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=TMAR6">TMAR6</a></td>
+              <td>TELEMAR</td>
+              <td>TELEMAR NORTE LESTE SA</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=TMCP3">TMCP3</a></td>
+              <td>TELEMIG CELULAR PARTICIPA��ES S.A.</td>
+              <td>TELEMIG CELULAR PARTICIPA��ES S.A.</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=TMCP4">TMCP4</a></td>
+              <td>TELEMIG CELULAR PARTICIPA��ES S.A.</td>
+              <td>TELEMIG CELULAR PARTICIPA��ES S.A.</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=TMGC11">TMGC11</a></td>
+              <td>TELEMIG CELULAR</td>
+              <td>TELEMIG CELULAR SA</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=TMGC12">TMGC12</a></td>
+              <td>TELEMIG CELULAR</td>
+              <td>TELEMIG CELULAR SA</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=TMGC13">TMGC13</a></td>
+              <td>TELEMIG CELULAR</td>
+              <td>TELEMIG CELULAR SA</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=TMGC3">TMGC3</a></td>
+              <td>TELEMIG CELULAR</td>
+              <td>TELEMIG CELULAR SA</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=TMGC7">TMGC7</a></td>
+              <td>TELEMIG CELULAR</td>
+              <td>TELEMIG CELULAR SA</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=TNCP3">TNCP3</a></td>
+              <td>AMAZ�NIA CELULAR</td>
+              <td>TELE NORTE CELULAR PARTICIPA��ES SA</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=TNCP4">TNCP4</a></td>
+              <td>AMAZ�NIA CELULAR</td>
+              <td>TELE NORTE CELULAR PARTICIPA��ES SA</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=TNEP3">TNEP3</a></td>
+              <td>TELE NORDESTE CELULAR PARTICIPA��ES S.A.</td>
+              <td>TELE NORDESTE CELULAR PARTICIPA��ES SA</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=TNEP4">TNEP4</a></td>
+              <td>TELE NORDESTE CELULAR PARTICIPA��ES S.A.</td>
+              <td>TELE NORDESTE CELULAR PARTICIPA��ES SA</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=TNLP3">TNLP3</a></td>
+              <td>TELEMAR</td>
+              <td>TELE NORTE LESTE PARTICIPA��ES SA</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=TNLP4">TNLP4</a></td>
+              <td>TELEMAR</td>
+              <td>TELE NORTE LESTE PARTICIPA��ES SA</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=TOTS3">TOTS3</a></td>
+              <td>TOTVS</td>
+              <td>TOTVS S.A.</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=TOYB3">TOYB3</a></td>
+              <td>TEC TOY</td>
+              <td>TEC TOY S/A</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=TOYB4">TOYB4</a></td>
+              <td>TEC TOY</td>
+              <td>TEC TOY S/A</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=TPIS3">TPIS3</a></td>
+              <td>TRIUNFO PARTICIPACOES SA</td>
+              <td>TRIUNFO PARTICIPACOES E INVESTIMENTOS SA</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=TPRC3">TPRC3</a></td>
+              <td>TIM PARTICIPA��ES S.A.</td>
+              <td>TIM PARTICIPA��ES S.A.</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=TPRC6">TPRC6</a></td>
+              <td>TIM PARTICIPA��ES S.A.</td>
+              <td>TIM PARTICIPA��ES S.A.</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=TRFO3">TRFO3</a></td>
+              <td>TRAFO</td>
+              <td>TRAFO EQUIPAMENTOS ELETRICOS S.A.</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=TRFO4">TRFO4</a></td>
+              <td>TRAFO</td>
+              <td>TRAFO EQUIPAMENTOS ELETRICOS S.A.</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=TRIS3">TRIS3</a></td>
+              <td>Trisul</td>
+              <td>TRISUL S/A</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=TROR3">TROR3</a></td>
+              <td>TRORION</td>
+              <td>TRORION SA</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=TROR4">TROR4</a></td>
+              <td>TRORION</td>
+              <td>TRORION SA</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=TRPL3">TRPL3</a></td>
+              <td>TRANSMISS�O PAULISTA</td>
+              <td>CTEEP-CIA TRANSM ENERGIA EL�TR. PAULISTA</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=TRPL4">TRPL4</a></td>
+              <td>TRANSMISS�O PAULISTA</td>
+              <td>CTEEP-CIA TRANSM ENERGIA EL�TR. PAULISTA</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=TRPN3">TRPN3</a></td>
+              <td>TARPON INV</td>
+              <td>TARPON INVESTIMENTOS S.A.</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=TSEP3">TSEP3</a></td>
+              <td>TELE SUDESTE CELULAR PART SA</td>
+              <td>TELE SUDESTE CELULAR PARTICIPA��ES SA</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=TSEP4">TSEP4</a></td>
+              <td>TELE SUDESTE CELULAR PART SA</td>
+              <td>TELE SUDESTE CELULAR PARTICIPA��ES SA</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=TSPP3">TSPP3</a></td>
+              <td>VIVO PARTICIPA��ES</td>
+              <td>VIVO PARTICIPA��ES S/A</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=TSPP4">TSPP4</a></td>
+              <td>VIVO PARTICIPA��ES</td>
+              <td>VIVO PARTICIPA��ES S/A</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=TUPY3">TUPY3</a></td>
+              <td>TUPY</td>
+              <td>TUPY SA</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=TUPY4">TUPY4</a></td>
+              <td>TUPY</td>
+              <td>TUPY SA</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=TVIT3">TVIT3</a></td>
+              <td>TIVIT</td>
+              <td>TIVIT TERC. DE PROC., SERV. E TEC. S.A.</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=TXRX3">TXRX3</a></td>
+              <td>RENAUX</td>
+              <td>TEXTIL RENAUXVIEW S.A.</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=TXRX4">TXRX4</a></td>
+              <td>RENAUX</td>
+              <td>TEXTIL RENAUXVIEW S.A.</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=UBBR11">UBBR11</a></td>
+              <td>UNIBANCO SA</td>
+              <td>UNIBANCO UNIAO BANCOS BRAS SA</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=UBBR3">UBBR3</a></td>
+              <td>UNIBANCO SA</td>
+              <td>UNIBANCO UNIAO BANCOS BRAS SA</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=UBBR4">UBBR4</a></td>
+              <td>UNIBANCO SA</td>
+              <td>UNIBANCO UNIAO BANCOS BRAS SA</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=UCAS3">UCAS3</a></td>
+              <td>UNICASA</td>
+              <td>UNICASA IND�STRIA DE M�VEIS S.A.</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=UCOP4">UCOP4</a></td>
+              <td>USINA COSTA PINTO S/A A��CAR E �LCOOL</td>
+              <td>USINA COSTA PINTO SA ACUC ALC</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=UGPA3">UGPA3</a></td>
+              <td>ULTRAPAR PARTICIPA��ES SA</td>
+              <td>ULTRAPAR PARTICIPA��ES SA</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=UGPA4">UGPA4</a></td>
+              <td>ULTRAPAR PARTICIPA��ES SA</td>
+              <td>ULTRAPAR PARTICIPA��ES SA</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=UNIP3">UNIP3</a></td>
+              <td>UNIPAR PARTICIPA��ES S.A.</td>
+              <td>UNIPAR PARTICIPA��ES S.A.</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=UNIP5">UNIP5</a></td>
+              <td>UNIPAR PARTICIPA��ES S.A.</td>
+              <td>UNIPAR PARTICIPA��ES S.A.</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=UNIP6">UNIP6</a></td>
+              <td>UNIPAR PARTICIPA��ES S.A.</td>
+              <td>UNIPAR PARTICIPA��ES S.A.</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=UOLL4">UOLL4</a></td>
+              <td>UOL</td>
+              <td>UNIVERSO ONLINE SA</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=USIM3">USIM3</a></td>
+              <td>USIMINAS</td>
+              <td>USINAS SIDERURGICAS DE MINAS GERAIS SA</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=USIM5">USIM5</a></td>
+              <td>USIMINAS</td>
+              <td>USINAS SIDERURGICAS DE MINAS GERAIS SA</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=USIM6">USIM6</a></td>
+              <td>USIMINAS</td>
+              <td>USINAS SIDERURGICAS DE MINAS GERAIS SA</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=VAGR3">VAGR3</a></td>
+              <td>TERRA SANTA</td>
+              <td>TERRA SANTA AGRO S.A.</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=VAGV3">VAGV3</a></td>
+              <td>SAVIRG</td>
+              <td>S.A. (VIACAO AEREA-RIOGRANDENSE)</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=VAGV4">VAGV4</a></td>
+              <td>SAVIRG</td>
+              <td>S.A. (VIACAO AEREA-RIOGRANDENSE)</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=VALE3">VALE3</a></td>
+              <td>VALE</td>
+              <td>VALE S.A.</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=VALE5">VALE5</a></td>
+              <td>VALE</td>
+              <td>VALE S.A.</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=VCPA4">VCPA4</a></td>
+              <td>Fibria</td>
+              <td>VOTORANTIM CELULOSE E PAPEL SA</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=VGOR3">VGOR3</a></td>
+              <td>VIGOR</td>
+              <td>SA FABRICA PRODS ALIMCS VIGOR</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=VGOR4">VGOR4</a></td>
+              <td>VIGOR</td>
+              <td>SA FABRICA PRODS ALIMCS VIGOR</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=VIGR3">VIGR3</a></td>
+              <td>VIGOR FOOD</td>
+              <td>VIGOR ALIMENTOS S.A.</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=VINE3">VINE3</a></td>
+              <td>VICUNHA TEXTIL SA</td>
+              <td>VICUNHA TEXTIL SA</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=VINE5">VINE5</a></td>
+              <td>VICUNHA TEXTIL SA</td>
+              <td>VICUNHA TEXTIL SA</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=VIVA3">VIVA3</a></td>
+              <td>VIVARA S.A.</td>
+              <td>VIVARA PARTICIPA�OES S.A</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=VIVO3">VIVO3</a></td>
+              <td>VIVO PARTICIPA��ES</td>
+              <td>VIVO PARTICIPA��ES S/A</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=VIVO4">VIVO4</a></td>
+              <td>VIVO PARTICIPA��ES</td>
+              <td>VIVO PARTICIPA��ES S/A</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=VIVR3">VIVR3</a></td>
+              <td>VIVER</td>
+              <td>VIVER INCORPORADORA E CONSTRUTORA S.A.</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=VIVT3">VIVT3</a></td>
+              <td>TELEF BRASIL</td>
+              <td>TELEF�NICA BRASIL S.A</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=VIVT4">VIVT4</a></td>
+              <td>TELEF BRASIL</td>
+              <td>TELEF�NICA BRASIL S.A</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=VLID3">VLID3</a></td>
+              <td>VALID</td>
+              <td>VALID SOLU��ES E SERV. SEG. MEIOS PAG. IDENT. S.A.</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=VNET3">VNET3</a></td>
+              <td>CIELO</td>
+              <td>CIELO S.A.</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=VPSC3">VPSC3</a></td>
+              <td>VPSC</td>
+              <td>VARIG PARTIC. EM SERVI�OS COMPLEMENTARES</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=VPSC4">VPSC4</a></td>
+              <td>VPSC</td>
+              <td>VARIG PARTIC. EM SERVI�OS COMPLEMENTARES</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=VPTA3">VPTA3</a></td>
+              <td>VPTA</td>
+              <td>VARIG PARTICIPA��ES EM TRANSP A�REOS S/A</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=VPTA4">VPTA4</a></td>
+              <td>VPTA</td>
+              <td>VARIG PARTICIPA��ES EM TRANSP A�REOS S/A</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=VTLM3">VTLM3</a></td>
+              <td>VITALYZE.ME</td>
+              <td>VITALYZE.ME SAUDE E TECNOLOGIA S.A.</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=VULC3">VULC3</a></td>
+              <td>VULCABRAS S/A.</td>
+              <td>VULCABRAS SA</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=VULC4">VULC4</a></td>
+              <td>VULCABRAS S/A.</td>
+              <td>VULCABRAS SA</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=VVAR11">VVAR11</a></td>
+              <td>VIAVAREJO</td>
+              <td>VIA VAREJO S.A.</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=VVAR3">VVAR3</a></td>
+              <td>VIAVAREJO</td>
+              <td>VIA VAREJO S.A.</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=VVAR4">VVAR4</a></td>
+              <td>VIAVAREJO</td>
+              <td>VIA VAREJO S.A.</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=VVAX3">VVAX3</a></td>
+              <td>VIVAX SA</td>
+              <td>VIVAX SA</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=VVAX4">VVAX4</a></td>
+              <td>VIVAX SA</td>
+              <td>VIVAX SA</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=WEGE3">WEGE3</a></td>
+              <td>WEG SA</td>
+              <td>WEG SA</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=WEGE4">WEGE4</a></td>
+              <td>WEG SA</td>
+              <td>WEG SA</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=WHRL3">WHRL3</a></td>
+              <td>WHIRLPOOL S.A.</td>
+              <td>WHIRLPOOL S.A.</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=WHRL4">WHRL4</a></td>
+              <td>WHIRLPOOL S.A.</td>
+              <td>WHIRLPOOL S.A.</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=WISA3">WISA3</a></td>
+              <td>WIEST SA</td>
+              <td>WIEST SA</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=WISA4">WISA4</a></td>
+              <td>WIEST SA</td>
+              <td>WIEST SA</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=WIZS3">WIZS3</a></td>
+              <td>WIZ S.A.</td>
+              <td>WIZ SOLU��ES E CORRETAGEM DE SEGUROS S.A.</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=WLMM3">WLMM3</a></td>
+              <td>WLM</td>
+              <td>WLM IND�STRIA E COM�RCIO S/A</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=WLMM4">WLMM4</a></td>
+              <td>WLM</td>
+              <td>WLM IND�STRIA E COM�RCIO S/A</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=WMBY3">WMBY3</a></td>
+              <td>WEMBLEY SOCIEDADE AN�NIMA</td>
+              <td>WEMBLEY SOCIEDADE AN�NIMA</td>
+					  </tr>
+             					<tr class="">
+              <td><a href="detalhes.php?papel=WSON33">WSON33</a></td>
+              <td>Wilson Sons</td>
+              <td>WILSON SONS LIMITED</td>
+					  </tr>
+             					<tr class="par">
+              <td><a href="detalhes.php?papel=YDUQ3">YDUQ3</a></td>
+              <td>YDUQS PART</td>
+              <td>ESTACIO PARTICIPACOES S.A.</td>
+					  </tr>
+          				</tbody>
+			</table>
+     		</div>
+	</div>
+
+
+		</div>
+	</div>
+		<div class="rodape">
+		<div class="center">
+			<ul>
+				<li><strong>Menu institucional:</strong></li>
+				<li><a class="home" href="index.php">P�gina inicial</a>|</li>
+				<li><a class="conheca" href="conheca.php">Conhe�a o site</a>|</li>
+				<li><a class="consciente" href="consciente.php">Investimento Consciente</a>|</li>
+				<li><a class="contato" href="contato.php">Entre em contato</a>|</li>
+			<!---	<li><a class="assine" href="assine.php">Assine agora</a></li> --->
+			</ul>
+			<ul>
+				<li><strong>Menu software: </strong></li>
+				<li><a class="graficos" href="graficos.php?tipo=1">Gr�ficos</a>|</li>
+				<li><a class="detalhes" href="detalhes.php">Detalhes</a>|</li>
+				<li><a class="cotacoes" href="cotacoes.php">Hist�rico de cota��es</a>|</li>
+				<li><a class="proventos" href="proventos.php">Proventos</a>|</li>
+				<li><a class="historicos" href="balancos.php">Balan�os Hist�ricos</a></li>
+				<li><a class="historicos" href="http://www.salarios.net.br">.</a></li>
+			</ul>
+		</div>
+	</div>
+	<script type="text/javascript">
+    var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+    document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <script type="text/javascript">
+    var pageTracker = _gat._getTracker("UA-3584125-1");
+    pageTracker._initData();
+    pageTracker._trackPageview();
+  </script>
+</body>
+</html>
