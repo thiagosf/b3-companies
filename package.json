@@ -1,0 +1,17 @@
+{
+  "name": "b3-companies",
+  "version": "1.0.0",
+  "description": "Crawler para pegar dados das empresas no B3",
+  "main": "index.js",
+  "author": "Thiago Silva Ferreira",
+  "license": "MIT",
+  "private": false,
+  "dependencies": {
+    "axios": "^0.19.0",
+    "cheerio": "^1.0.0-rc.3",
+    "mocha": "^6.2.2"
+  },
+  "scripts": {
+    "test": "mocha test/*_test.js"
+  }
+}

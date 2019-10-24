@@ -1,0 +1,765 @@
+
+<!doctype html>
+<html class="no-js" lang="pt-br">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script type="text/javascript" src="/ruxitagentjs_ICA27SVdefgijmoqruvx_10175190917092722.js" data-dtconfig="rid=RID_-568076877|rpid=-1910698498|domain=bmfbovespa.com.br|reportUrl=/rb_8370fec7-c82e-413f-a2c6-777046ed9811|app=5286dfffe4e737f8|featureHash=ICA27SVdefgijmoqruvx|srsr=25000|rdnt=1|uxrgce=1|bp=2|srms=1,1,,,|uxrgcm=100,25,300,3;100,25,300,3|dpvc=1|lastModification=1571869225092|dtVersion=10175190917092722|tp=500,50,0,1|uxdcw=1500|agentUri=/ruxitagentjs_ICA27SVdefgijmoqruvx_10175190917092722.js"></script><link rel="stylesheet" href="/aspnet_client/system_web/2_0_50727/Themes/SiteBmfBovespa/foundation.css" />
+<link rel="stylesheet" href="/aspnet_client/system_web/2_0_50727/Themes/SiteBmfBovespa/jquery.ui.datepicker.css" />
+<script src="/aspnet_client/system_web/2_0_50727/Themes/SiteBmfBovespa/js/vendor/modernizr.js"></script>
+<script src="/aspnet_client/system_web/2_0_50727/Themes/SiteBmfBovespa/js/vendor/jquery.js"></script>
+<script src="/aspnet_client/system_web/2_0_50727/Themes/SiteBmfBovespa/js/foundation.min.js"></script>
+  
+    <script language="javascript" src="js/InformacoesEmpresas.js"></script>
+    <script language="JavaScript1.2" type="text/javascript" src="/InstLibrary/ExecutaAcaoXML.js"></script>
+    <script language="JavaScript">
+
+        var gstrCA = new String('707065480568690343681248570543651562452559491845572940512747550360665270')
+
+        window.addEventListener('click', atualizaTamanho);
+        function atualizaTamanho() {
+            parent.resizeFrame(parent.document.getElementById('ctl00_contentPlaceHolderConteudo_iframeCarregadorPaginaExterna'));
+        }
+        
+        /******************************************************************************
+        / Objetivo  : Atualiza o tamanho do Frame principal para não gerar scroll
+        / Premissas : Nenhuma
+        / Entradas  : nenhuma
+        / Retorno   : Nenhum
+        /******************************************************************************/
+        function ResizeFramePrincipal() {
+            var totalLinhas = document.getElementById("tbMultas").rows.length;
+            totalLinhas = totalLinhas * 25;
+            var tamanhoTotal = 0;
+            if (document.getElementById('divMultas').style.display == 'none') {
+                tamanhoTotal = ((parent.document.getElementById('ctl00_contentPlaceHolderConteudo_iframeCarregadorPaginaExterna').style.height.replace("px", "").valueOf() * 1) + totalLinhas.valueOf());
+
+                parent.document.getElementById('ctl00_contentPlaceHolderConteudo_iframeCarregadorPaginaExterna').style.height = tamanhoTotal + "px";
+            }
+            else {
+                tamanhoTotal = ((parent.document.getElementById('ctl00_contentPlaceHolderConteudo_iframeCarregadorPaginaExterna').style.height.replace("px", "").valueOf() * 1) - totalLinhas.valueOf());
+                parent.document.getElementById('ctl00_contentPlaceHolderConteudo_iframeCarregadorPaginaExterna').style.height = tamanhoTotal + "px";
+            }
+        }
+        /******************************************************************************
+        / Objetivo  : Atualiza as notícias do Plantão de Notícias
+        / Premissas : Nenhuma
+        / Entradas  : objXmlREt objeto xml
+        / Retorno   : Nenhum
+        /******************************************************************************/
+        function AtualizarNoticias(objXmlREt) {
+
+            var objXMLElement = objXmlREt.getElementsByTagName("Noticias"); // objeto xml
+            try {
+                if (objXMLElement.length > 0)
+                    document.getElementById("divTabelaNoticias").innerHTML = objXMLElement[0].childNodes[0].nodeValue
+            }
+            catch (objEx) {
+                alert(objEx.message);
+            }
+        }
+        /******************************************************************************
+        / Objetivo  : Exibir e ocultar div
+        / Premissas : Nenhuma
+        / Entradas  : id div
+        / Retorno   : Nenhum
+        /******************************************************************************/
+        function ExibirOcultarDiv(ID) {
+            if (document.getElementById(ID).style.display == "none") {
+                document.getElementById(ID).style.display = "";
+            }
+            else {
+                document.getElementById(ID).style.display = "none";
+            }
+        }
+        /******************************************************************************
+        / Objetivo  : Atualiza as informações Dados Econômico-Financeiros IFRS ou LS
+        / Premissas : Nenhuma
+        / Entradas  : objXmlREt objeto xml
+        / Retorno   : Nenhum
+        /******************************************************************************/
+        function AtualizarDadosEcon(objXmlREt) {
+            //alert(objXmlREt.xml)
+            var objXMLElement = objXmlREt.getElementsByTagName("DadosEconFinanc"); // objeto xml
+            var objXMLElement2 = objXmlREt.getElementsByTagName("TituloEconFinanc"); // objeto xml
+            var objXMLElement3 = objXmlREt.getElementsByTagName("ImgDuvida"); // objeto xml
+            try {
+                //alert(objXMLElement[0].childNodes[0].nodeValue)
+                document.getElementById("divDadosEconomicos").innerHTML = objXMLElement[0].childNodes[0].nodeValue;
+                //document.getElementById("divTituloDadosEconFinanc").innerHTML = objXMLElement2[0].childNodes[0].nodeValue;
+                //document.getElementById("divImagemDuvida").innerHTML = objXMLElement3[0].childNodes[0].nodeValue;
+            }
+            catch (objEx) {
+                alert(objEx.message);
+            }
+        }
+        /******************************************************************************
+        / Objetivo  : Atualiza as informações Dados Econômico-Financeiros ITRNOVO ou DFPNOVO
+        / Premissas : Nenhuma
+        / Entradas  : objXmlREt objeto xml
+        / Retorno   : Nenhum
+        /******************************************************************************/
+        function AtualizarDadosEconNovo(objXmlREt) {
+            //alert(objXmlREt.xml)
+            var objXMLElement = objXmlREt.getElementsByTagName("DadosEconFinanc"); // objeto xml
+            try {
+                //alert(objXMLElement[0].childNodes[0].nodeValue)
+                document.getElementById("divDadosEconNovo").innerHTML = objXMLElement[0].childNodes[0].nodeValue;
+            }
+            catch (objEx) {
+                alert(objEx.message);
+            }
+        }
+        /******************************************************************************
+        / Objetivo  : Recupera o tipo de Dados Econômicos-Financeiros e envia para Ajax
+        / Premissas : Nenhuma
+        / Entradas  : Nenhuma
+        / Retorno   : Nenhum
+        /******************************************************************************/
+        function VerificaDadosEcon(intCodCVM, strValor) {
+			
+            try {
+                var strFuncao = 'intEstado=1&funcao=AtualizarDadosEcon&codCVM=' + intCodCVM + '&formato=' + strValor
+                if (strValor == 'IFRS' || strValor == 'LS') {
+                    CarregarXMLHTTP('ExecutaAcaoAjaxInfoEmpresas.asp?rnd=232', 'post', 2, true, 'AtualizarDadosEcon', strFuncao);
+                }
+                else {
+					
+                    CarregarXMLHTTP('ExecutaAcaoAjaxInfoEmpresas.asp?rnd=232', 'post', 2, true, 'AtualizarDadosEconNovo', strFuncao);
+                }
+								
+            }
+            catch (objEx) {
+                alert(objEx.message);
+            }
+        }
+        function AbreFormularioCadastral(url) {
+            window.open(url, '', 'width=800px,height=520px,scrollbars=1');
+        }
+    </script>
+    <style type="text/css">
+        .list-avatar.two-line.least.pn {margin-bottom:1em;}
+    </style>
+</head>
+<body onload="parent.resizeFrame(parent.document.getElementById('ctl00_contentPlaceHolderConteudo_iframeCarregadorPaginaExterna'))">
+<!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-KPF8G3"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KPF8G3');</script>
+<!-- End Google Tag Manager -->  
+
+<div class="row">
+<div class="large-9 columns">
+        <p class="legenda">Atualizado em 23/10/2019, às 23h09</p>
+    </div>              
+
+<div class="large-3 columns text-right">
+        <div id="divImgSegmento">
+            
+            <p><img id="Img1" src="/aspnet_client/system_web/2_0_50727/Themes/SiteBmfBovespa/img/InfEmpLogoNovoMercado.png" /></p>
+            
+        </div>
+    </div>
+
+</div>
+
+<div class="row">                
+<div  class="large-8 columns">
+        <ul class="accordion" data-accordion>
+            <li class="accordion-navigation">
+            
+            <a onclick="$('#accordionDados').toggle();">Dados da Companhia</a>
+            
+            <div id="accordionDados" class="content active">
+            <table class="ficha responsive">
+            <tr>
+                <td>Nome de Pregão:</td>
+                <td>CYRELA REALT</td>
+            </tr>
+            
+            <tr>
+                <td>Códigos de Negociação:</td>
+                <td>
+                <a onclick="$('#divCodigosOculto').toggle()"><strong>Mais Códigos</strong></a><br />
+                <a href='javascript:;' class=LinkCodNeg onclick=javascript:VerificaCotacao('CYRE3','0');>CYRE3</a>
+                <span id="spnCodigosOculto"></span>
+                <div id="divCodigosOculto" class="hide">
+                
+                <a href="javascript: void(0);" class="LinkCodNeg" onclick="VerificaCotacao('CYRE3', '0');">CYRE3</a>
+                
+                <br />
+                <strong>Códigos ISIN:</strong><br />
+                BRCYREACNOR7<br />
+                <!-- Não mostra o CVM para Cias Dispensadas -->
+                
+                <br />
+                <strong>Códigos CVM:</strong><br />
+                14460<br />
+                
+                </div>
+                
+                </td>
+            </tr>
+            
+            <tr>
+                <td>CNPJ:</td>
+                <td>73.178.600/0001-18</td>
+            </tr>
+            
+            <tr>
+                <td>Atividade Principal:</td>
+                <td>Incorporação Imobiliária</td>
+            </tr>
+            <tr>
+                <td>Classificação Setorial:</td>
+                
+                <td>Consumo Cíclico / Construção Civil / Incorporações</td>
+                
+            </tr>
+            
+            <tr>
+                <td>Site:</td>
+                <td><a target="_blank" href="http://www.cyrela.com.br">www.cyrela.com.br</a></td>
+            </tr>
+            
+            </table>
+            </div>
+            </li>
+                <!-- FIM TAB DADOS DA COMPANIA -->
+            <li class="accordion-navigation">
+                <a onclick="$('#divContatos').toggle()">Contatos</a>
+                    <div id="divContatos" class="content">
+					 
+                        <div>
+                            <table class="ficha responsive">
+                                <caption>Escriturador (Departamento de Acionistas)</caption>
+                                
+                                <tr>
+                                    <td>Instituição:</td>
+                                    <td>
+                                        BRADESCO
+                                    </td>
+                                </tr>
+                                
+                            </table>
+                        </div>
+                        
+						</br>
+                        
+							<div id="formFRE">
+								<div class="list-avatar">
+									<div class="list-avatar-row">
+										<div class="primary-action">
+											<img src="/aspnet_client/system_web/2_0_50727/Themes/SiteBmfBovespa/img/ic_web_black_48dp.png" alt="">
+										</div>
+										<div class="content">
+											<p class="primary-text"><a onclick="javascript:AbreFormularioCadastral('http://www.rad.cvm.gov.br/enetconsulta/frmGerenciaPaginaFRE.aspx?NumeroSequencialDocumento=80218&CodigoTipoInstituicao=2');" id="lnkFormCadastral">Formulário Cadastral - 2019 - Versão 1.0</a></p>
+										</div>
+									</div>
+									<div class="divider"></div>
+								</div>
+							</div>
+													
+                    </div>
+					</li>
+                </ul>
+                                    
+			    
+                <!-- BOVESPA MAIS  -->
+                
+                <!-- FIM BOVESPA MAIS -->
+				
+            </div>
+
+<div class="large-4 columns">
+<div id="colunaDireita">
+<!-- TradingView Widget BEGIN -->
+<div id="widget-empresas"></div>
+                      
+<script type="text/javascript" src="https://s3.amazonaws.com/tradingview/tv.js"></script>
+<script type="text/javascript">
+    var symbols = 'CYRE3';
+// Medida palhativa para mitigar problema de cotação VSPT3 FERROVIA CENTRO-ATLANTICA S.A.
+if (symbols.indexOf("VSPT3") == -1) { 
+		function splitSymbols() {
+			if (symbols != '') {
+				if (symbols.indexOf("|") > 0) {
+					return symbols.split('|');
+				}
+				else {
+					return [symbols, ''];
+				}
+			}
+			else return ['', ''];
+		}                      
+		new TradingView.MiniWidget({
+			"container_id": "widget-empresas",
+			"tabs": [
+			"Cotação"
+			],
+			"symbols": {
+			"Cotação": [
+				[
+					splitSymbols()
+				]
+			]
+			},
+			"gridLineColor": "#E9E9EA",
+			"fontColor": "#83888D",
+			"underLineColor": "#dbeffb",
+			"trendLineColor": "#4bafe9",
+			"activeTickerBackgroundColor": "#EDF0F3",
+			"noGraph": false,
+			"width": "100%",
+			"large_chart_url": "http://www.b3.com.br/pt_br/market-data-e-indices/servicos-de-dados/market-data/cotacoes/",
+			"customer": "bovespa",
+			"locale": "pt"
+		});
+	}
+</script>
+<!-- TradingView Widget END -->
+<br />                    
+</div>
+</div>
+</div>
+
+<div class="row">
+<div class="large-12 columns">
+
+<div id="divPlantaoNoticias">
+    <h3>Plantão de Notícias <small>delay de 15 min.</small></h3>
+    <div id="divTabelaNoticias">
+        <div class="list-avatar two-line least pn">
+            
+                <div class="list-avatar-row">
+                    <div class="primary-action">
+                        <img src="/aspnet_client/system_web/2_0_50727/Themes/SiteBmfBovespa/img/ic_chat_black_48dp.png" alt="">
+                    </div>
+                    <div class="content">
+                        <div class="least-content">
+                            
+                        </div>
+                        <p class="primary-text">
+                            16/10/2019
+                        </p>
+                        <p class="secondary-text">
+                            <!--a href="#a" onClick="javascript:window.open('FormConsultaDetalhePlantaoNot.asp?Data=16/10/2019&Sequencia=','DetalheNoticias','resizable=0,width=720,height=400');">CYRELA REALT (CYRE-NM) - Outros Comunicados ao Mercado - 16/10/19</a-->
+                            <a href="#a" onClick="javascript:window.open('FormConsultaDetalhePlantaoNot.asp?Data=16/10/2019&Id=974196','DetalheNoticias','resizable=0,width=720,height=400');">CYRELA REALT (CYRE-NM) - Outros Comunicados ao Mercado - 16/10/19</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="divider"></div>
+                
+        </div>
+    </div>
+    <div id="divAtualizar">
+        <div class="row collapse">
+            <div class="large-3 columns">
+                <a href="#a" onclick="javascript:window.open('FormConsultaPlantaoNoticias.asp?CodCVM=14460&SocEmi=CYRE&Periodo=dia','PlantaoNoticias','resizable=0,width=615,height=420');" class="button">Mais Notícias</a>
+            </div>
+            <div class="large-9 columns text-right">
+                <a onclick="CarregarXMLHTTP('ExecutaAcaoAjaxInfoEmpresas.asp?rnd=232', 'post', 2, true, 'AtualizarNoticias','intEstado=1&funcao=AtualizarNoticias&codCVM=14460&SocEmi=CYRE');"><img src="/aspnet_client/system_web/2_0_50727/Themes/SiteBmfBovespa/img/ic_history_black_36dp.png" alt="Atualizar" /></a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="divGovernancaCorporativa">
+<h3>Compliance</h3>
+<!-- CONDICOES EXCEPCIONAIS -->
+<div class="list-avatar">
+
+<!-- FIM CONDICOES EXCEPCIONAIS -->
+<!-- MULTAS -->
+
+<ul class="accordion" data-accordion>
+    <li class="accordion-navigation">
+	 	<a onclick="$('#divMultas').toggle()">Multas Aplicadas por descumprimento das obrigações</a>
+            <div class="content" id="divMultas">
+                <?xml version="1.0" encoding="UTF-16"?><table id="tbMultas"><tr><td>Outubro
+        
+        de 2011</td><td>Estatuto Social - Não inclusão de cláusulas mínimas</td></tr><tr><td>Outubro
+        
+        de 2012</td><td>Demostrações Financeiras Traduzidas para o Inglês - Atraso</td></tr><tr><td>Outubro
+        
+        de 2012</td><td>Calendário Anual - Não observância das regras de atualização</td></tr><tr><td>Abril
+        
+        de 2013</td><td>Calendário Anual - Não observância das regras de atualização</td></tr></table>
+            </div>
+        </li>
+    </ul>
+
+</div>     
+<!-- FIM MULTAS -->
+
+<!-- FIM COMPILANCE -->
+
+<div id="divConteudoPrincipal">
+<div id="divConteudoDados">
+    
+    <div id="divDadosEconomicoFinanceiros">
+        <div id="divTabelaDadosEconFinanc">
+        <div class="row collapse">                            
+        <div class="large-8 columns">
+            <h3>Dados Econômico-Financeiros - R$ - mil
+            </h3>
+        </div>
+         
+        <div class="large-3 columns">
+        <label>
+            Ver dados no formato
+            <select id="sltFormatoDoc" name="sltFormatoDoc" onchange="VerificaDadosEcon(14460,this.value);">
+                <option value="CONSOLIDADO">Consolidado</option><option value="COMPANHIA">N&atilde;o-Consolidado</option>
+            </select>
+        </label>
+        </div>
+        </div>
+
+        <div id="divDadosEconNovo">
+
+        
+        
+        <div>
+            <table>
+            <thead>
+                <tr>
+                    <th>
+                        Balanço Patrimonial - Consolidado
+                    </th>
+                    <th width="15%" class="text-center">30/06/2019</th>
+                    <th width="15%" class="text-center">31/12/2018</th>
+                </tr>
+            </thead>
+            
+            <tr>
+                <td>Ativo Imobilizado, Investimentos e Intangível</td>
+                <td class="text-right">884.031</td>
+                <td class="text-right">972.371</td>
+            </tr>
+            
+            <tr>
+                <td>Ativo Total</td>
+                <td class="text-right">9.772.333</td>
+                <td class="text-right">9.829.268</td>
+            </tr>
+            
+            <tr>
+                <td>Património Líquido</td>
+                <td class="text-right">5.680.594</td>
+                <td class="text-right">5.537.811</td>
+            </tr>
+            
+            <tr>
+                <td>Patrimônio Líquido Atribuído à Controladora</td>
+                <td class="text-right">5.307.777</td>
+                <td class="text-right">5.148.548</td>
+            </tr>
+            
+        </table>                           
+        </div>
+
+        <div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Demonstração do Resultado - Consolidado</th>
+                        <th width="15%" class="text-center">01/01/2019 a 30/06/2019</th>
+                        <th width="15%" class="text-center">01/01/2018 a 30/06/2018</th>
+                    </tr>
+                </thead>
+                
+                <tr>
+                    <td>Receita de Venda</td>
+                    <td class="text-right">1.762.858</td>
+                    <td class="text-right">1.090.161</td>
+                </tr>
+                
+                <tr>
+                    <td>Resultado Bruto</td>
+                    <td class="text-right">541.849</td>
+                    <td class="text-right">296.080</td>
+                </tr>
+                
+                <tr>
+                    <td>Resultado de Equivalência Patrimonial</td>
+                    <td class="text-right">50.649</td>
+                    <td class="text-right">24.173</td>
+                </tr>
+                
+                <tr>
+                    <td>Resultado Financeiro</td>
+                    <td class="text-right">19.744</td>
+                    <td class="text-right">7.233</td>
+                </tr>
+                
+                <tr>
+                    <td>Resultado Líquido das Operações Continuadas</td>
+                    <td class="text-right">203.692</td>
+                    <td class="text-right">(53.782)</td>
+                </tr>
+                
+                <tr>
+                    <td>Lucro (Prejuízo) do Período</td>
+                    <td class="text-right">203.692</td>
+                    <td class="text-right">(53.782)</td>
+                </tr>
+                
+                <tr>
+                    <td>Lucro (Prejuízo) do Período Atribuído à Controladora</td>
+                    <td class="text-right">162.244</td>
+                    <td class="text-right">(79.721)</td>
+                </tr>
+                
+            </table>
+        </div>
+
+        <div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Demonstração do Fluxo de Caixa - Consolidado</th>
+                        <th width="15%" class="text-center">01/01/2019 a 30/06/2019</th>
+                        <th width="15%" class="text-center">01/01/2018 a 30/06/2018</th>
+                    </tr>
+                </thead>
+                
+                <tr>
+                    <td>Atividades Operacionais</td>
+                    <td class="text-right">256.885</td>
+                    <td class="text-right">481.909</td>
+                </tr>
+                
+                <tr>
+                    <td>Atividades de Investimento</td>
+                    <td class="text-right">128.919</td>
+                    <td class="text-right">(223.490)</td>
+                </tr>
+                
+                <tr>
+                    <td>Atividades de Financiamento</td>
+                    <td class="text-right">(419.042)</td>
+                    <td class="text-right">(293.409)</td>
+                </tr>
+                
+                <tr>
+                    <td>Variação Cambial sobre Caixa e Equivalentes</td>
+                    <td class="text-right">0</td>
+                    <td class="text-right">0</td>
+                </tr>
+                
+                <tr>
+                    <td>Aumento (Redução) de Caixa e Equivalentes</td>
+                    <td class="text-right">(33.238)</td>
+                    <td class="text-right">(34.990)</td>
+                </tr>
+                
+            </table>
+        </div>
+
+        
+                </div>
+        </div>
+        
+                    <div id="divPosAcionariaCompCapitalSocial">
+                    
+                    <div id="divPosicaoAcionaria">
+                    <div>
+                        <h3>Posição Acionária*</h3>
+                        <table>
+                                <thead>
+                                    <tr>
+                                        <th>Nome</th>
+                                        <th class="text-center">%ON</th>
+                                        <th class="text-center">%PN</th>
+                                        <th class="text-center">%Total</th>
+                                    </tr>
+                                </thead>
+                                
+                                <tr>
+                                    <td>Eirenor S/a</td>
+                                    <td class="text-right">5,48</td>
+                                    <td class="text-right">0,00</td>
+                                    <td class="text-right">5,48</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td>Elie Horn</td>
+                                    <td class="text-right">18,00</td>
+                                    <td class="text-right">0,00</td>
+                                    <td class="text-right">18,00</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td>Susette Horn</td>
+                                    <td class="text-right">0,00</td>
+                                    <td class="text-right">0,00</td>
+                                    <td class="text-right">0,00</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td>Eh Capital Management</td>
+                                    <td class="text-right">1,88</td>
+                                    <td class="text-right">0,00</td>
+                                    <td class="text-right">1,88</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td>Itaú Unibanco S.A</td>
+                                    <td class="text-right">5,39</td>
+                                    <td class="text-right">0,00</td>
+                                    <td class="text-right">5,39</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td>Outros</td>
+                                    <td class="text-right">65,40</td>
+                                    <td class="text-right">0,00</td>
+                                    <td class="text-right">65,40</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td>Ações Tesouraria</td>
+                                    <td class="text-right">3,85</td>
+                                    <td class="text-right">0,00</td>
+                                    <td class="text-right">3,85</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td>Total</td>
+                                    <td class="text-right">100,00</td>
+                                    <td class="text-right">0,00</td>
+                                    <td class="text-right">100,00</td>
+                                </tr>
+                                
+                            </table>
+                        <p class="legenda">Informação recebida em 11/09/2019.<br /> (*)Posição dos acionistas com mais de 5% das ações de cada espécie.</p>
+                    </div>
+                    </div>
+                    
+                    <!-- INÍCIO AÇÕES EM CIRCULAÇÃO NO MERCADO -->
+                    
+                    <div id="div1">
+                    <div>
+                        <h3>Ações em Circulação no Mercado</h3>
+                        <table>
+                            
+                            <thead>
+                                <tr>
+                                    <th colspan="3" class="text-center">26/04/2019</th>
+                                </tr>
+                                <tr>
+                                    <td>Tipos de Investidores / Ações</td>
+                                    <td class="text-center">Quantidade</td>
+                                    <td class="text-center">Percentual</td>
+                                </tr>
+                            </thead>
+                                
+                                <tr>
+                                    <td>Pessoas Físicas</td>
+                                    <td class="text-right">7.535</td>
+                                    <td class="text-right"> - </td>
+                                </tr>
+                                
+                                <tr>
+                                    <td>Pessoas Jurídicas</td>
+                                    <td class="text-right">490</td>
+                                    <td class="text-right"> - </td>
+                                </tr>
+                                
+                                <tr>
+                                    <td>Investidores Institucionais</td>
+                                    <td class="text-right">409</td>
+                                    <td class="text-right"> - </td>
+                                </tr>
+                                
+                                <tr>
+                                    <td>Quantidade de Ações Ordinárias</td>
+                                    <td class="text-right">263.583.096</td>
+                                    <td class="text-right">65,94</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td>Total de Ações</td>
+                                    <td class="text-right">263.583.096</td>
+                                    <td class="text-right">65,94</td>
+                                </tr>
+                                
+                                </table>
+                    </div>
+                    </div>
+                    
+                    <!-- FIM AÇÕES EM CIRCULAÇÃO NO MERCADO -->
+				
+				
+				
+					<!-- Não mostra Composição do capital para Cias Dispensadas -->
+									
+						<div id="divComposicaoCapitalSocial">
+						
+						<div>    
+							<h3>Composição do Capital Social</h3>
+							<table>
+								<thead>
+									<tr>
+										
+										<th colspan="2" class="text-center">
+											 - 28/04/2016
+										</th>
+										
+									</tr>
+								</thead>
+								<tr>
+									<td>Ordinárias</td>
+									<td class="text-right">399.742.799</td>
+								</tr>
+								<tr>
+									<td>Preferenciais</td>
+									<td class="text-right">0</td>
+								</tr>
+								<tr>
+									<td>Total</td>
+									<td class="text-right">399.742.799</td>
+								</tr>
+							</table>
+						</div>
+						</div>
+				
+    </div>
+    
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+
+<script src="/aspnet_client/system_web/2_0_50727/Themes/SiteBmfBovespa/js/responsive.tables.min.js"></script>
+<script src="/aspnet_client/system_web/2_0_50727/Themes/SiteBmfBovespa/js/jquery.ui.core.js"></script>
+<script src="/aspnet_client/system_web/2_0_50727/Themes/SiteBmfBovespa/js/jquery.ui.datepicker.js"></script>
+<script>
+	$(document).foundation();
+	$("table").addClass("responsive");
+</script>
+
+<script type="text/javascript">
+
+	window.addEventListener('click', iframe_resize);
+
+	function iframe_resize() {
+
+	height = $("#divContainerIframeBmf").height();
+
+	if (parent.postMessage) {
+		parent.postMessage(height, "http://www.bmfbovespa.com.br");
+	}
+
+	}
+</script>
+<script type="text/javascript">iframe_resize();</script>
+</body>
+</html>
