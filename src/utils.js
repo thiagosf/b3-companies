@@ -16,7 +16,7 @@ module.exports = {
           .toString()
           .replace(/\./g, '')
           .replace(/,/g, '.')
-          .replace(/[^0-9\.]/g, '')
+          .replace(/[^0-9\.\-]/g, '')
           .trim()
       )
     }

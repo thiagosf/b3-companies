@@ -32,7 +32,11 @@ const b3quote = async code => {
     data = JSON.parse(utils.loadFixture('ELET3.json'))
   } else {
     const url = `http://cotacao.b3.com.br/mds/api/v1/instrumentQuotation/${code}`
-    const response = await axios.get(url)
+    const response = await axios({
+      url,
+      method: 'get',
+      timeout: 3000
+    })
     data = response.data
   }
   return formatQuote(data)

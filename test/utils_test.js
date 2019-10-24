@@ -20,5 +20,11 @@ describe('utils', () => {
       const expected = 12.5
       assert.equal(utils.toDecimal(value), expected)
     })
+
+    it('should keep minus signal', () => {
+      const value = '-12,5%'
+      const expected = -12.5
+      assert.equal(utils.toDecimal(value), expected)
+    })
   })
 })

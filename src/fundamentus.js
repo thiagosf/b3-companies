@@ -14,7 +14,11 @@ const fundamentus = async code => {
   if (useMock) {
     $ = cheerio.load(utils.loadFixture('ALPA3.html'))
   } else {
-    const response = await axios.get(url)
+    const response = await axios({
+      url,
+      method: 'get',
+      timeout: 3000
+    })
     utils.writeFixture(`${code}.html`, response.data)
     $ = cheerio.load(response.data)
   }

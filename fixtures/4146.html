@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script type="text/javascript" src="/ruxitagentjs_ICA27SVdefgijmoqruvx_10175190917092722.js" data-dtconfig="rid=RID_-519808291|rpid=2077980114|domain=bmfbovespa.com.br|reportUrl=/rb_8370fec7-c82e-413f-a2c6-777046ed9811|app=5286dfffe4e737f8|featureHash=ICA27SVdefgijmoqruvx|srsr=25000|rdnt=1|uxrgce=1|bp=2|srms=1,1,,,|uxrgcm=100,25,300,3;100,25,300,3|dpvc=1|lastModification=1571869225092|dtVersion=10175190917092722|tp=500,50,0,1|uxdcw=1500|agentUri=/ruxitagentjs_ICA27SVdefgijmoqruvx_10175190917092722.js"></script><link rel="stylesheet" href="/aspnet_client/system_web/2_0_50727/Themes/SiteBmfBovespa/foundation.css" />
+    <script type="text/javascript" src="/ruxitagentjs_ICA27SVdefgijmoqruvx_10175190917092722.js" data-dtconfig="rid=RID_-519808291|rpid=1075790187|domain=bmfbovespa.com.br|reportUrl=/rb_8370fec7-c82e-413f-a2c6-777046ed9811|app=5286dfffe4e737f8|featureHash=ICA27SVdefgijmoqruvx|srsr=25000|rdnt=1|uxrgce=1|bp=2|srms=1,1,,,|uxrgcm=100,25,300,3;100,25,300,3|dpvc=1|lastModification=1571869225092|dtVersion=10175190917092722|tp=500,50,0,1|uxdcw=1500|agentUri=/ruxitagentjs_ICA27SVdefgijmoqruvx_10175190917092722.js"></script><link rel="stylesheet" href="/aspnet_client/system_web/2_0_50727/Themes/SiteBmfBovespa/foundation.css" />
 <link rel="stylesheet" href="/aspnet_client/system_web/2_0_50727/Themes/SiteBmfBovespa/jquery.ui.datepicker.css" />
 <script src="/aspnet_client/system_web/2_0_50727/Themes/SiteBmfBovespa/js/vendor/modernizr.js"></script>
 <script src="/aspnet_client/system_web/2_0_50727/Themes/SiteBmfBovespa/js/vendor/jquery.js"></script>
@@ -321,6 +321,44 @@ if (symbols.indexOf("VSPT3") == -1) {
 
 <div class="row">
 <div class="large-12 columns">
+
+<div id="divPlantaoNoticias">
+    <h3>Plantão de Notícias <small>delay de 15 min.</small></h3>
+    <div id="divTabelaNoticias">
+        <div class="list-avatar two-line least pn">
+            
+                <div class="list-avatar-row">
+                    <div class="primary-action">
+                        <img src="/aspnet_client/system_web/2_0_50727/Themes/SiteBmfBovespa/img/ic_chat_black_48dp.png" alt="">
+                    </div>
+                    <div class="content">
+                        <div class="least-content">
+                            
+                        </div>
+                        <p class="primary-text">
+                            24/10/2019
+                        </p>
+                        <p class="secondary-text">
+                            <!--a href="#a" onClick="javascript:window.open('FormConsultaDetalhePlantaoNot.asp?Data=24/10/2019&Sequencia=','DetalheNoticias','resizable=0,width=720,height=400');">KARSTEN (CTKA) - Esclarecimentos de questionamentos CVM/B3- 24/10/19  </a-->
+                            <a href="#a" onClick="javascript:window.open('FormConsultaDetalhePlantaoNot.asp?Data=24/10/2019&Id=978773','DetalheNoticias','resizable=0,width=720,height=400');">KARSTEN (CTKA) - Esclarecimentos de questionamentos CVM/B3- 24/10/19  </a>
+                        </p>
+                    </div>
+                </div>
+                <div class="divider"></div>
+                
+        </div>
+    </div>
+    <div id="divAtualizar">
+        <div class="row collapse">
+            <div class="large-3 columns">
+                <a href="#a" onclick="javascript:window.open('FormConsultaPlantaoNoticias.asp?CodCVM=4146&SocEmi=CTKA&Periodo=dia','PlantaoNoticias','resizable=0,width=615,height=420');" class="button">Mais Notícias</a>
+            </div>
+            <div class="large-9 columns text-right">
+                <a onclick="CarregarXMLHTTP('ExecutaAcaoAjaxInfoEmpresas.asp?rnd=232', 'post', 2, true, 'AtualizarNoticias','intEstado=1&funcao=AtualizarNoticias&codCVM=4146&SocEmi=CTKA');"><img src="/aspnet_client/system_web/2_0_50727/Themes/SiteBmfBovespa/img/ic_history_black_36dp.png" alt="Atualizar" /></a>
+            </div>
+        </div>
+    </div>
+</div>
 
 <!-- FIM COMPILANCE -->
 

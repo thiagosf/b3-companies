@@ -14,12 +14,17 @@ const b3company = async (code, delay = 0) => {
   if (useMock) {
     $ = cheerio.load(utils.loadFixture('10456.html'))
   } else {
-    const response = await axios.get(url)
+    const response = await axios({
+      url,
+      method: 'get',
+      timeout: 3000
+    })
     utils.writeFixture(`${code}.html`, response.data)
     $ = cheerio.load(response.data)
   }
 
   let output = {
+    code,
     name: null,
     document: null,
     site: null,
