@@ -2,11 +2,11 @@ const fs = require('fs')
 
 module.exports = {
   loadFixture (name) {
-    return fs.readFileSync(`../fixtures/${name}`)
+    return fs.readFileSync(`./fixtures/${name}`)
   },
 
   writeFixture (name, content) {
-    fs.writeFileSync(`../fixtures/${name}`, content)
+    fs.writeFileSync(`./fixtures/${name}`, content)
   },
 
   toDecimal (value) {

@@ -2,11 +2,10 @@ const cache = require('../cache')
 
 const companies = async (req, res, next) => {
   try {
+    const lifetime = 60 * 60 * 24 * 30
     const codes = await cache.fetch({
       key: 'COMPANIES',
-      options: {
-        lifetime: 60 * 60 * 24 * 5
-      },
+      options: { lifetime },
       fn: async () => {
         return null
       }
@@ -19,10 +18,7 @@ const companies = async (req, res, next) => {
       try {
         const companyData = await cache.fetch({
           key: 'COMPANY',
-          options: {
-            code,
-            lifetime: 60 * 60 * 24 * 30 * 5
-          },
+          options: { code, lifetime },
           fn: async () => {
             return null
           }
@@ -47,10 +43,7 @@ const companies = async (req, res, next) => {
             try {
               fundamentusData = await cache.fetch({
                 key: 'FUNDAMENTUS',
-                options: {
-                  code,
-                  lifetime: 60 * 60 * 24 * 5
-                },
+                options: { code, lifetime },
                 fn: async () => {
                   return null
                 }
@@ -62,10 +55,7 @@ const companies = async (req, res, next) => {
             try {
               quoteData = await cache.fetch({
                 key: 'QUOTE',
-                options: {
-                  code,
-                  lifetime: 120
-                },
+                options: { code, lifetime },
                 fn: async () => {
                   return null
                 }
