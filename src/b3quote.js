@@ -15,7 +15,12 @@ const formatQuote = data => {
     current: null,
     variation: null
   }
-  if (data.BizSts.cd === 'OK' && data.Trad && data.Trad.length > 0) {
+  if (
+    data &&
+    data.BizSts &&
+    data.BizSts.cd === 'OK' &&
+    data.Trad && data.Trad.length > 0
+  ) {
     output.open = +data.Trad[0].scty.SctyQtn.opngPric
     output.max = +data.Trad[0].scty.SctyQtn.maxPric
     output.min = +data.Trad[0].scty.SctyQtn.minPric
@@ -27,18 +32,25 @@ const formatQuote = data => {
 }
 
 const b3quote = async code => {
+  console.log('-- b3quote:', code, new Date())
+  console.time(code)
   let data
   if (useMock) {
     data = JSON.parse(utils.loadFixture('ELET3.json'))
   } else {
-    const url = `http://cotacao.b3.com.br/mds/api/v1/instrumentQuotation/${code}`
-    const response = await axios({
-      url,
-      method: 'get',
-      timeout: 3000
-    })
-    data = response.data
+    try {
+      const url = `http://cotacao.b3.com.br/mds/api/v1/instrumentQuotation/${code}`
+      const response = await axios({
+        url,
+        method: 'get',
+        timeout: 3000
+      })
+      data = response.data
+    } catch (error) {
+      console.log('---- error:', error.message)
+    }
   }
+  console.timeEnd(code)
   return formatQuote(data)
 }
 

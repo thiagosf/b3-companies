@@ -1,7 +1,7 @@
-const b3codes = require('./src/b3codes')
-const b3company = require('./src/b3company')
-const b3quote = require('./src/b3quote')
-const fundamentus = require('./src/fundamentus')
+const b3codes = require('./b3codes')
+const b3company = require('./b3company')
+const b3quote = require('./b3quote')
+const fundamentus = require('./fundamentus')
 
 async function main() {
   const codes = await b3codes()

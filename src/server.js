@@ -1,13 +1,13 @@
 const express = require('express')
 const cors = require('cors')
 const schedule = require('node-schedule')
-const routes = require('./src/routes')
-const services = require('./src/services')
+const routes = require('./routes')
+const services = require('./services')
 
 const app = express()
 const port = +(process.env.PORT || 4000)
 
-schedule.scheduleJob('*/2 * * * *', () => {
+schedule.scheduleJob('*/5 * * * *', () => {
   return services.updateData()
 })
 
