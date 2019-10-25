@@ -167,9 +167,11 @@ const cache = {
     return this.get(options.key, options.options)
       .then((result) => {
         if (!result) {
-          return options.fn().then((data) => {
-            return this.set(options.key, options.options, data)
-          })
+          if (options.fn) {
+            return options.fn().then((data) => {
+              return this.set(options.key, options.options, data)
+            })
+          }
         }
         return result
       })

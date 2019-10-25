@@ -18,10 +18,7 @@ const companies = async (req, res, next) => {
       try {
         const companyData = await cache.fetch({
           key: 'COMPANY',
-          options: { code, lifetime },
-          fn: async () => {
-            return null
-          }
+          options: { code, lifetime }
         })
         data.push(companyData)
       } catch (error) {
@@ -43,10 +40,7 @@ const companies = async (req, res, next) => {
             try {
               fundamentusData = await cache.fetch({
                 key: 'FUNDAMENTUS',
-                options: { code, lifetime },
-                fn: async () => {
-                  return null
-                }
+                options: { code, lifetime }
               })
             } catch (error) {
               console.log('fundamentus error', code, error.message)
@@ -55,10 +49,7 @@ const companies = async (req, res, next) => {
             try {
               quoteData = await cache.fetch({
                 key: 'QUOTE',
-                options: { code, lifetime },
-                fn: async () => {
-                  return null
-                }
+                options: { code, lifetime }
               })
             } catch (error) {
               console.log('quote error', code, error.message)
