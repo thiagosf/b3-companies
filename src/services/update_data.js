@@ -50,6 +50,10 @@ const updateData = async () => {
       if (item.codes) {
         for (let j in item.codes) {
           const code = item.codes[j]
+
+          console.time(code)
+          console.log('-- update code:', code)
+
           let fundamentusData
           let quoteData
 
@@ -73,7 +77,7 @@ const updateData = async () => {
               key: 'QUOTE',
               options: {
                 code,
-                lifetime: 60 * 7
+                lifetime: 60 * 5
               },
               fn: async () => {
                 return b3quote(code)
@@ -82,6 +86,8 @@ const updateData = async () => {
           } catch (error) {
             console.log('quote error', code, error.message)
           }
+
+          console.timeEnd(code)
 
           item.aggregate.push({
             code,

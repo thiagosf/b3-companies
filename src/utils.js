@@ -29,7 +29,9 @@ module.exports = {
     if (process.env.WITH_PROXY === 'true') {
       const tor = torAxios.torSetup({
         ip: process.env.PROXY_HOST || 'localhost',
-        port: process.env.PROXY_PORT || 9050
+        port: process.env.PROXY_PORT || 9050,
+        controlPort: process.env.PROXY_CONTROL_PORT || null,
+        controlPassword: process.env.PROXY_CONTROL_PASSWORD || null
       })
       return tor
     }
