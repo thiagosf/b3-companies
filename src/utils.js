@@ -1,4 +1,6 @@
 const fs = require('fs')
+const axios = require('axios')
+const torAxios = require('tor-axios')
 
 module.exports = {
   loadFixture (name) {
@@ -21,5 +23,17 @@ module.exports = {
       )
     }
     return 0
+  },
+
+  getAxios () {
+    if (process.env.WITH_PROXY === 'true') {
+      const tor = torAxios.torSetup({
+        ip: process.env.PROXY_HOST || 'localhost',
+        port: process.env.PROXY_PORT || 9050
+      })
+      console.log(tor)
+      return tor
+    }
+    return axios
   }
 }

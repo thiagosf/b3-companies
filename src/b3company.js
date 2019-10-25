@@ -1,5 +1,4 @@
 const cheerio = require('cheerio')
-const axios = require('axios')
 const utils = require('./utils')
 let useMock = false
 
@@ -14,10 +13,10 @@ const b3company = async (code, delay = 0) => {
   if (useMock) {
     $ = cheerio.load(utils.loadFixture('10456.html'))
   } else {
-    const response = await axios({
+    const response = await utils.getAxios().request({
       url,
       method: 'get',
-      timeout: 3000
+      timeout: 5000
     })
     utils.writeFixture(`${code}.html`, response.data)
     $ = cheerio.load(response.data)

@@ -1,4 +1,3 @@
-const axios = require('axios')
 const utils = require('./utils')
 let useMock = false
 
@@ -20,7 +19,8 @@ const formatQuote = data => {
     data &&
     data.BizSts &&
     data.BizSts.cd === 'OK' &&
-    data.Trad && data.Trad.length > 0
+    data.Trad &&
+    data.Trad.length > 0
   ) {
     output.open = +data.Trad[0].scty.SctyQtn.opngPric
     output.max = +data.Trad[0].scty.SctyQtn.maxPric
@@ -41,10 +41,10 @@ const b3quote = async code => {
   } else {
     try {
       const url = `http://cotacao.b3.com.br/mds/api/v1/instrumentQuotation/${code}`
-      const response = await axios({
+      const response = await utils.getAxios().request({
         url,
         method: 'get',
-        timeout: 3000
+        timeout: 5000
       })
       data = response.data
     } catch (error) {
