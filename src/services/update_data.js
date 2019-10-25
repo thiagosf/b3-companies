@@ -3,9 +3,15 @@ const b3codes = require('../b3codes')
 const b3company = require('../b3company')
 const b3quote = require('../b3quote')
 const fundamentus = require('../fundamentus')
+const utils = require('../utils')
 
 const updateData = async () => {
   try {
+    if (process.env.WITH_PROXY === 'true') {
+      const axios = utils.getAxios()
+      await axios.torNewSession()
+    }
+
     const codes = await cache.fetch({
       key: 'COMPANIES',
       options: {

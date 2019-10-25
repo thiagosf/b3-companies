@@ -4,3 +4,4 @@ tmp/*
 !tmp/.keep
 dist/*
 !dist/.keep
+torrc

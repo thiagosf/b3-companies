@@ -31,7 +31,6 @@ module.exports = {
         ip: process.env.PROXY_HOST || 'localhost',
         port: process.env.PROXY_PORT || 9050
       })
-      console.log(tor)
       return tor
     }
     return axios
