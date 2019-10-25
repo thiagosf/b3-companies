@@ -27,7 +27,7 @@ const fundamentus = async code => {
     market_value: null, // Valor de mercado
     firm_value: null, // Valor da firma
     last_balance: null, // Últ balanço processado
-    asset_count: null, // Nro. Ações
+    asset_count: null, // Nro. Ações,
     indicators: {
       p_l: null,
       p_vp: null,
@@ -49,7 +49,8 @@ const fundamentus = async code => {
       roic: null, // ROIC
       roe: null, // ROE
       total_gross_debt: null, // Div Br/ Patrim
-    }
+    },
+    updated: Date.now()
   }
 
   const indicadorReplaces = {

@@ -67,7 +67,7 @@ const updateData = async () => {
               key: 'QUOTE',
               options: {
                 code,
-                lifetime: 120
+                lifetime: 60 * 7
               },
               fn: async () => {
                 return b3quote(code)

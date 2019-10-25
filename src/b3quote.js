@@ -13,7 +13,8 @@ const formatQuote = data => {
     min: null,
     average: null,
     current: null,
-    variation: null
+    variation: null,
+    updated: Date.now()
   }
   if (
     data &&

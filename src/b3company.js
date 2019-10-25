@@ -29,7 +29,8 @@ const b3company = async (code, delay = 0) => {
     document: null,
     site: null,
     activity: null,
-    codes: []
+    codes: [],
+    updated: Date.now()
   }
 
   // Basic info
