@@ -5,10 +5,7 @@ const companies = async (req, res, next) => {
     const lifetime = 60 * 60 * 24 * 30
     const codes = await cache.fetch({
       key: 'COMPANIES',
-      options: { lifetime },
-      fn: async () => {
-        return null
-      }
+      options: { lifetime }
     })
 
     let data = []
