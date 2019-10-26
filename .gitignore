@@ -5,3 +5,6 @@ tmp/*
 dist/*
 !dist/.keep
 torrc
+data/all.json
+fixtures/*
+!fixtures/.keep

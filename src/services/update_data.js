@@ -6,7 +6,16 @@ const fundamentus = require('../fundamentus')
 const utils = require('../utils')
 
 const updateData = async () => {
+  let data = []
+
   try {
+    let storedData = utils.loadData('all.json')
+    if (storedData) {
+      storedData = JSON.parse(storedData)
+    } else {
+      storedData = []
+    }
+
     if (process.env.WITH_PROXY === 'true') {
       const axios = utils.getAxios()
       await axios.torNewSession()
@@ -22,10 +31,10 @@ const updateData = async () => {
       }
     })
 
-    let data = []
-
     for (let i in codes) {
       const code = codes[i]
+      console.time(code)
+      console.log('-- load company id:', code)
       try {
         const companyData = await cache.fetch({
           key: 'COMPANY',
@@ -41,6 +50,7 @@ const updateData = async () => {
       } catch (error) {
         console.log('company error', code, error.message)
       }
+      console.timeEnd(code)
     }
 
     for (let i in data) {
@@ -97,11 +107,26 @@ const updateData = async () => {
         }
       }
 
+      let found = false
+      storedData = storedData.map(_item => {
+        if (_item.id === item.id) {
+          _item = { ...item }
+          found = true
+        }
+        return _item
+      })
+      if (!found) {
+        storedData.push(item)
+      }
+      utils.writeData('all.json', JSON.stringify(storedData))
+
       data[i] = item
     }
   } catch (error) {
     console.log('updateData error', error.message)
   }
+
+  return data
 }
 
 module.exports = updateData

@@ -4,6 +4,7 @@ const b3codes = async () => {
   let codes = fs.readFileSync('./data/codes.txt')
     .toString()
     .split("\n")
+    .filter(item => !!item)
   if (process.env.NODE_ENV !== 'production') {
     codes = codes.slice(0, 5)
   }

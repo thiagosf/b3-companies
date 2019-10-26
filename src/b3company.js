@@ -6,8 +6,8 @@ if (process.env.MOCK !== undefined) {
   useMock = process.env.MOCK === 'true'
 }
 
-const b3company = async (code, delay = 0) => {
-  const url = `http://bvmf.bmfbovespa.com.br/pt-br/mercados/acoes/empresas/ExecutaAcaoConsultaInfoEmp.asp?CodCVM=${code}&ViewDoc=1&AnoDoc=2019&VersaoDoc=1&NumSeqDoc=80218`
+const b3company = async (id, delay = 0) => {
+  const url = `http://bvmf.bmfbovespa.com.br/pt-br/mercados/acoes/empresas/ExecutaAcaoConsultaInfoEmp.asp?CodCVM=${id}&ViewDoc=1&AnoDoc=2019&VersaoDoc=1&NumSeqDoc=80218`
   let $
 
   if (useMock) {
@@ -18,12 +18,12 @@ const b3company = async (code, delay = 0) => {
       method: 'get',
       timeout: 5000
     })
-    utils.writeFixture(`${code}.html`, response.data)
+    utils.writeFixture(`${id}.html`, response.data)
     $ = cheerio.load(response.data)
   }
 
   let output = {
-    code,
+    id,
     name: null,
     document: null,
     site: null,

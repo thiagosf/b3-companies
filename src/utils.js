@@ -1,14 +1,61 @@
 const fs = require('fs')
+const path = require('path')
 const axios = require('axios')
 const torAxios = require('tor-axios')
 
 module.exports = {
+  loadData (name) {
+    let data = null
+    try {
+      data = fs.readFileSync(
+        path.join(
+          __dirname,
+          '../data',
+          name
+        )
+      ).toString()
+    } catch (error) {
+      console.log('error', name, error.message)
+    }
+    return data
+  },
+
+  writeData (name, content) {
+    return fs.writeFileSync(
+      path.join(
+        __dirname,
+        '../data',
+        name
+      ),
+      content
+    )
+  },
+
   loadFixture (name) {
-    return fs.readFileSync(`./fixtures/${name}`)
+    let data = null
+    try {
+      data = fs.readFileSync(
+        path.join(
+          __dirname,
+          '../fixtures',
+          name
+        )
+      ).toString()
+    } catch (error) {
+      console.log('error', name, error.message)
+    }
+    return data
   },
 
   writeFixture (name, content) {
-    fs.writeFileSync(`./fixtures/${name}`, content)
+    return fs.writeFileSync(
+      path.join(
+        __dirname,
+        '../fixtures',
+        name
+      ),
+      content
+    )
   },
 
   toDecimal (value) {
