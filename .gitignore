@@ -8,3 +8,5 @@ torrc
 data/all.json
 fixtures/*
 !fixtures/.keep
+public/*
+!public/.keep

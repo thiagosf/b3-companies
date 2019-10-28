@@ -1,3 +1,4 @@
+const path = require('path')
 const express = require('express')
 const cors = require('cors')
 const schedule = require('node-schedule')
@@ -8,11 +9,22 @@ const app = express()
 const port = +(process.env.PORT || 4000)
 
 schedule.scheduleJob('*/5 10-17 * * 1,2,3,4,5', () => {
-// schedule.scheduleJob('* * * * *', () => {
+// schedule.scheduleJob('46 * * * *', () => {
   return services.updateQuote()
 })
 
+schedule.scheduleJob('0 * * * 1,2,3,4,5', () => {
+// schedule.scheduleJob('46 * * * *', () => {
+  return services.takeScreenshots()
+})
+
 app.use(cors())
+app.use(express.static(
+  path.join(
+    __dirname,
+    '../public'
+  )
+))
 app.get('/companies', routes.companies)
 
 app.use((err, req, res, next) => {
