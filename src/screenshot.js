@@ -16,6 +16,7 @@ const screenshot = async code => {
   console.time(code)
 
   const browser = await puppeteer.launch({
+    args: ['--no-sandbox'],
     defaultViewport: {
       width: 1280,
       height: 768

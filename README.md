@@ -22,3 +22,5 @@ yarn run build
 ## TODO
 
 - [ ] Restagar empresas listadas diretamente do B3
+- [ ] Adicionar MySQL para salvar dados
+- [ ] Criar histórico de preços dos ativos
