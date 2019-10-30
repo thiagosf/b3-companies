@@ -15,10 +15,14 @@ const companies = async (req, res, next) => {
             `${aggregate.code}.png`
           )
           let screenshot = null
+          let screenshotDate = null
           if (fs.existsSync(fullPath)) {
+            const stat = fs.statSync(fullPath)
             screenshot = `/files/charts/${aggregate.code}.png`
+            screenshotDate = stat.mtimeMs
           }
           aggregate.screenshot = screenshot
+          aggregate.screenshot_date = screenshotDate
           return aggregate
         })
         return item
