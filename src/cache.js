@@ -175,6 +175,31 @@ const cache = {
         }
         return result
       })
+  },
+
+  /**
+   * Limpa cache pelo prefixo
+   * @param {string} prefix
+   * @returns {Promise}
+   */
+  cleanCache (prefix) {
+    return fs.readdirSync(
+      path.join(
+        __dirname,
+        '../tmp'
+      )
+    ).filter(item => {
+      return item.includes(prefix)
+    }).map(item => {
+      fs.unlinkSync(
+        path.join(
+          __dirname,
+          '../tmp',
+          item
+        )
+      )
+      return item
+    })
   }
 }
 
