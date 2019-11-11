@@ -7,7 +7,7 @@ const quoteAlert = async () => {
     const dayVariation = +((((+quote.current / +quote.open) - 1) * 100).toFixed(2))
 
     if (dayVariation >= 3) {
-      const message = `*${code}*: aumento de ${dayVariation}% no dia (${item.name})`
+      const message = `*${code}*: aumento de ${dayVariation}% no dia (${item.name}), preço: ${quote.current}`
       await cache.fetch({
         key: 'QUOTE_ALERT',
         options: {
