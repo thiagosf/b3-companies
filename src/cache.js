@@ -75,9 +75,10 @@ const cache = {
   _generateKey (prefix, obj) {
     let filter = null
     if (obj) {
-      delete obj.lifetime
+      const objClone = { ...obj }
+      delete objClone.lifetime
       try {
-        filter = JSON.stringify(obj)
+        filter = JSON.stringify(objClone)
       } catch (e) {
         this._log('---- cacheUtils::_generateKey error:', e)
       }
