@@ -8,7 +8,7 @@ const services = require('./services')
 const app = express()
 const port = +(process.env.PORT || 4000)
 
-schedule.scheduleJob('*/15 13-20 * * 1,2,3,4,5', () => {
+schedule.scheduleJob('*/15 13-21 * * 1,2,3,4,5', () => {
   return services.updateQuote()
 })
 
@@ -16,7 +16,7 @@ schedule.scheduleJob('0 21 * * 1,2,3,4,5', () => {
   return services.takeScreenshots()
 })
 
-schedule.scheduleJob('*/15 13-20 * * 1,2,3,4,5', () => {
+schedule.scheduleJob('*/15 13-21 * * 1,2,3,4,5', () => {
   return services.quoteAlert()
 })
 
