@@ -5,8 +5,9 @@ const utils = require('../utils')
 const quoteAlert = async () => {
   const checkAlert = async (code, quote, item) => {
     const dayVariation = +((((+quote.current / +quote.open) - 1) * 100).toFixed(2))
+    const minVariation = +(process.env.MIN_VARIATION || 2)
 
-    if (dayVariation >= 3) {
+    if (dayVariation >= minVariation) {
       const message = `*${code}*: aumento de ${dayVariation}% no dia (${item.name}), preço: ${quote.current}`
       await cache.fetch({
         key: 'QUOTE_ALERT',
