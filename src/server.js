@@ -9,15 +9,13 @@ const app = express()
 const port = +(process.env.PORT || 4000)
 
 schedule.scheduleJob('*/15 13-21 * * 1,2,3,4,5', () => {
-  return services.updateQuote()
+  return services.updateQuote().then(() => {
+    return services.quoteAlert()
+  })
 })
 
 schedule.scheduleJob('0 21 * * 1,2,3,4,5', () => {
   return services.takeScreenshots()
-})
-
-schedule.scheduleJob('*/15 13-21 * * 1,2,3,4,5', () => {
-  return services.quoteAlert()
 })
 
 schedule.scheduleJob('0 0 * * *', () => {
