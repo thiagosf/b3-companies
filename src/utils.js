@@ -2,6 +2,8 @@ const fs = require('fs')
 const path = require('path')
 const axios = require('axios')
 const torAxios = require('tor-axios')
+const moment = require('moment')
+const _ = require('lodash')
 
 module.exports = {
   loadData (name) {
@@ -83,5 +85,13 @@ module.exports = {
       return tor
     }
     return axios
+  },
+
+  formatDatetime (date) {
+    return moment.utc(date).format('YYYY-MM-DD HH:mm:ss')
+  },
+
+  strongParams (data, permited) {
+    return _.pick(data, permited)
   }
 }

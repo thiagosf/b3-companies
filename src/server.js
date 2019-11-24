@@ -4,14 +4,21 @@ const cors = require('cors')
 const schedule = require('node-schedule')
 const routes = require('./routes')
 const services = require('./services')
+const models = require('./models')
 
 const app = express()
 const port = +(process.env.PORT || 4000)
 
-schedule.scheduleJob('*/15 13-21 * * 1,2,3,4,5', () => {
-  return services.updateQuote().then(() => {
-    return services.quoteAlert()
-  })
+schedule.scheduleJob('0 0 * * 1,2,3,4,5', () => {
+  return services.updateFundamentus()
+})
+
+schedule.scheduleJob('0 22 * * 1,2,3,4,5', () => {
+  return services.updateCandles()
+})
+
+schedule.scheduleJob('*/2 13-21 * * 1,2,3,4,5', () => {
+  return services.tvCompanies()
 })
 
 schedule.scheduleJob('0 21 * * 1,2,3,4,5', () => {
@@ -22,6 +29,10 @@ schedule.scheduleJob('0 0 * * *', () => {
   return services.cleanCache()
 })
 
+app.use((req, res, next) => {
+  req.models = models
+  next()
+})
 app.use(cors())
 app.use(express.static(
   path.join(

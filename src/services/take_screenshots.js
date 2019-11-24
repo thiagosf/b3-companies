@@ -1,38 +1,25 @@
 const screenshot = require('../screenshot')
-const utils = require('../utils')
+const models = require('../models')
 
 const takeScreenshots = async () => {
+  console.time('takeScreenshots')
   try {
-    let storedData = utils.loadData('all.json')
-    storedData = JSON.parse(storedData)
+    const { Asset } = models
+    const assets = await Asset.scope('active').findAll()
 
-    for (let i in storedData) {
-      let item = storedData[i]
-      item.aggregate = item.aggregate || []
-
-      if (item.aggregate.length > 0) {
-        for (let j in item.aggregate) {
-          let aggregate = item.aggregate[j]
-          const { code } = aggregate
-
-          console.time(code)
-          console.log('-- screenshot code:', code)
-
-          try {
-            await screenshot(code)
-          } catch (error) {
-            console.log('quote error', code, error.message)
-          }
-
-          console.timeEnd(code)
-        }
+    for (let i in assets) {
+      const asset = assets[i]
+      console.log('-- code:', asset.code)
+      try {
+        await screenshot(asset.code)
+      } catch (e) {
+        console.log('-- error:', asset.code, error)
       }
     }
-
-    return storedData
   } catch (error) {
     console.log('takeScreenshots error', error)
   }
+  console.timeEnd('takeScreenshots')
 }
 
 module.exports = takeScreenshots

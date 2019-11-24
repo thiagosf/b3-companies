@@ -11,3 +11,5 @@ fixtures/*
 public/*
 !public/.keep
 .env
+mysql/*
+!mysql/.keep

@@ -1,33 +1,50 @@
 const fs = require('fs')
 const path = require('path')
-const utils = require('../utils')
 
 const companies = async (req, res, next) => {
   try {
-    const data = JSON.parse(utils.loadData('all.json'))
-    res.send({
-      success: true,
-      data: data.map(item => {
-        item.aggregate = item.aggregate.map(aggregate => {
-          const fullPath = path.join(
-            __dirname,
-            '../../public/files/charts',
-            `${aggregate.code}.png`
-          )
-          let screenshot = null
-          let screenshotDate = null
-          if (fs.existsSync(fullPath)) {
-            const stat = fs.statSync(fullPath)
-            screenshot = `/files/charts/${aggregate.code}.png`
-            screenshotDate = stat.mtimeMs
-          }
-          aggregate.screenshot = screenshot
-          aggregate.screenshot_date = screenshotDate
-          return aggregate
-        })
-        return item
+    const { Asset, AssetCandle } = req.models
+    const options = {
+      order: [['code', 'asc']]
+    }
+    const assets = await Asset.findAll(options)
+    let data = []
+    for (let i in assets) {
+      const asset = assets[i]
+      const item = await asset.publicData()
+      const options = {
+        where: {
+          asset_id: asset.id
+        },
+        limit: 1,
+        order: [['date', 'desc']]
+      }
+      let itemCandle
+      const assetCandle = await AssetCandle.findOne(options)
+      if (assetCandle) {
+        itemCandle = await assetCandle.publicData()
+      }
+      let screenshot = {
+        url: null,
+        date: null
+      }
+      const fullPath = path.join(
+        __dirname,
+        '../../public/files/charts',
+        `${asset.code}.png`
+      )
+      if (fs.existsSync(fullPath)) {
+        const stat = fs.statSync(fullPath)
+        screenshot.url = `/files/charts/${asset.code}.png`
+        screenshot.date = stat.mtimeMs
+      }
+      data.push({
+        ...item,
+        screenshot,
+        last_candle: itemCandle
       })
-    })
+    }
+    res.send({ success: true, data })
   } catch (error) {
     next(error)
   }

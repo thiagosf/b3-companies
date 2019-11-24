@@ -1,0 +1,42 @@
+version: "3"
+services:
+  web:
+    build:
+      dockerfile: ./docker/web.Dockerfile
+      context: .
+    image: thiagosf/b3-api
+    container_name: b3-api
+    ports:
+      - "3000:3000"
+    command: yarn start
+    env_file:
+      - ./.env
+    networks:
+      - b3-api-network
+    depends_on:
+      - db
+    links:
+      - db
+    volumes:
+      - ./:/var/www
+      - /var/www/node_modules
+
+  db:
+    image: mysql:5.7
+    container_name: b3-api-mysql
+    volumes:
+      - ./mysql/:/var/lib/mysql
+      - ./docker/mysql.cnf:/etc/mysql/conf.d/docker.cnf
+    ports:
+      - 3306:3306
+    networks:
+      - b3-api-network
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: my_db
+      MYSQL_USER: docker
+      MYSQL_PASSWORD: docker
+
+networks:
+  b3-api-network:
+    driver: bridge
