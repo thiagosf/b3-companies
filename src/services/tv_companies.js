@@ -79,7 +79,7 @@ const tvCompanies = async () => {
               link = linkEl.getAttribute('href')
               code = link.split(':').pop().trim()
             }
-            if (code) {
+            if (code && !isNaN(+price) && +price > 0) {
               return { code, name, price, open, high, low, link }
             }
           }).filter(item => item)
