@@ -43,8 +43,11 @@ const screenshot = async code => {
     const controlSelector = '.control-bar-wrapper'
     await page.$eval(controlSelector, hideElement)
 
-    const tvSelector = '.tv-floating-toolbar__widget-wrapper'
+    const tvSelector = '.tv-floating-toolbar'
     await page.$eval(tvSelector, hideElement)
+
+    const overlay = '#overlap-manager-root'
+    await page.$eval(overlay, hideElement)
 
     const chartSelector = '.layout__area--center'
     const rect = await page.evaluate(selector => {
