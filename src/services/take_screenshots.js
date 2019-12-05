@@ -1,6 +1,12 @@
 const screenshot = require('../screenshot')
 const models = require('../models')
 
+const delay = seconds => {
+  return new Promise(resolve => {
+    setTimeout(resolve, seconds * 1000)
+  })
+}
+
 const takeScreenshots = async () => {
   console.time('takeScreenshots')
   try {
@@ -15,6 +21,7 @@ const takeScreenshots = async () => {
       } catch (e) {
         console.log('-- error:', asset.code, error)
       }
+      await delay(10)
     }
   } catch (error) {
     console.log('takeScreenshots error', error)
