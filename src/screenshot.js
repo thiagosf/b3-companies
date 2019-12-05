@@ -27,14 +27,14 @@ const screenshot = async code => {
     const hideElement = el => el.style.display = 'none'
     const page = await browser.newPage()
     await page.goto(`https://br.tradingview.com/chart/?symbol=BMFBOVESPA:${code}&interval=D`)
-    await page.waitFor(15)
+    await page.waitFor(10)
 
     const buttonSelector = '.button-3SuA46Ww-'
-    await page.waitForSelector(buttonSelector)
+    await page.waitForSelector(buttonSelector, { timeout: 2000 })
     await page.click(buttonSelector)
 
     const zoomSelector = '.control-bar__btn--zoom-in'
-    await page.waitForSelector(zoomSelector)
+    await page.waitForSelector(zoomSelector, { timeout: 2000 })
     const clicks = 6
     for (let i = 0; i < clicks; i++) {
       await page.click(zoomSelector)
@@ -53,9 +53,9 @@ const screenshot = async code => {
     const rect = await page.evaluate(selector => {
       const element = document.querySelector(selector)
       if (!element)
-      return null
-      const {x, y, width, height} = element.getBoundingClientRect()
-      return {left: x, top: y, width, height, id: element.id}
+        return null
+      const { x, y, width, height } = element.getBoundingClientRect()
+      return { left: x, top: y, width, height, id: element.id }
     }, chartSelector)
 
     if (rect) {
@@ -70,10 +70,10 @@ const screenshot = async code => {
           `${code}.png`
         ),
         clip: {
-            x: rect.left,
-            y: rect.top,
-            width: rect.width,
-            height: rect.height
+          x: rect.left,
+          y: rect.top,
+          width: rect.width,
+          height: rect.height
         }
       })
       output = true
