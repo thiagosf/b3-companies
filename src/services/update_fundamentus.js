@@ -17,8 +17,8 @@ const updateFundamentus = async () => {
             p_vp: fundamentusData.indicators.p_vp
           })
         }
-      } catch (e) {
-        console.log('-- error:', asset.code, e)
+      } catch (error) {
+        console.log('-- error:', asset.code, error)
       }
     }
   } catch (error) {

@@ -109,8 +109,8 @@ const tvCompanies = async () => {
         }
 
         console.log('---- items:', data.length)
-      } catch (e) {
-        console.log('error: ', tvLink.name, e)
+      } catch (error) {
+        console.log('error: ', tvLink.name, error)
       }
     }
   } catch (error) {

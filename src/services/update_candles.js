@@ -34,8 +34,8 @@ const updateCandles = async () => {
         if (!created) {
           await assetCandle.strongUpdate(options.defaults)
         }
-      } catch (e) {
-        console.log('-- error:', asset.code, e)
+      } catch (error) {
+        console.log('-- error:', asset.code, error)
       }
     }
   } catch (error) {
