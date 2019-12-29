@@ -29,10 +29,6 @@ const screenshot = async code => {
     await page.goto(`https://br.tradingview.com/chart/?symbol=BMFBOVESPA:${code}&interval=D`)
     await page.waitFor(10)
 
-    const buttonSelector = '.button-3SuA46Ww-'
-    await page.waitForSelector(buttonSelector, { timeout: 2000 })
-    await page.click(buttonSelector)
-
     const zoomSelector = '.control-bar__btn--zoom-in'
     await page.waitForSelector(zoomSelector, { timeout: 2000 })
     const clicks = 6
