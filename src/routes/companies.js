@@ -1,10 +1,49 @@
 const fs = require('fs')
 const path = require('path')
+const moment = require('moment')
+const _getFilters = ({ query, models }) => {
+  let output = {}
+  if (query.candles) {
+    const { sequelize } = models
+    const { Op } = sequelize.Sequelize
+    const firstDate = moment.utc()
+
+    const items = query.candles.split(',')
+      .map(item => {
+        const signal = item === 'n' ? '<' : '>'
+        const date = firstDate.subtract(1, 'days')
+          .startOf('day')
+          .format('YYYY-MM-DD HH:mm:ss')
+        return `
+          (close ${signal} open and date = '${date}')
+        `
+      })
+
+    const count = items.length
+    const field = sequelize.literal(`
+      (
+        SELECT count(id) AS total FROM asset_candles AS ac
+        WHERE ac.asset_id = Asset.id and
+        (
+          ${items.join('OR')}
+        )
+      ) = ${count}
+    `)
+
+    output.where = {
+      [Op.and]: field
+    }
+  }
+  return output
+}
 
 const companies = async (req, res, next) => {
   try {
-    const { Asset, AssetCandle } = req.models
+    const { models } = req
+    const { Asset, AssetCandle } = models
+    const { query } = req
     const options = {
+      ..._getFilters({ query, models }),
       order: [['code', 'asc']]
     }
     const assets = await Asset.findAll(options)
