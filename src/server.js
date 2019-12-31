@@ -21,7 +21,7 @@ schedule.scheduleJob('0 21 * * 1,2,3,4,5', () => {
   return services.tvCompanies()
 })
 
-schedule.scheduleJob('0 21 * * 1,2,3,4,5', () => {
+schedule.scheduleJob('30 21 * * 1,2,3,4,5', () => {
   return services.takeScreenshots()
 })
 
