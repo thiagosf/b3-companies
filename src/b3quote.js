@@ -28,6 +28,7 @@ const formatQuote = data => {
     output.average = +data.Trad[0].scty.SctyQtn.avrgPric
     output.current = +data.Trad[0].scty.SctyQtn.curPrc
     output.variation = +data.Trad[0].scty.SctyQtn.prcFlcn
+    output.updated = data.Msg.dtTm.substring(0, 10) + ' 00:00:00'
   }
   return output
 }
