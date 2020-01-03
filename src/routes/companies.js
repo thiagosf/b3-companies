@@ -17,7 +17,7 @@ const companies = async (req, res, next) => {
       const item = await asset.publicData()
       const hasCandles = query.candles !== ''
       let addItem = true
-      const count = query.candles
+      const count = query.candles !== ''
         ? query.candles.split(',').length
         : 1
       const options = {
