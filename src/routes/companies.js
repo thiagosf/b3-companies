@@ -15,9 +15,9 @@ const companies = async (req, res, next) => {
     for (let i in assets) {
       const asset = assets[i]
       const item = await asset.publicData()
-      const hasCandles = query.candles !== ''
+      const hasCandles = query.candles !== '' && query.candles !== undefined
       let addItem = true
-      const count = query.candles !== ''
+      const count = hasCandles
         ? query.candles.split(',').length
         : 1
       const options = {
@@ -51,7 +51,7 @@ const companies = async (req, res, next) => {
         candles.forEach((direction, index) => {
           const item = assetCandles[index]
           if (item) {
-            const candleDirection = +item.close > +item.open
+            const candleDirection = +item.close >= +item.open
               ? 'p'
               : 'n'
             addItem = addItem && direction === candleDirection
