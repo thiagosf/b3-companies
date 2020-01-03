@@ -1,41 +1,6 @@
 const fs = require('fs')
 const path = require('path')
 const moment = require('moment')
-const _getFilters = ({ query, models }) => {
-  let output = {}
-  if (query.candles) {
-    const { sequelize } = models
-    const { Op } = sequelize.Sequelize
-    const firstDate = moment.utc()
-
-    const items = query.candles.split(',')
-      .map(item => {
-        const signal = item === 'n' ? '<' : '>'
-        const date = firstDate.subtract(1, 'days')
-          .startOf('day')
-          .format('YYYY-MM-DD HH:mm:ss')
-        return `
-          (close ${signal} open and date = '${date}')
-        `
-      })
-
-    const count = items.length
-    const field = sequelize.literal(`
-      (
-        SELECT count(id) AS total FROM asset_candles AS ac
-        WHERE ac.asset_id = Asset.id and
-        (
-          ${items.join('OR')}
-        )
-      ) = ${count}
-    `)
-
-    output.where = {
-      [Op.and]: field
-    }
-  }
-  return output
-}
 
 const companies = async (req, res, next) => {
   try {
@@ -43,7 +8,6 @@ const companies = async (req, res, next) => {
     const { Asset, AssetCandle } = models
     const { query } = req
     const options = {
-      ..._getFilters({ query, models }),
       order: [['code', 'asc']]
     }
     const assets = await Asset.findAll(options)
@@ -51,17 +15,22 @@ const companies = async (req, res, next) => {
     for (let i in assets) {
       const asset = assets[i]
       const item = await asset.publicData()
+      const hasCandles = query.candles !== undefined
+      let addItem = true
+      const count = query.candles
+        ? query.candles.split(',').length
+        : 1
       const options = {
         where: {
           asset_id: asset.id
         },
-        limit: 1,
+        limit: count,
         order: [['date', 'desc']]
       }
       let itemCandle
-      const assetCandle = await AssetCandle.findOne(options)
-      if (assetCandle) {
-        itemCandle = await assetCandle.publicData()
+      const assetCandles = await AssetCandle.findAll(options)
+      if (assetCandles.length > 0) {
+        itemCandle = await assetCandles[0].publicData()
       }
       let screenshot = {
         url: null,
@@ -77,11 +46,27 @@ const companies = async (req, res, next) => {
         screenshot.url = `/files/charts/${asset.code}.png`
         screenshot.date = stat.mtimeMs
       }
-      data.push({
-        ...item,
-        screenshot,
-        last_candle: itemCandle
-      })
+      if (hasCandles) {
+        const candles = query.candles.split(',')
+        candles.forEach((direction, index) => {
+          const item = assetCandles[index]
+          if (item) {
+            const candleDirection = +item.close > +item.open
+              ? 'p'
+              : 'n'
+            addItem = addItem && direction === candleDirection
+          } else {
+            addItem = false
+          }
+        })
+      }
+      if (addItem) {
+        data.push({
+          ...item,
+          screenshot,
+          last_candle: itemCandle
+        })
+      }
     }
     res.send({ success: true, data })
   } catch (error) {
