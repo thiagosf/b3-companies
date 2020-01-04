@@ -2,6 +2,14 @@ const moment = require('moment')
 const b3quote = require('../b3quote')
 const models = require('../models')
 
+const delay = seconds => {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve()
+    }, seconds * 1000)
+  })
+}
+
 const updateCandles = async () => {
   console.time('updateCandles')
   try {
@@ -34,9 +42,14 @@ const updateCandles = async () => {
         if (!created) {
           await assetCandle.strongUpdate(options.defaults)
         }
+        await asset.update({
+          open: quoteData.open,
+          price: quoteData.current
+        })
       } catch (error) {
         console.log('-- error:', asset.code, error)
       }
+      await delay(0.5)
     }
   } catch (error) {
     console.log('updateCandles error', error)

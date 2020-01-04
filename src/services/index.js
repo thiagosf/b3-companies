@@ -5,5 +5,6 @@ module.exports = {
   quoteAlert: require('./quote_alert'),
   cleanCache: require('./clean_cache'),
   tvCompanies: require('./tv_companies'),
-  updateFundamentus: require('./update_fundamentus')
+  updateFundamentus: require('./update_fundamentus'),
+  tvServices: require('./tv_services')
 }
