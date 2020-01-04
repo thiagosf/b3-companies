@@ -13,7 +13,7 @@ schedule.scheduleJob('0 0 * * 1,2,3,4,5', () => {
   return services.updateFundamentus()
 })
 
-schedule.scheduleJob('30 21 * * 1,2,3,4,5', () => {
+schedule.scheduleJob('0 23 * * 1,2,3,4,5', () => {
   return services.updateCandles()
 })
 
