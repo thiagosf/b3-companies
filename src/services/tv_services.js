@@ -1,7 +1,7 @@
-const puppeteer = require('puppeteer')
 const path = require('path')
 const fs = require('fs')
 const models = require('../models')
+const utils = require('../utils')
 const tvServicesData = require('../../data/tv_services.json')
 let useMock = false
 
@@ -12,21 +12,15 @@ if (process.env.MOCK !== undefined) {
 const tvServices = async () => {
   console.time('tvCompanies')
   const { Asset } = models
-  const browser = await puppeteer.launch({
-    args: ['--no-sandbox'],
-    defaultViewport: {
-      width: 1280,
-      height: 768
-    }
-  })
+  const browser = await utils.headlessBrowser()
   let codes = []
 
   try {
     for (let i in tvServicesData) {
       const tvService = tvServicesData[i]
-      try {
-        const page = await browser.newPage()
+      const page = await browser.newPage()
 
+      try {
         console.log('-- name:', tvService.name)
 
         // real
@@ -92,10 +86,14 @@ const tvServices = async () => {
         console.log('---- items:', data.length)
       } catch (error) {
         console.log('error: ', error.message)
+      } finally {
+        await page.close()
       }
     }
   } catch (error) {
     console.log('error: ', error.message)
+  } finally {
+    await browser.close()
   }
 }
 

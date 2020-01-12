@@ -1,6 +1,6 @@
-const puppeteer = require('puppeteer')
 const path = require('path')
 const fs = require('fs')
+const utils = require('./utils')
 
 const createDirectoryIfNotExists = dir => {
   if (!fs.existsSync(dir)) {
@@ -15,22 +15,16 @@ const screenshot = async code => {
   console.log('-- screenshot:', code, new Date())
   console.time(code)
 
-  const browser = await puppeteer.launch({
-    args: ['--no-sandbox'],
-    defaultViewport: {
-      width: 1280,
-      height: 768
-    }
-  })
+  const browser = await utils.headlessBrowser()
+  const page = await browser.newPage()
 
   try {
     const hideElement = el => el.style.display = 'none'
-    const page = await browser.newPage()
     await page.goto(`https://br.tradingview.com/chart/?symbol=BMFBOVESPA:${code}&interval=D`)
     await page.waitFor(10)
 
     const zoomSelector = '.control-bar__btn--zoom-in'
-    await page.waitForSelector(zoomSelector, { timeout: 2000 })
+    await page.waitForSelector(zoomSelector, { timeout: 7000 })
     const clicks = 6
     for (let i = 0; i < clicks; i++) {
       await page.click(zoomSelector)
@@ -76,9 +70,10 @@ const screenshot = async code => {
     }
   } catch (error) {
     console.log('screenshot error:', code, error)
+  } finally {
+    await page.close()
+    await browser.close()
   }
-
-  await browser.close()
 
   console.timeEnd(code)
   return output

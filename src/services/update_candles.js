@@ -20,32 +20,36 @@ const updateCandles = async () => {
       const asset = assets[i]
       try {
         const quoteData = await b3quote(asset.code)
-        const date = moment.utc(quoteData.updated)
-          .startOf('day')
-          .toDate()
-        const options = {
-          where: {
-            asset_id: asset.id,
-            date
-          },
-          defaults: {
-            date,
-            asset_id: asset.id,
-            time_frame: '1d',
-            open: quoteData.open,
-            high: quoteData.max,
-            low: quoteData.min,
-            close: quoteData.current
+        if (quoteData.open) {
+          const date = moment.utc(quoteData.updated)
+            .startOf('day')
+            .toDate()
+          const options = {
+            where: {
+              asset_id: asset.id,
+              date
+            },
+            defaults: {
+              date,
+              asset_id: asset.id,
+              time_frame: '1d',
+              open: quoteData.open,
+              high: quoteData.max,
+              low: quoteData.min,
+              close: quoteData.current
+            }
           }
+          const [assetCandle, created] = await AssetCandle.findOrCreate(options)
+          if (!created) {
+            await assetCandle.strongUpdate(options.defaults)
+          }
+          await asset.update({
+            open: quoteData.open,
+            price: quoteData.current
+          })
+        } else {
+          console.log('-- no quote data')
         }
-        const [assetCandle, created] = await AssetCandle.findOrCreate(options)
-        if (!created) {
-          await assetCandle.strongUpdate(options.defaults)
-        }
-        await asset.update({
-          open: quoteData.open,
-          price: quoteData.current
-        })
       } catch (error) {
         console.log('-- error:', asset.code, error)
       }

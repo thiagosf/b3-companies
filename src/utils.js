@@ -4,6 +4,7 @@ const axios = require('axios')
 const torAxios = require('tor-axios')
 const moment = require('moment')
 const _ = require('lodash')
+const puppeteer = require('puppeteer')
 
 module.exports = {
   loadData (name) {
@@ -93,5 +94,21 @@ module.exports = {
 
   strongParams (data, permited) {
     return _.pick(data, permited)
+  },
+
+  headlessBrowser () {
+    return puppeteer.launch({
+      args: [
+        '--ignore-certificate-errors',
+        '--no-sandbox',
+        '--disable-setuid-sandbox',
+        '--disable-dev-shm-usage',
+        '--user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36'
+      ],
+      defaultViewport: {
+        width: 1280,
+        height: 768
+      }
+    })
   }
 }

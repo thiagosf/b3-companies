@@ -1,14 +1,19 @@
 const cache = require('../cache')
 const alert = require('../alert')
-const utils = require('../utils')
+const models = require('../models')
 
 const quoteAlert = async () => {
   const checkAlert = async (code, quote, item) => {
     const dayVariation = +((((+quote.current / +quote.open) - 1) * 100).toFixed(2))
-    const minVariation = +(process.env.MIN_VARIATION || 2)
+    const minVariation = +(process.env.MIN_VARIATION || 5)
 
-    if (dayVariation >= minVariation) {
-      const message = `*${code}*: aumento de ${dayVariation}% no dia (${item.name}), preço: ${quote.current}`
+    if (
+      dayVariation >= minVariation ||
+      dayVariation <= (minVariation * -1)
+    ) {
+      const directionMessage = dayVariation < 0 ? 'queda' : 'aumento'
+      const message = `*${code}*: ${directionMessage} de ${dayVariation}% no dia (${item.name}), preço: ${quote.current}`
+
       await cache.fetch({
         key: 'QUOTE_ALERT',
         options: {
@@ -24,13 +29,23 @@ const quoteAlert = async () => {
   }
 
   try {
-    const data = JSON.parse(utils.loadData('all.json'))
-    for (let i in data) {
-      const item = data[i]
-      for (let j in item.aggregate) {
-        const aggregate = item.aggregate[j]
-        const { code, quote } = aggregate
-        await checkAlert(code, quote, item)
+    const { Asset, AssetCandle } = models
+    const assets = await Asset.scope('active').findAll()
+
+    for (let i in assets) {
+      const asset = assets[i]
+      const assetCandle = await AssetCandle.findOne({
+        where: {
+          asset_id: asset.id
+        },
+        order: [['date', 'desc']]
+      })
+      if (assetCandle) {
+        const quote = {
+          current: +assetCandle.close,
+          open: +assetCandle.open
+        }
+        await checkAlert(asset.code, quote, asset)
       }
     }
   } catch (error) {
