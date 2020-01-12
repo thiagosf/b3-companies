@@ -25,7 +25,7 @@ const screenshot = async code => {
 
     const zoomSelector = '.control-bar__btn--zoom-in'
     await page.waitForSelector(zoomSelector, { timeout: 7000 })
-    const clicks = 6
+    const clicks = 3
     for (let i = 0; i < clicks; i++) {
       await page.click(zoomSelector)
     }
