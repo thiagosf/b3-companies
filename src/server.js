@@ -17,9 +17,9 @@ schedule.scheduleJob('0 23 * * 1,2,3,4,5', () => {
   return services.updateCandles()
 })
 
-schedule.scheduleJob('30 23 * * 1,2,3,4,5', () => {
-  return services.quoteAlert()
-})
+// schedule.scheduleJob('30 23 * * 1,2,3,4,5', () => {
+//   return services.quoteAlert()
+// })
 
 schedule.scheduleJob('0,15,20 0 */2 * *', () => {
   return services.tvServices().then(() => {
