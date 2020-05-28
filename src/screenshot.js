@@ -10,7 +10,7 @@ const createDirectoryIfNotExists = dir => {
   }
 }
 
-const screenshot = async code => {
+const screenshot = async (code, interval = 'D') => {
   let output = false
   console.log('-- screenshot:', code, new Date())
   console.time(code)
@@ -20,7 +20,7 @@ const screenshot = async code => {
 
   try {
     const hideElement = el => el.style.display = 'none'
-    await page.goto(`https://br.tradingview.com/chart/?symbol=BMFBOVESPA:${code}&interval=D`)
+    await page.goto(`https://br.tradingview.com/chart/?symbol=BMFBOVESPA:${code}&interval=${interval}`)
     await page.waitFor(10)
 
     const zoomSelector = '.control-bar__btn--zoom-in'
