@@ -44,6 +44,8 @@ const companies = async (req, res, next) => {
       if (fs.existsSync(fullPath)) {
         const stat = fs.statSync(fullPath)
         screenshot.url = `/files/charts/${asset.code}.png`
+        screenshot.url_weekly = `/files/charts/${asset.code}_W.png`
+        screenshot.url_monthly = `/files/charts/${asset.code}_M.png`
         screenshot.date = stat.mtimeMs
       }
       if (hasCandles) {
