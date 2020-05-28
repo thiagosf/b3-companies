@@ -54,10 +54,14 @@ const screenshot = async (code, interval = 'D') => {
         '../public/files/charts',
       )
       createDirectoryIfNotExists(chartsPath)
+      let name = `${code}.png`
+      if (interval !== 'D') {
+        name = `${code}_${interval}.png`
+      }
       await page.screenshot({
         path: path.join(
           chartsPath,
-          `${code}.png`
+          name
         ),
         clip: {
           x: rect.left,
