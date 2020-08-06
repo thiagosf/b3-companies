@@ -20,6 +20,8 @@ const screenshot = async (code, interval = 'D') => {
 
   try {
     const hideElement = el => el.style.display = 'none'
+    const upIndex = el => el.style.zIndex = '10000'
+
     await page.goto(`https://br.tradingview.com/chart/?symbol=BMFBOVESPA:${code}&interval=${interval}`)
     await page.waitFor(10)
 
@@ -33,8 +35,8 @@ const screenshot = async (code, interval = 'D') => {
     const controlSelector = '.control-bar-wrapper'
     await page.$eval(controlSelector, hideElement)
 
-    const tvSelector = '.tv-floating-toolbar'
-    await page.$eval(tvSelector, hideElement)
+    const allContent = '.js-rootresizer__contents'
+    await page.$eval(allContent, upIndex)
 
     const overlay = '#overlap-manager-root'
     await page.$eval(overlay, hideElement)
