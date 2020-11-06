@@ -19,7 +19,14 @@ const screenshot = async (code, interval = 'D') => {
   const page = await browser.newPage()
 
   try {
-    const hideElement = el => el.style.display = 'none'
+    const hideElement = async name => {
+      await page.evaluate((value) => {
+        const el = document.querySelector(value)
+        if (el) {
+          el.style.display = 'none'
+        }
+      }, name)
+    }
     const upIndex = el => el.style.zIndex = '10000'
 
     await page.goto(`https://br.tradingview.com/chart/?symbol=BMFBOVESPA:${code}&interval=${interval}`)
@@ -32,14 +39,12 @@ const screenshot = async (code, interval = 'D') => {
       await page.click(zoomSelector)
     }
 
-    const controlSelector = '.control-bar-wrapper'
-    await page.$eval(controlSelector, hideElement)
-
     const allContent = '.js-rootresizer__contents'
     await page.$eval(allContent, upIndex)
 
-    const overlay = '#overlap-manager-root'
-    await page.$eval(overlay, hideElement)
+    await hideElement('.control-bar-wrapper')
+    await hideElement('#overlap-manager-root')
+    await hideElement('div[data-role="toast-container"]')
 
     const chartSelector = '.layout__area--center'
     const rect = await page.evaluate(selector => {
