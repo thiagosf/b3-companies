@@ -1,0 +1,16 @@
+name: CI
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run SSH command
+        uses: garygrossgarten/github-action-ssh@v0.5.0
+        with:
+          command: ${{ secrets.COMMAND }}
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USER }}
+          privateKey: ${{ secrets.PRIVATE_KEY}}
