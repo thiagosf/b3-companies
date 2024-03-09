@@ -46,6 +46,22 @@ app.use(express.static(
     '../public'
   )
 ))
+app.get('/update-companies', async (req, res) => {
+  const services = await services.tvServices()
+  const companies = await services.tvCompanies()
+
+  res.send({ success: true, data: { services, companies } })
+})
+app.get('/update-candles', async (req, res) => {
+  const data = await services.updateCandles()
+
+  res.send({ success: true, data })
+})
+app.get('/update-screenshots', async (req, res) => {
+  const data = await services.takeScreenshots()
+
+  res.send({ success: true, data })
+})
 app.get('/companies', routes.companies)
 
 app.use((err, req, res, next) => {

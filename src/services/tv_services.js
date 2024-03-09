@@ -45,7 +45,14 @@ const tvServices = async () => {
           page.setContent(html)
         }
 
-        const codeSelector = '.tv-screener__symbol'
+        const loadMoreButton = '.apply-overflow-tooltip--check-children-recursively'
+        await page.waitForSelector(loadMoreButton)
+        await page.click(loadMoreButton)
+        await page.click(loadMoreButton)
+        await page.click(loadMoreButton)
+        await page.click(loadMoreButton)
+
+        const codeSelector = '.tickerName-GrtoTeat'
         await page.waitForSelector(codeSelector)
         const data = await page.$$eval(codeSelector, els => {
           return [].slice.call(els).map(el => {
