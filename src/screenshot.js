@@ -29,6 +29,8 @@ const screenshot = async (code, interval = 'D') => {
     }
     const upIndex = el => el.style.zIndex = '10000'
 
+    const cookies = process.env.TV_COOKIES ? JSON.parse(process.env.TV_COOKIES) : []
+    await page.setCookie(...cookies)
     await page.goto(`https://br.tradingview.com/chart/?symbol=BMFBOVESPA:${code}&interval=${interval}`)
     await page.waitFor(10)
 
